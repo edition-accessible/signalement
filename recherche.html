@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+<title>Options de recherche | Signalement des livres numériques accessibles</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="statics/EA21_signalement.css" media="all" />
+<link rel="stylesheet" href="statics/EA21_accessibilite.css" media="all" />
+<link rel="stylesheet" href="statics/EA21_modale.css" media="all" />
+</head>
+
+<body><div class="inside">
+<nav role="navigation" aria-label="Accès rapide"><a id="skiplink" href="#main">Contenu</a></nav>
+<div id="wrapper">
+
+ <div id="header" class="clear">
+ <div class="inside">
+ <div>
+ <header role="banner">
+ <h1>Signalement des livres numériques accessibles</h1>
+
+ <p>Réalisé par EDRLab, cet ensemble de pages web proposent différents exemples d'implémentation du <i>Guide d'expérience utilisateur pour l'affichage des métadonnées d'accessibilité 1.0</i> élaboré par le <i>Publishing Community Group du W3C.</i></p>
+ </header>
+ </div>
+ <hr/>
+ <nav id="navigation" role="navigation" aria-label="Menu de navigation">
+ <ul><li><a href="index.html">Accueil</a></li>
+ <li><a href="fiche-livre.html">Affichage dans une fiche livre</a></li>
+ <li><a href="recherche.html">Options de recherche</a></li>
+ <li><a href="declaration.html">Déclarations</a></li>
+ <li><a href="references.html">Références</a></li>
+ 
+ </ul>
+ </nav> <!-- end #navigation" -->
+ </div>
+ </div> <hr /> <!-- end #header -->
+
+
+<main id="main" role="main" tabindex="-1">
+ <div class="inside">
+ 
+<section><h2 class="center">Exemple 1 : filtres de recherche</h2> 
+
+ <div role="search" class="clear">
+ <form method="POST" id="search">
+ <input type="text" id="search-input" title="Rechercher sur le site" placeholder="Recherche" />
+ <input type="image" src="img/loupe.png" title="Lancer la recherche" alt="Lancer la recherche" />
+ </form>
+ </div> 
+ <div>
+ 
+ <h2>Filtres d'accessibilité :</h2>
+  
+ <div>
+ <div class="item-list">
+ <ul class="facet-multiselect-checkbox">
+  <li>
+  <input data-facet-value="130889" type="checkbox" id="130889" value="1"> <label class="option" for="130889">Affichage personnalisable (607) </label>
+  </li>
+  <li>
+  <input data-facet-value="130895" type="checkbox" id="130895" value="1"> <label class="option" for="130895">Navigation structurée (877) </label>
+  </li>
+  <li style="display: list-item;"><div >
+  <input data-facet-value="130901" type="checkbox" id="130901" value="1"> <label class="option" for="130901">Table des matières (883) </label>
+  </li>
+
+  <li class="first">
+
+ <input data-facet-value="130883" type="checkbox" id="130883" value="1"> <label class="option" for="130883">Images décrites (375) </label>
+
+ </li>
+ <li>
+ <input data-facet-value="130886" type="checkbox" id="130886" value="1"> <label class="option" for="130886">Mathématiques décrits (1) </label>
+ 
+ </li>
+
+    <li  class="first">
+ <input data-facet-value="130892" type="checkbox" id="130892" value="1"> <label class="option" for="130892">​Référence aux numéros de page du livre imprimé (127) </label>
+ 
+ </li>
+
+
+ <li class="last" style="display: list-item;"><div >
+ <input data-facet-value="130907" type="checkbox" id="130907" value="1"> <label class="option" for="130907">Aucune information disponible (158) </label>
+ 
+ </div>
+ </li>
+ </ul></div></div>
+ </div>
+
+
+</section></div>
+
+ <div class="inside">
+<section><h2 class="center">Exemple 2 : filtres de recherche</h2> 
+
+ <div role="search" class="clear">
+ <form method="POST" id="search">
+ <input type="text" id="search-input" title="Rechercher sur le site" placeholder="Recherche" />
+ <input type="image" src="img/loupe.png" title="Lancer la recherche" alt="Lancer la recherche" />
+ </form>
+ </div> 
+<div>
+
+ <h2>Accessibilité :</h2>
+  
+ <div>
+ <div class="item-list">
+ <ul class="facet-multiselect-checkbox">
+ <li class="first">
+
+ <input data-facet-value="130883" type="checkbox" id="130883" value="1"> <label class="option" for="130883">Accessibles (WCAG AA) </label>
+
+</li>
+<li>
+ <input data-facet-value="130886" type="checkbox" id="130886" value="1"> <label class="option" for="130886">Accessibles (WCAG A)</label>
+
+</li>
+<li>
+ <input data-facet-value="130889" type="checkbox" id="130889" value="1"> <label class="option" for="130889">Non accessibles</label>
+</li>
+<li>
+ <input data-facet-value="130892" type="checkbox" id="130892" value="1"> <label class="option" for="130892">Aucune information d'accessibilité</label>
+</li>
+</ul></div></div>
+</div>
+
+
+</section></div>
+
+</main>
+<footer><hr/><!--<img id="logo_img" title="EDRLab" src="https://www.edrlab.org/wp-content/uploads/2016/12/edrlab_logo@2x.jpg" alt="EDRLab" style="max-height: 33px;">-->
+<span><i>Ces pages sont réalisées à titre d'exemple. Les fonctionalités présentées n'ont pas vocation à être fonctionelles.</i></span>
+
+</footer>
+<!-- end #main -->
+</div><!-- end #wrapper -->
+
+
+<div id="modal-def-content" aria-labelledby="modal-def-title" tabindex="-1" role="dialog">
+<button class="close" id="btn-close-def" title="Fermer"><span aria-hidden="true">X</span></button>
+<div tabindex="0" role="document">
+ <h1 id="modal-def-title">Toutes les informations d'accessibilité</h1>
+ <p>Cette publication comprend un balisage permettant la compatibilité avec les technologies d'assistance. Les images de cette publication sont décrites. La liste ci-dessous donne le détail des fonctions incluses.</p>
+ <ul>
+  
+  
+  <li>Table des matières
+  </li><li>Ordre de lecture logique
+  </li><li>Descriptions brèves des images
+  </li><li>Référence à la pagination du livre imprimé 
+  </li><li><a href="infos-accessibilite.html">Politique d'accessibilité de l'éditeur</a>
+  <li>Conforme à la norme EPUB accessibilité 1.0 & WCAG AA</li>
+  <li><a href="ace-smart-report-fr.html">Rapport de conformité de ce titre</a>
+  </li>
+ </ul>
+</div>
+</div>
+
+<script type="text/javascript" src="statics/modale-def.js"></script>
+</div></body>
+
+</html>

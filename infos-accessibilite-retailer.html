@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+<title>Déclaration sur l'accessibilité | Signalement des livres numériques accessibles</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="statics/EA21_signalement.css" media="all" />
+<link rel="stylesheet" href="statics/EA21_accessibilite.css" media="all" />
+<link rel="stylesheet" href="statics/EA21_modale.css" media="all" />
+</head>
+
+<body><div class="inside">
+<nav role="navigation" aria-label="Accès rapide">
+<a id="skiplink" href="#main">Contenu</a></nav>
+<div id="wrapper">
+
+    <div id="header" class="clear">
+
+        <header role="banner">
+        <h1>Signalement des livres numériques accessibles</h1>
+
+        <p>Réalisé par EDRLab, cet ensemble de pages web proposent différents exemples d'implémentation du <i>Guide d'expérience utilisateur pour l'affichage des métadonnées d'accessibilité 1.0</i> élaboré par le <i>Publishing Community Group du W3C.</i></p>
+        </header>
+        <hr/>
+        <nav id="navigation" role="navigation" aria-label="Menu de navigation">
+        <ul><li><a href="index.html">Accueil</a></li>
+        <li><a href="fiche-livre.html">Affichage dans une fiche livre</a></li>
+        <li><a href="recherche.html">Options de recherche</a></li>
+        <li><a href="declaration.html">Déclaration d'accessibilité de l'éditeur</a></li>
+        <li><a href="references.html">Références</a></li>
+        </ul>
+        </nav>        
+        <!-- end #navigation" -->
+    
+        </div>  <hr />      <!-- end #header -->
+
+     
+<main  id="main" role="main" tabindex="-1">
+    <section>
+    <h2 class="center">Déclaration sur le signalement de l'accessibilité de la librairie en ligne</h2>   
+    <div class="inside">
+<article id="block-2">
+   <!-- <div class="left-title">
+        <img class="img" src="statics/accessibility.svg" alt="informations d'accessibilité disponibles"/>
+       </div>-->
+
+    <h3>Comprendre les caractéristiques d'accessibilité</h3>
+    <p>Les éditeurs doivent fournir des informations sur l'accessibilité de leurs livres numériques. Ces informations, ou "métadonnées d'accessibilité", comprennent les caractéristiques d'accessibilité ci-dessous. Lorsqu'elles sont fournies, notre plateforme affichera ces informations aux lecteurs afin qu'ils puissent rechercher et télécharger les livres qui répondent le mieux à leurs besoins. </p>
+    <p>Le logo de l'homme de Vitruve en blanc dans un cercle bleu accompagné du texte alternatif "informations d'accessibilité disponibles" indique que des informations relatives à l'accessibilité sont disponibles. </p>
+<p>Les livres qui ont été certifiés accessibles par une tierce partie seront identifiés dans notre catalogue avec le logo d'une coche dans un bouclier noir accompagné du texte alternatif "certifié". Le sens de cette certification peut varier d'un éditeur à l'autre.  </p>
+<p>Nous affichons les caractéristiques d'accessibilité des fichiers ci-dessous :</p>
+<ul>
+    <li>"Affichage personnalisable" : signifie que l'aspect du livre peut être  modifié par le lecteur. Les lecteurs peuvent ajuster la taille et le type de police, le contraste, etc. Ces fonctionnalités dépendent bien entendu du logiciel de lecture utilisé.</li>
+    <li>
+    "Images décrites" : toutes les images du livre sont décrites à l'aide d'un texte alternatif ou de descriptions longues.</li>
+    <li>"Mathématiques décrites" :  signifie que le livre contient des équations mathématiques décrites de manière accessible à l'aide de MathML, ou d'une description en langage simple.</li>
+    <li>"Navigation structurée" : tous les titres du livre sont correctement balisés  afin que les lecteurs puissent naviguer par titres.</li>
+    <li>"Référence aux numéros de page du livre imprimé" : signifie que le livre contient une liste de liens vers des emplacements statiques de saut de page du livre imprimé correspondant (c'est-à-dire qui ne changent pas en fonction de la taille de l'écran ou lorsque l'affichage est transformé).</li>
+    <li>"Lecture à voix haute" : signifie que le livre contient un enregistrement audio de l'intégralité du texte y compris des descriptions d'images le cas échéant.</li>
+    <li>"Table des matières" : signifie que le livre contient une table des matières (dans le document de navigation EPUB) permettant de naviguer dans les principales sections de l'ouvrage. Elle inclut au moins tous les titres de premier niveau.</li>
+    <li>"Aucune information disponible" : indique que l'éditeur n'a fourni aucune information d'accessibilité. Cela n'indique pas que le livre est inaccessible. </li></ul>
+</article>
+</div>
+
+</section>
+</main><!-- end #main -->
+</div><!-- end #wrapper -->
+<div id="modal-def-content" aria-labelledby="modal-def-title" tabindex="-1" role="dialog">
+<button class="close" id="btn-close-def" title="Fermer"><span aria-hidden="true">X</span></button>
+<div tabindex="0" role="document">
+    <h1 id="modal-def-title">Toutes les informations d'accessibilité</h1>
+    <p>Cette publication comprend un balisage permettant la compatibilité avec les technologies d'assistance. Les images de cette publication sont décrites. La liste ci-dessous donne le détail des fonctions incluses.</p>
+        <ul>
+            <li>Conforme à la norme EPUB accessibilité 1.0 AA</li>
+           
+            <li>Table des matières
+            </li><li>Ordre de lecture logique
+            </li><li>Descriptions brèves des images
+            </li><li>Référence à la pagination du livre imprimé 
+            </li><li>Certification de conformité par l'éditeur
+            </li></ul>
+</div>
+</div>
+
+<script type="text/javascript" src="statics/modale-def.js"></script>
+</div></body>
+
+</html>

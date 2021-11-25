@@ -1,0 +1,183 @@
+/* Minimal set for demonstration use. */
+
+.img {width: 200px;}
+.center {text-align: center;}
+.img30 {width: 30px;}
+.facet-multiselect-checkbox {
+	list-style-type: none;
+}
+
+*{
+	box-sizing:border-box;
+	line-height:1.33em;
+}
+
+body{
+	font-family:"sans-serif";
+	margin:0;
+	position:relative;
+	z-index:2;
+	font-size:1em;
+	overflow-x:hidden;
+	color:#000;
+	background:#fff;
+    margin: 10px;
+}
+
+body a{
+	color:#000;
+}
+
+/** General **/
+
+.clear:after{
+	content:'';
+	display:block;
+	width:100%;
+	clear:both;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* added line */
+	border: 0;
+}
+
+.inside{
+	width:1040px;
+	max-width:100%;
+	margin:auto;
+	position:relative;
+}
+
+button{
+	cursor:pointer;
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/** header**/
+
+#header{
+/**	background:#142347;
+	color:#fff;**/
+	padding:0 0 0 0;
+    color: #1D3E80;
+}
+
+h1{
+	margin:1em;
+	font-weight:normal;
+	text-transform:none;
+	font-size:1.9em;
+}
+
+/** nav **/
+#navigation{
+	margin-top:1em;
+    text-align: center;
+}
+#navigation ul{
+	padding:0;
+	margin:0;
+	text-align: center;
+}
+
+@media screen and (min-width:65em){
+	#navigation{
+		min-width:27.88%;
+		float:left;
+		margin:0;
+	}
+    #navigation li{
+        display:inline-block;
+        list-style:none;
+        font-size: 1.1em;
+    }
+    
+    #navigation li a{
+        display:inline-block;
+        min-width:50%;
+        color:rgb(94, 97, 105);
+        border-radius:5px;
+        text-decoration:none;
+        padding:10px;
+        margin-bottom:10px;
+    }
+}
+
+#navigation li{
+    display:inline-block;
+	list-style:none;
+    font-size: 1.1em;
+	text-align: center;
+}
+
+#navigation li a{
+	display:inline-block;
+	min-width:50%;
+	color:rgb(94, 97, 105);
+	border-radius:5px;
+	text-decoration:none;
+	padding:10px;
+	margin-bottom:10px;
+}
+
+#navigation li a:hover,
+#navigation a:hover,
+#navigation li a:focus,
+#navigation a:focus{
+ color: #1D3E80;
+}
+
+@media screen and (min-width:70em){
+	.left-title{
+		width:250px;
+		float:left;
+		padding-right:0;
+		padding-bottom: 10em;
+	}
+	.left-title-book{
+		width:250px;
+		float:left;
+		padding-right:0;
+		padding-bottom: 2em;
+	}
+
+	.right-title{
+		width:300px;
+		float:right;
+	}
+
+	.left-content{
+		width:700px;
+		float:left;
+		padding:2em 20px 2em 0;
+		border-right:1px solid #ccc;
+	}
+
+	.right-content{
+		width:750px;
+		float:right;
+		left:250px;
+		padding:2em 0 2em 10px;
+		border-left:1px solid #ccc;
+	}
+}
+
+
+
+/** footer **/
+footer{
+clear:both;
+color:#1D3E80;
+padding:5em 0 4em 0;
+text-align: center;
+}
+

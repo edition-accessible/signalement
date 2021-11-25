@@ -1,0 +1,39 @@
+/* Fonctions d'accessibilité  */
+
+*:focus{
+	outline:2px dotted rgb(36, 138, 255);
+}
+
+/*Contenu seulement pour les revues d'écran (masque le contenu en le positionnant en dehors de la zone d'affichage).*/
+.sr{
+	position:absolute;
+	top:-100000px;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* added line */
+	border: 0;
+}
+
+.is-hidden{
+	display:none;
+}
+
+/*Les liens d'évitement sont utiles à des utilisateurs n'utilisant pas de revue d'écran (la loupe par exemple)*/
+#skiplink{
+	position:absolute;
+	left : -10000px;
+	color:#fff;
+}
+
+#skiplink:focus{
+	display:block;
+	left : 8.2em;
+}

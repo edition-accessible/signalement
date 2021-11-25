@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gautier Chomel" />
+  <title>Guide d’expérience utilisateur pour l’affichage des métadonnées d’accessibilité 1.0</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<header>
+<h1 class="title">Guide d’expérience utilisateur pour l’affichage des métadonnées d’accessibilité 1.0</h1>
+<p class="author">Gautier Chomel</p>
+<p class="date">Novembre 2021</p>
+</header>
+<h2 id="résumé">Résumé</h2>
+<p>Trouver, acheter et finalement lire une publication est une expérience très personnelle. Pour la plupart d’entre nous, c’est une routine. Nous allons dans une librairie, nous cherchons le titre qui nous intéresse ou nous parcourons la liste des meilleures ventes, puis nous achetons et commençons à lire la publication.</p>
+<p>Imaginons maintenant que vous soyez aveugle et que vous ayez recours à une technologie d’assistance pour lire la publication. Vous vous demandez : mon lecteur d’écran fonctionnera-t-il avec ce titre ; y a-t-il des descriptions d’images qui seront énoncées ; y a-t-il des référence aux pages du livre imprimé ; l’ordre de lecture est-il logique pour que je n’entende pas un <em>avertissement</em> après avoir lu un paragraphe qui pourrait être dérangeant ou particulier ? Ce ne sont là que quelques-unes des préoccupations des lecteurs avec des besoins spécifiques en matière d’accessibilité lorsqu’ils essaient d’acheter et de lire une publication numérique.</p>
+<p>La bonne nouvelle, c’est que de plus en plus d’éditeurs créent des publications nativement accessibles (c’est-à-dire accessibles dès le départ et non adaptées ultérieurement) et font valider ou vérifier l’accessibilité par des organismes indépendants.</p>
+<p>Ce document propose un cadre commun pour présenter les métadonnées d’accessibilité des publications de manière conviviale.</p>
+<h2 id="statut-de-ce-document">Statut de ce document</h2>
+<p>Cette spécification a été publiée par le <a href="https://www.w3.org/community/publishingcg/"><em>Publishing Community Group</em></a>]. Elle n’est pas une norme du W3C et n’est pas non plus sur la piste des normes du W3C. Veuillez noter que d’autres conditions s’appliquent dans le cadre du <a href="https://www.w3.org/community/about/agreements/final/"><em>W3C Community Final Specification Agreement (FSA)</em></a>. En savoir plus sur les <a href="https://www.w3.org/community/">groupes communautaires et commerciaux du W3C</a>.</p>
+<p>Les <a href="https://github.com/w3c/publ-a11y/issues/"><em>issues</em> GitHub (en anglais)</a> sont préférés pour la discussion de cette spécification.</p>
+<h2 id="aperçu-général">1. Aperçu général</h2>
+<p>Ce document aide ceux qui souhaitent rendre disponibles les métadonnées d’accessibilité aux utilisateurs. Il permet de comprendre comment représenter les métadonnées d’accessibilité lisibles par machine dans une interface utilisateur (UI) et avec une expérience utilisateur (UX) conviviale.</p>
+<pre><code>Note :
+
+Ce document présente des principes de haut niveau sans entrer dans les questions techniques liées aux différentes normes de métadonnées dans le secteur de l&#39;édition.
+
+Par conséquent, il existe des documents techniques pour les développeurs qui illustrent comment récupérer les données pour afficher les informations décrites dans ce document.</code></pre>
+<p>Les métadonnées trouvées à l’intérieur d’une publication numérique ou dans un document externe correspondant peuvent contenir des informations importantes sur l’accessibilité qui aident les utilisateurs finaux à trouver et à déterminer si la publication peut répondre à leurs besoins spécifiques en matière d’accessibilité.</p>
+<p>La plupart des métadonnées sont censées être lisibles par une machine afin de faciliter les recherches des utilisateurs, par exemple <em>“trouver toutes les publications numériques qui contiennent des gros caractères ou du braille, ou qui répondent à un certain niveau de conformité en matière d’accessibilité”</em>.</p>
+<p>L’exception à cette règle est le résumé d’accessibilité qui, s’il est présent, décrit dans une prose lisible par l’homme les caractéristiques d’accessibilité présentes dans la publication ainsi que les lacunes, le cas échéant. Ce résumé est destiné à être présenté directement aux utilisateurs finaux.</p>
+<p>Voici un exemple de ce à quoi pourrait ressembler une page web de métadonnées d’accessibilité conviviale :</p>
+<pre><code>Exemple 1
+
+Compatible avec les lecteurs d&#39;écran : Oui
+
+Résumé de l&#39;accessibilité : cette publication comprend un balisage permettant l&#39;accessibilité et la compatibilité avec les technologies d&#39;assistance. Les images, le son et la vidéo de cette publication sont bien décrits, conformément aux WCAG 2.0 AA.
+
+Conformité de l&#39;accessibilité : Accessibilité EPUB, WCAG 2.0-AA
+
+Certifié par : Nom de l&#39;organisme de certification
+
+Référence du certificateur : [Page Web du certificat publié par l&#39;organisme de certification](lien)
+
+Toutes les métadonnées d&#39;accessibilité : [Page Web interne présentant l&#39;ensemble des métadonnées d&#39;accessibilité](lien)</code></pre>
+<h2 id="découverte-du-contenu-accessible">2. Découverte du contenu accessible</h2>
+<p>Les directives relatives à la présentation des métadonnées d’accessibilité détaillées dans ce document sont destinées à améliorer l’expérience des utilisateurs lorsque les lecteurs parcourent l’entrée du catalogue d’une publication. Toutefois, les métadonnées d’accessibilité ont également un rôle essentiel à jouer pour aider les lecteurs à découvrir des publications qui leur sont accessibles. Les fournisseurs de publications, tels que les vendeurs et les bibliothèques, sont encouragés à créer des outils de recherche et de filtrage qui interprètent les métadonnées d’accessibilité pour faciliter la découverte. (Une discussion complète des questions de recherche et de filtrage est hors de portée de ce document, mais cette section fournit des indications en attendant que des recherches plus approfondies puissent être menées).</p>
+<p>Bien que chaque utilisateur ait des besoins différents en matière d’accessibilité, le respect des exigences des <em>Web Content Accessibility Guidelines (WCAG) 2.0</em>, même au niveau A, est une base qui garantit qu’une publication sera largement accessible. Les fournisseurs de publications peuvent donc souhaiter créer des capacités de recherche spécifiques pour permettre aux utilisateurs de trouver des publications qui ont déclaré être conformes aux WCAG à tous les niveaux. Nous suggérons la création d’un filtre de recherche “Accessible” qui ne renvoie que les publications dont les métadonnées indiquent la conformité au niveau WCAG sélectionné par l’utilisateur - A, AA ou AAA.</p>
+<p>Les publications audio et texte synchronisé créées pour un usage courant offrent une accessibilité importante à de nombreux utilisateurs handicapés, même si elles ne sont pas accessibles à tous. (Notez que ces publications diffèrent des livres audio traditionnels en ce sens que l’audio accompagne le texte intégral ou partiel de la publication). Les distributeurs de livres numériques disposent peut-être déjà d’outils de recherche visant à trouver les livres audio traditionnels, puisqu’ils sont populaires et courants, si ce n’est pas le cas, ce serait un bon ajout à la série d’outils permettant de trouver des publications accessibles. Cependant, les publications avec un contenu audio et texte synchronisé risquent de ne pas satisfaire aux exigences des WCAG, car elles sont destinées à un public spécifique plutôt qu’à un large public. Par conséquent, elles ne seraient pas trouvées en utilisant la recherche “Accessible” suggérée précédemment.</p>
+<p>N’importe lequel des champs de métadonnées examinés en détail ci-dessous pourrait également être utilisé comme filtre - une recherche <em>“accessible aux lecteurs d’écran”</em> serait appréciée par les utilisateurs de lecteurs d’écran, et un moyen de s’assurer qu’aucune publication présentant des risques n’est téléchargée serait apprécié par les personnes atteintes d’épilepsie sensible à la lumière ou d’autres conditions liées aux risques. Mais si un seul filtre de recherche supplémentaire convient le mieux à l’interface utilisateur d’un site, un outil permettant de trouver des documents accessibles qui déclarent être conformes aux WCAG 2.0 est le meilleur choix à fournir.</p>
+<h2 id="détails-techniques-de-linterface-utilisateur">3. Détails techniques de l’interface utilisateur</h2>
+<p>Lorsque vous disposez de métadonnées d’accessibilité sur une publication numérique, il est important de partager ces informations de la manière la plus conviviale possible. À un niveau très élevé, lorsque vous affichez des informations sur une publication numérique, vous pouvez vous contenter de mentionner que des “fonctionnalités d’accessibilité” ou des “informations sur l’accessibilité” sont disponibles. Si l’utilisateur souhaite obtenir ces informations, il peut cliquer sur un lien texte ou image qui lui fournira les informations décrites ci-dessous.</p>
+<pre><code>Note
+
+Lorsqu&#39;un éditeur ne fournit pas de métadonnées d&#39;accessibilité pour une publication, une déclaration doit être affichée pour informer l&#39;utilisateur qu&#39;aucune information n&#39;a été fournie.</code></pre>
+<p>Dans cet exemple, un lien vers les informations sur l’accessibilité est fourni par un lien textuel traditionnel.</p>
+<pre><code>Exemple 2
+
+Titre : Huckleberry Finn
+
+Auteur : Mark Twain
+
+Copyright : 1999
+
+ISBN : 9780486110035
+
+Éditeur : Dover Publications
+
+Caractéristiques du livre : Informations sur l&#39;accessibilité (lien textuel vers les informations sur l&#39;accessibilité ci-dessous)</code></pre>
+<p>Ce lien vers les informations sur l’accessibilité pourrait également être fourni par une image cliquable.</p>
+<pre><code>Exemple 3
+
+Caractéristiques du livre :
+
+Informations sur l&#39;accessibilité
+
+&lt;a id=&quot;a11y&quot; href=&quot;#completOnix&quot;&gt;&lt;img  width=&quot;200px&quot; float=&quot;left&quot; src=&quot;https://www.w3.org/2021/09/UX-Guide-metadata-1.0/principles/media/accessibility.svg&quot; alt=&quot;Informations sur l&#39;accessibilité&quot; class=&quot;img&quot;/&gt;&lt;/a&gt;
+
+(image cliquable menant aux informations sur l&#39;accessibilité ci-dessous). Texte alternatif suggéré pour l&#39;image &quot;Informations sur l&#39;accessibilité&quot;.</code></pre>
+<h3 id="techniques">3.1 Techniques</h3>
+<p>Pour aider les développeurs à mettre en œuvre ces directives, des notes approfondies sont disponibles pour expliquer comment extraire les informations des normes de métadonnées de l’industrie de l’édition.</p>
+<p>Au moment de la publication de ce document, les techniques disponibles pour les normes de métadonnées sont les suivantes :</p>
+<p><a href="https://www.w3.org/publishing/a11y/UX-Guide-metadata/techniques/epub-metadata/index.html">Métadonnées d’accessibilité EPUB (en anglais)</a></p>
+<p><a href="Guide_techniques_accessibilite_onix.md">Métadonnées d’accessibilité ONIX (en français)</a></p>
+<h2 id="ordre-des-informations-clés">4. Ordre des informations clés</h2>
+<p>Le fait d’ordonner les métadonnées fournies d’une manière significative et cohérente pour les utilisateurs les aide à comprendre facilement les points forts et les points faibles de chaque publication. Par conséquent, les informations les plus importantes apparaissent en premier pour aider l’utilisateur à déterminer rapidement si la publication répondra à ses besoins spécifiques.</p>
+<p>L’ordre recommandé pour la présentation des informations est le suivant :</p>
+<ol type="1">
+<li>Adapté aux lecteurs d’écran</li>
+<li>Audio complet (si présent)</li>
+<li>Résumé de l’accessibilité</li>
+<li>Conformité de l’accessibilité</li>
+<li>Certifié par</li>
+<li>Références du certificateur</li>
+<li>Rapport du certificateur (si présent)</li>
+<li>Dangers</li>
+<li>Toutes les métadonnées d’accessibilité</li>
+</ol>
+<p>Les deux principaux aménagements d’accessibilité à répertorier sont les suivants : la publication est-elle “adaptée aux lecteurs d’écran” et a-t-elle un “contenu audio complet” ? Une publication adaptée aux lecteurs d’écran implique que tout le texte est accessible et que toutes les images sont décrites, si nécessaire. Une publication qui indique qu’elle comporte une version audio complète permet à l’utilisateur de savoir que l’intégralité de la publication peut être écoutée grâce à la lecture audio.</p>
+<p>L’élément important suivant est le résumé de l’accessibilité, qui est constitué de métadonnées décrivant tous les aménagements d’accessibilité fournis par cette publication.</p>
+<p>Viennent ensuite les informations sur la conformité de l’accessibilité (le niveau de conformité atteint, l’organisme qui l’a certifié et les références de certification).</p>
+<p>Enfin, les risques éventuels sont affichés et un lien est créé vers toutes les métadonnées d’accessibilité, y compris toutes les caractéristiques d’accessibilité spécifiques telles que les descriptions d’images, le langage MathML, une table des matières, etc.</p>
+<p>Des informations plus détaillées sur ces champs sont fournies dans les sections suivantes.</p>
+<h3 id="adapté-aux-lecteurs-décran">4.1 Adapté aux lecteurs d’écran</h3>
+<p>Valeur : “Oui”, “Non” ou “Inconnu”</p>
+<h4 id="définition">Définition</h4>
+<p>Une réponse “Oui”, “Non” ou “Inconnu” à la question “Un utilisateur de lecteur d’écran peut-il lire cette publication ?”. Cette réponse peut être basée sur une combinaison de champs de métadonnées, si nécessaire, qui établissent que le contenu principal de la publication est disponible en texte véritable et ne contient pas d’images de texte.</p>
+<h4 id="justification">Justification</h4>
+<p>La plupart des publications numériques disponibles incluent leur contenu en texte intégral et peuvent indiquer qu’elles sont adaptées aux lecteurs d’écran. Les exceptions sont les publications dont le contenu essentiel n’est inclus que dans des images, comme des graphiques, des tableaux ou des équations présentés sous forme d’images, et les publications dont l’apparence fixe est créée par une image de chaque page au lieu d’un texte véritable.</p>
+<h4 id="mise-en-œuvre">Mise en œuvre</h4>
+<p><a href="https://www.w3.org/publishing/a11y/UX-Guide-metadata/techniques/epub-metadata/index.html#screen-reader-friendly">Accessibilité d’EPUB : Adapté aux lecteurs d’écran</a></p>
+<p><a href="https://www.w3.org/publishing/a11y/UX-Guide-metadata/techniques/onix-metadata/index.html#screen-reader-friendly">ONIX : adapté aux lecteurs d’écran (en anglais)</a></p>
+<p><a href="lien%20à%20faire">ONIX : adapté aux lecteurs d’écran (en français)</a></p>
+<h3 id="audio-complet">4.2 Audio complet</h3>
+<p>Valeurs : “Oui” ou si non alors ne pas afficher cette section.</p>
+<h4 id="définition-1">Définition</h4>
+<p>Indication que cette publication peut être lue intégralement en mode audio. Cette désignation s’applique même si le texte est également disponible avec l’audio.</p>
+<h4 id="justification-1">Justification</h4>
+<p>Certains utilisateurs, y compris les utilisateurs souffrant de dyslexie ou de déficiences visuelles, recherchent des publications qu’ils peuvent utiliser entièrement en écoutant. Les métadonnées “Full Audio” ou Audio “complet” sont importantes permettre aux utilisateurs de les identifier. Il se peut que les fournisseurs de publications désignent déjà les “livres audio” comme un ensemble consultable séparément, sur la base de la définition populaire d’un livre audio comme une expérience uniquement auditive. Les publications qui comprennent le texte intégral et le son intégral ne sont peut-être pas actuellement regroupées avec les livres audio, de sorte que l’exposition de ces métadonnées ajoute des publications supplémentaires à la liste des titres susceptibles d’intéresser les utilisateurs de livres audio.</p>
+<p>Les livres audio présentés sans texte sont considérés comme des publications optimisées. Ils ne répondent pas à toutes les exigences en matière d’accessibilité et ne seront donc pas identifiés lors du filtrage des publications “accessibles”, mais ils donnent accès à la publication à des utilisateurs spécifiques qui ont besoin de l’audio. Le fait d’offrir aux utilisateurs un moyen de rechercher dans une collection toutes les publications avec le son intégral aidera ces utilisateurs et le fait d’inclure cette information dans les métadonnées affichées alertera également les utilisateurs pour lesquels le son est inaccessible. Cet élément de métadonnées ne doit être inclus que si la valeur est “Oui”. Étant donné que la plupart des publications numériques disponibles ne comportent pas d’audio, il n’est important d’inclure cette métadonnée dans l’interface utilisateur que pour celles qui en comportent.</p>
+<h4 id="mise-en-œuvre-1">Mise en œuvre</h4>
+<pre><code>Accessibilité EPUB : Full Audio
+ONIX : Audio complet</code></pre>
+<p>### 4.3 Résumé de l’accessibilité</p>
+<p>Valeur : Données textuelles des métadonnées</p>
+<h4 id="définition-2">Définition :</h4>
+<p>Une explication en langage clair de l’accessibilité globale de la publication. Le résumé d’accessibilité doit contenir des informations permettant à l’utilisateur final de déterminer facilement si la publication lui est accessible. Les éducateurs seraient également en mesure de déterminer si la publication est accessible pour une utilisation en classe ou dans un cours en ligne.</p>
+<h4 id="justification-2">Justification</h4>
+<p>Une description lisible par l’homme doit être disponible pour qu’un utilisateur final ou un professionnel de l’éducation puisse déterminer si le titre est accessible pour lui personnellement ou pour les étudiants. Elle doit être facile à lire et à comprendre si elle est adaptée à l’utilisation par des personnes handicapées. Cette détermination doit être faite avant que l’utilisateur final n’achète ou ne sélectionne le titre, et doit être déterminée avant qu’un titre ne soit sélectionné pour un cours.</p>
+<h4 id="mise-en-œuvre-2">Mise en œuvre</h4>
+<pre><code>Accessibilité d&#39;EPUB : Résumé
+ONIX : résumé</code></pre>
+<h3 id="conformité-de-laccessibilité">4.4 Conformité de l’accessibilité</h3>
+<p>Valeur : Lien textuel basé sur des métadonnées</p>
+<h4 id="définition-3">Définition</h4>
+<p>Pour signaler la conformité d’une publication en matière d’accessibilité, des métadonnées de conformité d’accessibilité doivent être fournies. Elles déclarent la norme d’accessibilité ou les spécifications d’accessibilité auxquelles la publication est conforme. La valeur peut être une URL ou un code qui identifie la norme d’accessibilité ou les spécifications d’accessibilité.</p>
+<pre><code>Note
+
+Dans le cas des publications EPUB, il s&#39;agira généralement des spécifications d&#39;accessibilité EPUB ou WCAG.
+
+Note
+
+Si une publication est optimisée pour un groupe d&#39;utilisateurs particulier (par exemple, un livre audio), elle ne sera pas conforme aux directives WCAG, mais elle peut être parfaitement utilisable par un groupe particulier (par exemple, les personnes aveugles). Dans ce cas, les métadonnées de conformité à l&#39;accessibilité doivent identifier la spécification utilisée pour créer la publication optimisée.</code></pre>
+<h4 id="justification-3">Justification</h4>
+<p>Les métadonnées de découverte permettent d’exposer l’accessibilité des publications indépendamment de l’accessibilité globale de la publication. Une publication optimisée pour un groupe particulier, comme un livre audio, ne serait pas conforme aux WCAG 2.0, mais elle serait entièrement accessible à de nombreuses personnes. Les métadonnées de conformité détaillent l’accessibilité de la publication, ce qui permet aux utilisateurs finaux et aux éducateurs d’évaluer l’adéquation de la publication pour les individus.</p>
+<pre><code>Note
+
+Au moment de la publication de ce document, le projet de travail de la version 1.1 de l&#39;accessibilité EPUB comporte un problème ouvert (n° 1767) (La tolérance zéro pour la conformité à l&#39;accessibilité est-elle pratique ?). Elle pourrait modifier les valeurs des métadonnées de conformité de l&#39;accessibilité dans la future révision de ces directives.</code></pre>
+<h4 id="mise-en-œuvre-3">Mise en œuvre</h4>
+<pre><code>Accessibilité EPUB : Conformité (Liens)
+Accessibilité du format EPUB : Conformité (chaînes de caractères)
+ONIX : conformité</code></pre>
+<h3 id="certifié-par">4.5 Certifié par</h3>
+<p>Valeur : Données textuelles provenant de métadonnées</p>
+<h4 id="définition-4">Définition</h4>
+<p>La propriété <em>Certified By</em> indique le nom de l’organisme qui a certifié le contenu. Le certificateur du contenu peut être la même entité qui a créé ou publié la publication, ou un certificateur d’accessibilité tiers.</p>
+<h4 id="justification-4">Justification</h4>
+<p>Lorsque les métadonnées d’une publication déclarent qu’elle est conforme à une spécification d’accessibilité atteignant un certain niveau de conformité aux WCAG, la partie qui fait cette déclaration doit être identifiée.</p>
+<h4 id="mise-en-œuvre-4">Mise en œuvre</h4>
+<pre><code>Accessibilité EPUB : Certifié par
+ONIX : Certifié par</code></pre>
+<h3 id="référence-du-certificateur">4.6 Référence du certificateur</h3>
+<p>Valeur : Données textuelles potentiellement liées à partir de métadonnées</p>
+<h4 id="définition-5">Définition</h4>
+<p>Le Certifier Credential indique le nom de la créance ou du badge qui établit l’autorité de l’organisme certificateur.</p>
+<h4 id="justification-5">Justification</h4>
+<p>Le fait d’indiquer que l’organisation qui certifie ce contenu possède une accréditation reconnue par la communauté donne un niveau de confiance plus élevé quant à l’exactitude du niveau de conformité atteint.</p>
+<h4 id="mise-en-œuvre-5">Mise en œuvre</h4>
+<pre><code>Accessibilité EPUB : Certificat d&#39;accréditation
+ONIX : certificat d&#39;authenticité</code></pre>
+<h3 id="rapport-du-certificateur">4.7 Rapport du certificateur</h3>
+<p>Valeur : Données textuelles potentiellement liées provenant de métadonnées</p>
+<h4 id="définition-6">Définition</h4>
+<p>Le rapport du certificateur est une URL pointant vers une page web où le certificateur publie un rapport détaillant l’accessibilité de la publication.</p>
+<h4 id="justification-6">Justification</h4>
+<p>Fournir un lien vers le rapport complet permet aux utilisateurs finaux et aux organisations d’examiner les détails de la conformité ou de l’échec aux normes. L’interface utilisateur doit afficher un lien vers le rapport.</p>
+<h4 id="mise-en-œuvre-6">Mise en œuvre</h4>
+<pre><code>Accessibilité EPUB : Rapport du certificateur
+ONIX : Rapport du certificateur</code></pre>
+<h3 id="risques">4.8 Risques</h3>
+<p>Valeurs : “clignotement”, “simulation de mouvement”, “son”, “pas de clignotement”, “pas de simulation de mouvement”, “pas de son”, “aucun”, ou “inconnu”.</p>
+<h4 id="définition-7">Définition</h4>
+<p>Les risques sont une liste des façons possibles dont cette publication pourrait être physiologiquement dangereuse pour certains utilisateurs (par exemple, les éléments clignotants, les sons de fond et la simulation de mouvement).</p>
+<h4 id="justification-7">Justification</h4>
+<p>Contrairement aux autres propriétés d’accessibilité, la présence de dangers peut être exprimée de manière positive ou négative. En effet, les utilisateurs recherchent plus souvent un contenu sans risque pour eux. Cette section devrait toujours être affichée ; indiquez qu’aucune métadonnée n’a été fournie si c’est le cas.</p>
+<h4 id="mise-en-œuvre-7">Mise en œuvre</h4>
+<pre><code>Accessibilité EPUB : Risques
+ONIX : Risques</code></pre>
+<h3 id="toutes-les-métadonnées-daccessibilité">4.9 Toutes les métadonnées d’accessibilité</h3>
+<p>Valeur : Lien vers la liste complète de tous les champs de métadonnées</p>
+<h4 id="définition-8">Définition</h4>
+<p>Ce champ fournit la liste de toutes les métadonnées d’accessibilité de la publication. Il peut s’agir d’un hyperlien vers une autre page ou d’une liste dans l’élément HTML summary/details. Il doit inclure les métadonnées pour accessibilityFeature, accessibilityHazard, accessMode, accessModeSufficient et toutes les métadonnées d’accessibilité et de conformité énumérées en amont de ce document.</p>
+<h4 id="justification-8">Justification</h4>
+<p>Une liste complète des métadonnées d’accessibilité est importante pour les utilisateurs avancés qui souhaitent connaître la présence de caractéristiques d’accessibilité spécifiques dans la publication. Cette liste est également importante pour la vérification de l’interprétation des métadonnées d’accessibilité fournies conformément à ce guide d’expérience utilisateur.</p>
+<h4 id="mise-en-œuvre-8">Mise en œuvre</h4>
+<pre><code>Accessibilité EPUB : Toutes les métadonnées d&#39;accessibilité https://www.w3.org/community/a11y-discov-vocab/ (draft)
+
+ONIX : Toutes les métadonnées d&#39;accessibilité For a complete list of ONIX accessibility metadata refer to the crosswalk. http://www.a11ymetadata.org/the-specification/metadata-crosswalk/ (no longer maintained). New crosswalk : https://w3c.github.io/a11y-discov-vocab/crosswalk/</code></pre>
+<h2 id="a.-a.-remerciements">A. A. Remerciements</h2>
+<p>Cette section est non normative.</p>
+<h3 id="a.1-contributeurs">A.1 Contributeurs</h3>
+</body>
+</html>
