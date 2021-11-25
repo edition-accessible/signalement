@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Gautier Chomel" />
+  <meta name="author" content="W3C Publishing Community Group. Traduction EDRLab" />
   <title>Guide d’expérience utilisateur pour l’affichage des métadonnées d’accessibilité 1.0</title>
   <style type="text/css">
       code{white-space: pre-wrap;}
@@ -16,9 +16,15 @@
 <body>
 <header>
 <h1 class="title">Guide d’expérience utilisateur pour l’affichage des métadonnées d’accessibilité 1.0</h1>
-<p class="author">Gautier Chomel</p>
+<p class="author">W3C Publishing Community Group. Traduction EDRLab</p>
 <p class="date">Novembre 2021</p>
 </header>
+<p>Dernière version publiée : https://www.w3.org/publishing/a11y/UX-Guide-metadata/principles/</p>
+<p>Dernière version de l’éditeur : https://w3c.github.io/publ-a11y/UX-Guide-Metadata/draft/principles/</p>
+<p>Rédacteurs : - Charles LaPierre (Benetech) - Gregorio Pellegrino (Fondazione LIA)</p>
+<p>Participez : - GitHub w3c/publ-a11y</p>
+<p>Copyright © 2021 les contributeurs du Guide d’expérience utilisateur pour l’affichage des métadonnées d’accessibilité 1.0, publié par le Publishing Community Group dans le cadre du W3C Community Final Specification Agreement (FSA). Un résumé lisible par l’homme est disponible.</p>
+<p>Traduction Française par EDRLab.</p>
 <h2 id="résumé">Résumé</h2>
 <p>Trouver, acheter et finalement lire une publication est une expérience très personnelle. Pour la plupart d’entre nous, c’est une routine. Nous allons dans une librairie, nous cherchons le titre qui nous intéresse ou nous parcourons la liste des meilleures ventes, puis nous achetons et commençons à lire la publication.</p>
 <p>Imaginons maintenant que vous soyez aveugle et que vous ayez recours à une technologie d’assistance pour lire la publication. Vous vous demandez : mon lecteur d’écran fonctionnera-t-il avec ce titre ; y a-t-il des descriptions d’images qui seront énoncées ; y a-t-il des référence aux pages du livre imprimé ; l’ordre de lecture est-il logique pour que je n’entende pas un <em>avertissement</em> après avoir lu un paragraphe qui pourrait être dérangeant ou particulier ? Ce ne sont là que quelques-unes des préoccupations des lecteurs avec des besoins spécifiques en matière d’accessibilité lorsqu’ils essaient d’acheter et de lire une publication numérique.</p>
@@ -95,7 +101,7 @@ Informations sur l&#39;accessibilité
 <p>L’ordre recommandé pour la présentation des informations est le suivant :</p>
 <ol type="1">
 <li>Adapté aux lecteurs d’écran</li>
-<li>Audio complet (si présent)</li>
+<li>audio intégral (si présent)</li>
 <li>Résumé de l’accessibilité</li>
 <li>Conformité de l’accessibilité</li>
 <li>Certifié par</li>
@@ -104,7 +110,7 @@ Informations sur l&#39;accessibilité
 <li>Dangers</li>
 <li>Toutes les métadonnées d’accessibilité</li>
 </ol>
-<p>Les deux principaux aménagements d’accessibilité à répertorier sont les suivants : la publication est-elle “adaptée aux lecteurs d’écran” et a-t-elle un “contenu audio complet” ? Une publication adaptée aux lecteurs d’écran implique que tout le texte est accessible et que toutes les images sont décrites, si nécessaire. Une publication qui indique qu’elle comporte une version audio complète permet à l’utilisateur de savoir que l’intégralité de la publication peut être écoutée grâce à la lecture audio.</p>
+<p>Les deux principaux aménagements d’accessibilité à répertorier sont les suivants : la publication est-elle “adaptée aux lecteurs d’écran” et a-t-elle un “contenu audio intégral” ? Une publication adaptée aux lecteurs d’écran implique que tout le texte est accessible et que toutes les images sont décrites, si nécessaire. Une publication qui indique qu’elle comporte une version audio complète permet à l’utilisateur de savoir que l’intégralité de la publication peut être écoutée grâce à la lecture audio.</p>
 <p>L’élément important suivant est le résumé de l’accessibilité, qui est constitué de métadonnées décrivant tous les aménagements d’accessibilité fournis par cette publication.</p>
 <p>Viennent ensuite les informations sur la conformité de l’accessibilité (le niveau de conformité atteint, l’organisme qui l’a certifié et les références de certification).</p>
 <p>Enfin, les risques éventuels sont affichés et un lien est créé vers toutes les métadonnées d’accessibilité, y compris toutes les caractéristiques d’accessibilité spécifiques telles que les descriptions d’images, le langage MathML, une table des matières, etc.</p>
@@ -119,7 +125,7 @@ Informations sur l&#39;accessibilité
 <p><a href="https://www.w3.org/publishing/a11y/UX-Guide-metadata/techniques/epub-metadata/index.html#screen-reader-friendly">Accessibilité d’EPUB : Adapté aux lecteurs d’écran</a></p>
 <p><a href="https://www.w3.org/publishing/a11y/UX-Guide-metadata/techniques/onix-metadata/index.html#screen-reader-friendly">ONIX : adapté aux lecteurs d’écran (en anglais)</a></p>
 <p><a href="lien%20à%20faire">ONIX : adapté aux lecteurs d’écran (en français)</a></p>
-<h3 id="audio-complet">4.2 Audio complet</h3>
+<h3 id="audio-intégral">4.2 Audio intégral</h3>
 <p>Valeurs : “Oui” ou si non alors ne pas afficher cette section.</p>
 <h4 id="définition-1">Définition</h4>
 <p>Indication que cette publication peut être lue intégralement en mode audio. Cette désignation s’applique même si le texte est également disponible avec l’audio.</p>
@@ -128,7 +134,7 @@ Informations sur l&#39;accessibilité
 <p>Les livres audio présentés sans texte sont considérés comme des publications optimisées. Ils ne répondent pas à toutes les exigences en matière d’accessibilité et ne seront donc pas identifiés lors du filtrage des publications “accessibles”, mais ils donnent accès à la publication à des utilisateurs spécifiques qui ont besoin de l’audio. Le fait d’offrir aux utilisateurs un moyen de rechercher dans une collection toutes les publications avec le son intégral aidera ces utilisateurs et le fait d’inclure cette information dans les métadonnées affichées alertera également les utilisateurs pour lesquels le son est inaccessible. Cet élément de métadonnées ne doit être inclus que si la valeur est “Oui”. Étant donné que la plupart des publications numériques disponibles ne comportent pas d’audio, il n’est important d’inclure cette métadonnée dans l’interface utilisateur que pour celles qui en comportent.</p>
 <h4 id="mise-en-œuvre-1">Mise en œuvre</h4>
 <pre><code>Accessibilité EPUB : Full Audio
-ONIX : Audio complet</code></pre>
+ONIX : audio intégral</code></pre>
 <p>### 4.3 Résumé de l’accessibilité</p>
 <p>Valeur : Données textuelles des métadonnées</p>
 <h4 id="définition-2">Définition :</h4>
