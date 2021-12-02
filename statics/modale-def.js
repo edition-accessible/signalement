@@ -21,7 +21,7 @@ var lastFocus = lastElem(modalContent);
 var modalWrapper = document.getElementById('wrapper');
 //traitement
 /* ***
-Configuration de la modale. À l'ouverture  :
+Configuration de la modale. À l'ouverture :
 - la modale est rendue visible,
 - la restitution du contenu est inhibée,
 - le focus est donné au premier élément pouvant le recevoir dans la modale (le bouton de fermeture),
@@ -32,65 +32,65 @@ Configuration de la modale. À l'ouverture  :
 - la tabulation est surveillée pour assurer la navigation circulaire dans la modale.
 *** */
 modalBtn.addEventListener('click', function() {
-    //open/close
-    modalContent.classList.add('is-visible');
-    modalWrapper.setAttribute('aria-hidden', 'true');
-    modalClose.focus();
-    //trapping focus
-    document.addEventListener('focus', trapFocus, true);
-    //pas de click en dehors de la modale
-    document.addEventListener('click', noClick, true);
-    //fermeture via escape
-    document.addEventListener('keydown', function(event) {
-        if (event.keyCode === 27) stopListening();
-    }, false);
-    //bouton de fermeture
-    modalClose.addEventListener('click', stopListening, false);
-    //Tabulation circulaire : 
-    // si la fenêtre à le focus, en tabulation arrière on doit redonner le focus sur le dernier élément (variable 'lastFocus')
-    document.addEventListener('keyup', function(event) {
-        var curEle = document.activeElement;
-        if (curEle === modalContent) {
-            if (event.shiftKey && event.keyCode === 9) {
-                lastFocus.focus();
-            }
-            event.stopPropagation();
-        }
-    }, false);
+ //open/close
+ modalContent.classList.add('is-visible');
+ modalWrapper.setAttribute('aria-hidden', 'true');
+ modalClose.focus();
+ //trapping focus
+ document.addEventListener('focus', trapFocus, true);
+ //pas de click en dehors de la modale
+ document.addEventListener('click', noClick, true);
+ //fermeture via escape
+ document.addEventListener('keydown', function(event) {
+ if (event.keyCode === 27) stopListening();
+ }, false);
+ //bouton de fermeture
+ modalClose.addEventListener('click', stopListening, false);
+ //Tabulation circulaire : 
+ // si la fenêtre à le focus, en tabulation arrière on doit redonner le focus sur le dernier élément (variable 'lastFocus')
+ document.addEventListener('keyup', function(event) {
+ var curEle = document.activeElement;
+ if (curEle === modalContent) {
+ if (event.shiftKey && event.keyCode === 9) {
+ lastFocus.focus();
+ }
+ event.stopPropagation();
+ }
+ }, false);
 }, false);
 /* *** Dépendances *** */
 //Récupère le dernier élément de la fenêtre
 function lastElem(modale) {
-    var eleFocus = modale.getElementsByTagName('*'); //récupérer tous les éléments de la modale	
-    for (var i = 0, len = eleFocus.length; i < len; i++) {
-        if (eleFocus[i].tabIndex >= '0') { //On teste si l'élément peut recevoir le focus	
-            lastFocus = eleFocus[i]; // Si oui, on affecte l'élément à 'lastFocus'
-        }
-    };
-    return lastFocus;
+ var eleFocus = modale.getElementsByTagName('*'); //récupérer tous les éléments de la modale	
+ for (var i = 0, len = eleFocus.length; i < len; i++) {
+ if (eleFocus[i].tabIndex >= '0') { //On teste si l'élément peut recevoir le focus	
+ lastFocus = eleFocus[i]; // Si oui, on affecte l'élément à 'lastFocus'
+ }
+ };
+ return lastFocus;
 }
 //trapping focus
 function trapFocus(event) {
-    console.log('event focus');
-    if (!modalContent.contains(event.target)) {
-        console.log('focus !');
-        modalContent.focus();
-    }
+ console.log('event focus');
+ if (!modalContent.contains(event.target)) {
+ console.log('focus !');
+ modalContent.focus();
+ }
 };
 //désactivation du click
 function noClick(event) {
-    console.log('event click');
-    if (!modalContent.contains(event.target)) {
-        console.log('no click');
-        event.stopPropagation();
-        event.preventDefault();
-    }
+ console.log('event click');
+ if (!modalContent.contains(event.target)) {
+ console.log('no click');
+ event.stopPropagation();
+ event.preventDefault();
+ }
 };
 //fermeture, rétablissement de la restitution du contenu, destruction des listener focus et click, remise du focus sur le bouton de contrôle
 function stopListening() {
-    modalContent.classList.remove('is-visible');
-    modalWrapper.removeAttribute('aria-hidden');
-    document.removeEventListener('focus', trapFocus, true);
-    document.removeEventListener('click', noClick, true);
-    modalBtn.focus();
+ modalContent.classList.remove('is-visible');
+ modalWrapper.removeAttribute('aria-hidden');
+ document.removeEventListener('focus', trapFocus, true);
+ document.removeEventListener('click', noClick, true);
+ modalBtn.focus();
 };

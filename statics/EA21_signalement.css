@@ -21,7 +21,7 @@ body{
 	overflow-x:hidden;
 	color:#000;
 	background:#fff;
-    margin: 10px;
+ margin: 10px;
 }
 
 body a{
@@ -58,7 +58,7 @@ body a{
 
 button{
 	cursor:pointer;
-    margin-top: 10px;
+ margin-top: 10px;
 	margin-bottom: 10px;
 }
 
@@ -68,7 +68,7 @@ button{
 /**	background:#142347;
 	color:#fff;**/
 	padding:0 0 0 0;
-    color: #1D3E80;
+ color: #1D3E80;
 }
 
 h1{
@@ -81,7 +81,7 @@ h1{
 /** nav **/
 #navigation{
 	margin-top:1em;
-    text-align: center;
+ text-align: center;
 }
 #navigation ul{
 	padding:0;
@@ -95,27 +95,27 @@ h1{
 		float:left;
 		margin:0;
 	}
-    #navigation li{
-        display:inline-block;
-        list-style:none;
-        font-size: 1.1em;
-    }
-    
-    #navigation li a{
-        display:inline-block;
-        min-width:50%;
-        color:rgb(94, 97, 105);
-        border-radius:5px;
-        text-decoration:none;
-        padding:10px;
-        margin-bottom:10px;
-    }
+ #navigation li{
+ display:inline-block;
+ list-style:none;
+ font-size: 1.1em;
+ }
+ 
+ #navigation li a{
+ display:inline-block;
+ min-width:50%;
+ color:rgb(94, 97, 105);
+ border-radius:5px;
+ text-decoration:none;
+ padding:10px;
+ margin-bottom:10px;
+ }
 }
 
 #navigation li{
-    display:inline-block;
+ display:inline-block;
 	list-style:none;
-    font-size: 1.1em;
+ font-size: 1.1em;
 	text-align: center;
 }
 
