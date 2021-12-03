@@ -10,7 +10,7 @@
 .listnodeco{
 	list-style-type: none;
 }
-
+.simple{max-width: 900px; padding: 1em;}
 *{
 	box-sizing:border-box;
 	line-height:1.33em;
