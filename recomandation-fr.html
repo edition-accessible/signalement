@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Renseignements sur l'accessibilité du livre | Signalement des livres numériques accessibles</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="statics/EA21_signalement.css" media="all" />
+    <link rel="stylesheet" href="statics/EA21_accessibilite.css" media="all" />
+    <link rel="stylesheet" href="statics/EA21_modale.css" media="all" />
+</head>
+
+<body>
+    <div class="inside">
+<nav role="navigation" aria-label="Accès rapide"><a id="skiplink" href="#main">Aller au contenu</a></nav>
+<div id="wrapper">
+
+    <div id="header" class="clear">
+<div class="inside">
+    <div class="">
+<header role="banner">
+    <h1>Signalement des livres numériques nativement accessibles</h1>
+
+    <p>Réalisé par EDRLab, cet ensemble de pages web proposent différents exemples d'implémentation du <i>Guide d'expérience utilisateur pour l'affichage des métadonnées d'accessibilité 1.0</i> élaboré par le <i>Publishing Community Group du W3C.</i></p>
+</header>
+    </div>
+    <hr/>
+    <nav id="navigation" role="navigation" aria-label="Menu de navigation">
+<ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="fiche-livre.html">Affichage dans une fiche livre</a></li>
+    <li><a href="recherche.html">Options de recherche</a></li>
+    <li><a href="declaration.html">Déclarations</a></li>
+    <li><a href="references.html">Références</a></li>
+
+</ul>
+    </nav>
+    <!-- end #navigation" -->
+</div>
+    </div>
+    <hr />
+    <!-- end #header -->
+
+
+    <main id="main" role="main" tabindex="-1">
+<div class="inside">
+<section><h2>Exemple 1 : fonctionalités & accessibilité</h2>
+    <article class="clear" id="livreex1">
+
+    <h3>Fiche livre</h3>
+    <details>
+<summary>Risques</summary>
+    <ul>
+    <li>Flashs lumineux</li>
+    <li>Lecture de vidéos automatique</li>
+    <li>Effets sonores</li></ul>
+    </details>
+    <details>
+<summary>Fonctionalités</summary>
+    <ul>
+    <li>Table des matières</li>
+    <li>Référence à la pagination du livre imprimé</li>
+    <li>Risques : aucun</li></ul>
+    </details>
+    <details>
+    <summary>Répond à des besoins spécifiques</summary>
+      <p>Cette publication comprend un balisage permettant la compatibilité avec les technologies d'assistance. Les images de cette publication sont décrites. La liste ci-dessous donne le détail des fonctions incluses.</p>
+<ul>
+<li>Ordre de lecture logique</li>
+<li>Descriptions des images</li>
+<li>Conforme à la norme EPUB accessibilité 1.0 & WCAG AA</li>
+<li>Conformité établie par xxxx</li>
+<li><a href="ace-smart-report-fr.html">Rapport de conformité de ce titre</a>
+</li>
+<li><a href="infos-accessibilite.html">Politique d'accessibilité de l'éditeur</a></li></ul>
+</details>
+
+    </article>
+    <article><h3>Options de recherche</h3>
+
+<h4>Fonctions</h4>
+<ul class="facet-multiselect-checkbox">
+<li><input type="checkbox"><label class="option">Table des matières</label></li>
+<li><input type="checkbox"><label class="option">Référence à la pagination du livre imprimé</label></li></ul>
+       
+<h4>Besoins spécifiques</h4>
+<ul class="facet-multiselect-checkbox">
+<li><input type="checkbox"><label class="option">Ordre de lecture logique</label></li>
+<li><input type="checkbox"><label class="option">Descriptions des images</label></li>
+<li><input type="checkbox"><label class="option">Conforme à la norme EPUB accessibilité 1.0 & WCAG AA</label></li>
+<li><input type="checkbox"><label class="option">Conformité établie </label></li>
+</ul>
+<h4>Éviter les risques</h4>
+<ul class="facet-multiselect-checkbox">
+<li><input type="checkbox"><label class="option">Flashs lumineux</label></li>
+<li><input type="checkbox"><label class="option">Lecture de vidéos automatique</label></li>
+<li><input type="checkbox"><label class="option">Effets sonores</label></li>
+</ul>
+
+    </article></section>
+    <hr/>
+    <section><h2>Exemple 2 : modes de lecture</h2></section>
+    <article class="clear" id="livreex3">
+        <h3>Fiche livre</h3>
+<details>
+    <summary>Modes de lecture</summary>
+    <ul>
+    <li>Mise en page adaptable</li>
+    <li>Structuré, navigable</li>
+    <li>Le contenu textuel suffit à la compréhension</li>
+    <li>Le contenu audio suffit à la compréhension intégral</li> 
+    <li>Texte & audio synchronisés</li> 
+    </ul>
+</details> 
+    </article>
+    <article><h3>Options de recherche</h3>
+        <h4>Modes de lecture</h4>
+        <ul class="facet-multiselect-checkbox">
+        <li><input type="checkbox"><label class="option">Mise en page adaptable</label></li>
+        <li><input type="checkbox"><label class="option">Structuré, navigable</label></li>
+        <li><input type="checkbox"><label class="option">Le contenu textuel suffit à la compréhension</label></li>
+        </ul>
+        <h4>Fonctions</h4>
+        <ul class="facet-multiselect-checkbox">
+        <li><input type="checkbox"><label class="option">Le contenu audio suffit à la compréhension intégral</label></li>
+        <li><input type="checkbox"><label class="option">texte & audio synchronisés</label></li></ul>
+               
+
+</div>
+    </main>
+
+    <footer>
+<hr/>
+<!--<img id="logo_img" title="EDRLab" src="https://www.edrlab.org/wp-content/uploads/2016/12/edrlab_logo@2x.jpg" alt="EDRLab" style="max-height: 33px;">-->
+<span><i>Ces pages sont réalisées à titre d'exemple. Les fonctionalités présentées n'ont pas vocation à être fonctionelles.</i></span>
+
+    </footer>
+    <!-- end #main -->
+</div>
+<!-- end #wrapper -->
+
+</body>
+
+</html>
