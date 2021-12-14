@@ -45,15 +45,18 @@
     <main id="main" role="main" tabindex="-1">
 <div class="inside">
 <section><h2>Exemple 1 : fonctionalités & accessibilité</h2>
-    <article class="clear" id="livreex1">
-
+    <article id="livreex1">
+        <div class="left-title-book">
+            <img class="img" src="statics/lamarquedes4-cover.jpg" role="doc-cover" alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+        </div>
+        <div  class="fichelivre">
     <h3>Fiche livre</h3>
     <details>
-<summary>Fonctionalités</summary>
+    <summary>Fonctionalités</summary>
     <ul>
     <li>Table des matières</li>
     <li>Référence à la pagination du livre imprimé</li>
-    <li>Risques : aucun</li></ul>
+</ul>
     </details>
     <details>
     <summary>Répond à des besoins spécifiques</summary>
@@ -66,8 +69,7 @@
 <li><a href="ace-smart-report-fr.html">Rapport de conformité de ce titre</a>
 </li>
 <li><a href="infos-accessibilite.html">Politique d'accessibilité de l'éditeur</a></li></ul>
-</details>
-
+    </details>
     <details>
 <summary>Risques</summary>
     <ul>
@@ -76,8 +78,10 @@
     <li>Effets sonores</li></ul>
     </details>
     </article>
-    <article><h3>Options de recherche</h3>
-
+    </section>
+    
+    <section>
+    <article  class="fichelivre"><h3>Options de recherche</h3>
 <h4>Fonctions</h4>
 <ul class="facet-multiselect-checkbox">
 <li><input type="checkbox"><label class="option">Table des matières</label></li>
@@ -100,7 +104,11 @@
     </article></section>
     <hr/>
     <section><h2>Exemple 2 : modes de lecture</h2></section>
-    <article class="clear" id="livreex3">
+    <article id="livreex3">
+        <div class="left-title-book">
+            <img class="img" src="statics/lamarquedes4-cover.jpg" role="doc-cover" alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+        </div></article>
+        <article class="fichelivre">
         <h3>Fiche livre</h3>
 <details>
     <summary>Modes de lecture</summary>
@@ -113,16 +121,14 @@
     </ul>
 </details> 
     </article>
-    <article><h3>Options de recherche</h3>
+    <article  class="fichelivre"><h3>Options de recherche</h3>
         <h4>Modes de lecture</h4>
         <ul class="facet-multiselect-checkbox">
         <li><input type="checkbox"><label class="option">Mise en page adaptable</label></li>
         <li><input type="checkbox"><label class="option">Structuré, navigable</label></li>
         <li><input type="checkbox"><label class="option">Le contenu textuel suffit à la compréhension</label></li>
-
         <li><input type="checkbox"><label class="option">Le contenu audio suffit à la compréhension intégral</label></li>
         <li><input type="checkbox"><label class="option">texte & audio synchronisés</label></li></ul>
-               
 
 </div>
     </main>
