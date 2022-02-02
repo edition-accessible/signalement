@@ -46,12 +46,13 @@
  <section>
  <h2>Correspondances</h2>
  <p>Travail en cours. </p><p>Cette section propose une correspondance entre les éléments à afficher dans les interfaces utilisateurs et les principaux standards de métadonnées. Elle est à compléter et permettra d'identifier les manques dans chaque standard.</p>
+ <p>Les codes marc21 et unimarc sont à compléter, ici et/ou dans le <a href="https://w3c.github.io/a11y-discov-vocab/crosswalk/"><span lang="en">W3C Schema.org Accessibility Properties Crosswalk</span></a></p>
 <h3>Modes de lecture</h3>
  <details><summary>Mise en page fluide</summary>
 <ul>
   <li><strong>Note</strong> : </li>
  <li><strong>ONIX</strong> : <a href="https://ns.editeur.org/onix/fr/175/E200">Liste 175 Code E200 : Redimensionnable.</a></li>
-  <li><strong>Schema.org</strong> : </li>
+  <li><strong>Schema.org</strong> : displayTransformability</li>
   <li><strong>MARC21</strong> : </li>
   <li><strong>UNIMARC</strong> : </li>
 </ul></details>
@@ -66,44 +67,44 @@
 <details><summary>Le contenu textuel permet la compréhension</summary>
 <ul>
   <li><strong>Note</strong> : dans le cas où la mesure de protection serait au choix de l'utilisateur, il devra être fait mention d'un risque de rupture de l'accessibilité lors de la sélection de la licence.</li>
- <li><strong>ONIX</strong> : Liste 81 Code 10 + liste 196 Code 10</li>
+ <li><strong>ONIX</strong> : Liste 81 Code 10 + liste 196 Code 10 + 16 (Représentations graphiques de données également accessibles comme données non graphiques)</li>
   <li><strong>Schema.org</strong> : accessModeSufficient:textual</li>
   <li><strong>MARC21</strong> : </li>
-  <li><strong>UNIMARC</strong> : </li>
+  <li><strong>UNIMARC</strong> : 341 	0#$atextual</li>
 </ul></details>
 <details><summary>Le contenu audio permet la compréhension</summary>
 <ul>
   <li><strong>Note</strong> : </li>
  <li><strong>ONIX</strong> : Liste 81 Code 01 : Audiobook.</li>
   <li><strong>Schema.org</strong> : accessModeSufficient:auditory</li>
-  <li><strong>MARC21</strong> : </li>
+  <li><strong>MARC21</strong> : 341 	0#$aauditory</li>
   <li><strong>UNIMARC</strong> : </li>
 </ul></details>
 <details><summary>Texte & audio synchronisés</summary>
     <ul>
       <li><strong>Note</strong> : </li>
      <li><strong>ONIX</strong> : Liste 196 Code 20 : Audio préenregistré synchronisé.</li>
-      <li><strong>Schema.org</strong> : </li>
+      <li><strong>Schema.org</strong> : sychronizedAudioText</li>
       <li><strong>MARC21</strong> : </li>
-      <li><strong>UNIMARC</strong> : </li>
+      <li><strong>UNIMARC</strong> : 231 ##$i20$2onix196</li>
     </ul></details>
 
 <h3>Fonctionalités</h3>
 <details><summary>Table des matières</summary>
  <ul>
   <li><strong>Note</strong> : </li>
- <li><strong>ONIX</strong> : </li>
-  <li><strong>Schema.org</strong> : </li>
+ <li><strong>ONIX</strong> : List: 196; Code: 12: Index navigation</li>
+  <li><strong>Schema.org</strong> : index</li>
   <li><strong>MARC21</strong> : </li>
-  <li><strong>UNIMARC</strong> : </li>
+  <li><strong>UNIMARC</strong> : 231 ##$i12$2onix196</li>
  </ul></details>
  <details><summary>Référence à la pagination du livre imprimé</summary>
  <ul>
   <li><strong>Note</strong> : </li>
- <li><strong>ONIX</strong> : </li>
-  <li><strong>Schema.org</strong> : </li>
+ <li><strong>ONIX</strong> : <a href="https://ns.editeur.org/onix/fr/196/19">Liste 196 Code	19 	Numérotation de pages équivalente au document imprimé</a></li>
+  <li><strong>Schema.org</strong> : printPageNumbers</li>
   <li><strong>MARC21</strong> : </li>
-  <li><strong>UNIMARC</strong> : </li>
+  <li><strong>UNIMARC</strong> : 231 ##$i19$2onix196</li>
  </ul></details>
 <h3>Réponses à des besoins spécifiques</h3>
 <details><summary>Résumé d'accessibilité</summary>
@@ -112,31 +113,31 @@
  <li><strong>ONIX</strong> : List 196 Code 00 : Résumé sur l'accessibilité</li>
   <li><strong>Schema.org</strong> : schema:accessibilitySummary</li>
   <li><strong>MARC21</strong> : </li>
-  <li><strong>UNIMARC</strong> : </li>
+  <li><strong>UNIMARC</strong> : 231 ##$i00$2onix196</li>
  </ul></details>
  <details><summary>Structuré, navigable</summary>
  <ul>
   <li><strong>Note</strong> : </li>
  <li><strong>ONIX</strong> : </li>
-  <li><strong>Schema.org</strong> : </li>
+  <li><strong>Schema.org</strong> : structuralNavigation</li>
   <li><strong>MARC21</strong> : </li>
   <li><strong>UNIMARC</strong> : </li>
  </ul></details>
  <details><summary>Ordre de lecture logique</summary>
  <ul>
   <li><strong>Note</strong> : </li>
- <li><strong>ONIX</strong> : </li>
-  <li><strong>Schema.org</strong> : </li>
+ <li><strong>ONIX</strong> : List: 196; Code: 13: Reading order</li>
+  <li><strong>Schema.org</strong> : readingOrder</li>
   <li><strong>MARC21</strong> : </li>
-  <li><strong>UNIMARC</strong> : </li>
+  <li><strong>UNIMARC</strong> : 231 ##$i13$2onix196</li>
  </ul></details>
  <details><summary>Descriptions des images</summary>
  <ul>
   <li><strong>Note</strong> : </li>
- <li><strong>ONIX</strong> : </li>
-  <li><strong>Schema.org</strong> : </li>
+ <li><strong>ONIX</strong> : Liste 196 Code 16 	Représentations graphiques de données également accessibles comme données non graphiques</li>
+  <li><strong>Schema.org</strong> : longDescription</li>
   <li><strong>MARC21</strong> : </li>
-  <li><strong>UNIMARC</strong> : </li>
+  <li><strong>UNIMARC</strong> :  : 231 ##$i16$2onix196</li>
  </ul></details>
  <details><summary>Conforme au standards EPUB accessibilité 1.0 & WCAG AA</summary>
  <ul>
@@ -144,33 +145,100 @@
  <li><strong>ONIX</strong> : Liste 196 Code 03 : Spécifications d’accessibilité EPUB 1.0 AA</li>
   <li><strong>Schema.org</strong> : dcterms:conformsTo</li>
   <li><strong>MARC21</strong> : </li>
-  <li><strong>UNIMARC</strong> : </li>
+  <li><strong>UNIMARC</strong> :  : 231 ##$i03$2onix196</li>
  </ul></details>
  <details><summary>Conformité établie par xxxx</summary>
  <ul>
   <li><strong>Note</strong> : </li>
  <li><strong>ONIX</strong> : Liste 196 Code 93 : Certification de conformité par</li>
   <li><strong>Schema.org</strong> : a11y:certifiedBy</li>
-  <li><strong>MARC21</strong> : </li>
-  <li><strong>UNIMARC</strong> : </li>
+  <li><strong>MARC21</strong> : 341 $8$0#$aAuthority record control number or standard number</li>
+  <li><strong>UNIMARC</strong> :  : 231 ##$i93$2onix196</li>
  </ul></details>
  <details><summary>Rapport de conformité de ce titre</summary>
  <ul>
   <li><strong>Note</strong> : </li>
- <li><strong>ONIX</strong> : </li>
-  <li><strong>Schema.org</strong> : </li>
+ <li><strong>ONIX</strong> : 196 	94 	Page web pour les informations détaillées d’accessibilité</li>
+  <li><strong>Schema.org</strong> : certifierReport</li>
   <li><strong>MARC21</strong> : </li>
-  <li><strong>UNIMARC</strong> : </li>
+  <li><strong>UNIMARC</strong> :  : 231 ##$i94$2onix196</li>
  </ul></details>
  <details><summary>Politique d'accessibilité de l'éditeur</summary>
  <ul>
    <li><strong>Note</strong> : </li>
- <li><strong>ONIX</strong> : </li>
+ <li><strong>ONIX</strong> : 196 	96 	Page web de l’éditeur pour les informations détaillées d’accessibilité</li>
    <li><strong>Schema.org</strong> : </li>
    <li><strong>MARC21</strong> : </li>
-   <li><strong>UNIMARC</strong> : </li>
+   <li><strong>UNIMARC</strong> :  : 231 ##$i96$2onix196</li>
  </ul></details>
-
+<details><summary>Autres informations spécifiques</summary><ul>
+  <li><strong>Note</strong> : n'afficher qu'en cas de présence. </li>
+  <li><strong>ONIX</strong> : un ou des items de la <a href="https://ns.editeur.org/onix/fr/196">Liste 196</a> parmis :  ; 196:15 	Descriptions alternatives complètes
+   ; 196:16 	Représentations graphiques de données également accessibles comme données non graphiques
+   ; 196:17 	Contenu mathématique accessible
+   ; 196:18 	Contenu chimique accessible
+   ; 196:19 	Numérotation de pages équivalente au document imprimé
+   ; 196:20 	Audio synchronisé préenregistré
+   ; 196:21 	Synthèse vocale optimisée
+   ; 196:22 	Balisage de la langue fourni
+   ; 196:24 	Lisibilité adaptée à la dyslexie
+   ; 196:25 	Usage de la couleur
+   ; 196:26 	Usage du contraste
+   ; 196:27 	Usage de l’audio
+   ; 196:28 	Audio-description alternative complète
+   ; 196:29 	Navigation suivant/précédent
+   ; List: 81; Code 19: Figures, Diagrams, Charts
+  </li>
+    <li><strong>Schema.org</strong> : annotations
+      ; audioDescription 
+      ; braille
+      ; captions
+      ; ChemML
+      ; describedMath
+      largePrint ; latex
+      rubyAnnotations
+ ; signLanguage
+; taggedPDF
+ ; tactileGraphic
+ ; tactileObject
+ ; timingControl
+ ; transcript
+ ; ttsMarkup
+accessibilityAPI (vocabulary list follows)
+ ; AndroidAccessibility
+ ; ARIA
+ ; ATK
+ ; AT-SPI
+ ; BlackberryAccessibility
+ ; iAccessible2
+ ; iOSAccessibility
+ ; JavaAccessibility
+ ; MacOSXAccessibility
+ ; MSAA
+ ; UIAutomation
+chartOnVisual  Diagrams, Charts
+chemOnVisual
+ ; colorDependent
+ ; diagramOnVisual 	
+mathOnVisual
+ ; musicOnVisual
+ ; tactile
+ ; textOnVisual
+    </li>
+    <li><strong>MARC21</strong> : <a href="https://www.loc.gov/marc/bibliographic/bd341.html">Zone 341</a> : 
+      $a - Content access mode (NR)
+      $b - Textual assistive features (R)
+      $c - Visual assistive features (R)
+      $d - Auditory assistive features (R)
+      $e - Tactile assistive features (R)
+      $2 - Source (NR)
+      $3 - Materials specified (NR)
+      $6 - Linkage (NR)
+      $8 - Field link and sequence number (R)
+  </li>
+    <li><strong>UNIMARC</strong> : la <a href="https://cdn.ifla.org/wp-content/uploads/U_B_231_update2021_ONLINE_FINAL-1.pdf">Zone 231i autorise l'usage des codes de la liste ONIX 196 selon la règle suivante : </a> 231 ##$i<i>(placer le code onix)</i>$2onix196</li>
+  </ul>
+</details>
 
  <h3> Points d'attention</h3>
 
@@ -214,6 +282,7 @@
 
 
  </section>
+ <hr/>✽ ✽ ✽
  <section>
  <h2 class="center">Documentation de référence</h2> 
  <article class="clear">
