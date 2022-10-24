@@ -1,0 +1,191 @@
+<h1 id="proposition-revue">Proposition revue</h1>
+<p>Cette proposition vise à simplifier l’accès aux informations clés en les affichant en dehors d’une boîte de détails. Les autres informations restent encadrées, mais les redondances ne sont plus exposées. <a href="#book-details">Plus de détails sur la façon de remplir les informations</a> sont fournis ci-dessous.</p>
+<figure>
+<img src="thorium-bookInfo-A11yRe.png" alt="" /><figcaption>Capture d’écran du rendu visuel attendu pour le panneau d’information du livre</figcaption>
+</figure>
+<figure>
+<img src="thorium-bookInfo-A11yRe2.png" alt="" /><figcaption>Capture d’écran avec les détails d’accessibilité en état ouvert</figcaption>
+</figure>
+<h2 id="filtres-de-recherche">Filtres de recherche</h2>
+<ul>
+<li>Entièrement accessible</li>
+<li>Partiellement accessible</li>
+<li>Texte et audio synchronisés</li>
+</ul>
+<p>Un pictogramme Homme de Vitruve avec texte alt “entièrement accessible” est affecté à tout fichier déclarant <a href="#conformsTo">conforme aux WCAG AA</a> : <img src="https://www.w3.org/2021/09/UX-Guide-metadata-1.0/principles/media/accessibility.svg" alt="Informations sur l'accessibilité" width="15"></p>
+<p>Une étiquette “partiellement accessible” est affectée à tout fichier prétendant être <a href="#conformeà">conforme aux WCAG A</a></p>
+<p>!Capture d’écran avec pictogramme Informations sur l’accessibilité](a11yInfoPicto.png)</p>
+<h3 id="détails-du-livre">Détails du livre</h3>
+<p>Les éléments effectivement affichés par thorium (détails du livre) ne sont pas cartographiés mais conservés ici à titre de référence.</p>
+<table>
+<thead>
+<tr class="header">
+<th>DisplayedEN</th>
+<th>ReadiumJSON</th>
+<th>fileMeta</th>
+<th>ifNotPresent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Format : EPUB</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Protection : LCP</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Publié en 2020 par SNE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>ISBN 9780000000000</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Langue : Français (fr)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="accessibilité">Accessibilité</h3>
+<p>Ceci est un titre (niveau h à déterminer)</p>
+<ul>
+<li>Si conforme aux WCAG AA, affichez : <strong>Accessiblité</strong> Si conforme aux WCAG A, afficher : <strong>Accessibilité</strong> : <strong>Accessibilité partielle</strong>. Si aucune de ces informations n’est fournie, affichez : <strong>Accessibilité</strong> : <strong>Aucune information sur l’accessibilité n’est disponible</strong> .</li>
+</ul>
+<p>Ensuite, si elle est présente, les informations suivantes sont affichées :</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>DisplayedEN</th>
+<th>ReadiumJSON</th>
+<th>fileMeta</th>
+<th>ifNotPresent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Affichage de la transformabilité</td>
+<td>“feature” :" <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L21">context.jsonld#L21</a> content=“displayTransformability”</td>
+<td><a href="http://schema.org/accessibilityFeature">schema.org:accessibilityFeature</a> content=“displayTransformability”</td>
+<td>ignore</td>
+</tr>
+<tr class="even">
+<td>Fixed-layout</td>
+<td></td>
+<td><em>aucune valeur existante dans schema.org. peut être extrait du format (pdf + epub3FXL</em> Dans EPUB3 opf : rendition:layout property set to pre-paginated</td>
+<td>ignore</td>
+</tr>
+<tr class="odd">
+<td>“accessMode” :" <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L19">context.jsonld#L19</a> <a href="https://github.com/readium/webpub-manifest/pull/85/files#diff-8cea754a027fe5af49d66d2c09ca919e926a884e447a290dbb71420c0c804f34#L55">content=“visual”, “textual”, “auditory”, “tactil”, etc.</a> (une ligne par valeur ou valeurs séparées par des virgules dans un champ)</td>
+<td><a href="http://schema.org/accessMode">schema.org:accessMode</a></td>
+<td>ignore</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>TTS &amp; Screen reader friendly</td>
+<td>“accessModeSufficient” <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L20">context.jsonld#L20</a> : textual</td>
+<td><a href="http://schema.org/accessModeSufficient">accessModeSufficient : textual</a></td>
+<td>ignore</td>
+</tr>
+<tr class="odd">
+<td>Contenu audio intégral (présentation, index, notes)</td>
+<td>“accessModeSufficient” <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L20">context.jsonld#L20</a> : auditif</td>
+<td>schema.org:accessModeSufficient:auditif</td>
+<td>ignore</td>
+</tr>
+<tr class="even">
+<td>Synchronisation du texte et de l’audio</td>
+<td>“feature” : <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L19">context.jsonld#L21</a> content=“synchronizedAudioText”</td>
+<td><a href="http://schema.org/accessibilityFeature">schema.org:accessibilityFeature</a> <a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#synchronizedAudioText">schema.org:sychronizedAudioText</a></td>
+<td>ignore</td>
+</tr>
+<tr class="odd">
+<td>Référence à la pagination des livres imprimés</td>
+<td>“feature” : <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L21">context.jsonld#L21</a> content=“printPageNumbers”</td>
+<td><a href="http://schema.org/accessibilityFeature">schema.org:accessibilityFeature</a> <a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#printPageNumbers">schema.org:printPageNumbers</a></td>
+<td>ignore</td>
+</tr>
+</tbody>
+</table>
+<p>Si l’une des informations d’accessibilité est définie sur true, elle doit également être affichée ici.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>DisplayedEN</th>
+<th>ReadiumJSON</th>
+<th>fileMeta</th>
+<th>ifNotPresent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>L’une des valeurs suivantes : <em>clignotement, simulation de mouvement, son, pas de clignotement, pas de simulation de mouvement, pas de son, aucun, inconnu.</em> <em>“danger” : <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L22">context.jsonld#L22</a> content=toutes les valeurs suivantes : </em>clignotant, simulation de mouvement, son, pas de clignotement, pas de simulation de mouvement, pas de son, aucun, inconnu.*</td>
+<td><a href="http://schema.org/accessibilityHazard">schema.org:accessibilityHazard</a></td>
+<td>ignore</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="plus-dinformations-sur-laccessibilité">Plus d’informations sur l’accessibilité</h3>
+<p>Ceci est un élément <code>details</code>, le <code>summary</code> est <strong>Plus d’informations sur l’accessibilité</strong>.</p>
+<p>Si aucune des informations n’est fournie, affichez dans un <code>&lt;p&gt;</code> : <strong>Aucune information sur l’accessibilité n’est disponible</strong> à la place.</p>
+<p><em>Afin d’éviter les redondances, les éléments suivants ne sont pas implémentés :</em></p>
+<p>Traduit avec www.DeepL.com/Translator (version gratuite)</p>
+<ul>
+<li><em>Certified By (this info is found in the certfier report)</em></li>
+<li><em>schema:structural &amp; schema:NavigationreadingOrder are implied by WCAG A</em></li>
+</ul>
+<p>accessibilitySummary is now at the very end of this section.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>DisplayedEN</th>
+<th>ReadiumJSON</th>
+<th>fileMeta</th>
+<th>ifNotPresent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Fully described graphical ressources</td>
+<td>“feature”: <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L21">context.jsonld#L21</a> content=“longDescription”</td>
+<td><a href="http://schema.org/accessibilityFeature">schema.org:accessibilityFeature</a> <a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#longDescription">schema.org:longDescription</a></td>
+<td>ignore</td>
+</tr>
+</tbody>
+</table>
+|
+<dt id="conformsTo">
+conformsTo
+</dt>
+<p>: readable human text or URL <em>[display content as it is, mark it with publication language]</em> lang tag|“conformsTo”: <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L7">context.jsonld#L7</a> content=“readable human text or URL”|[dc:conformsTo](http://purl.org/dc/terms/conformsTo“||No known conformity declared.| |<a href="ace-smart-report-fr.html">Conformance report</a> <em>[is a link]</em>||<a href="https://www.w3.org/TR/epub-a11y-11/#certifierReport">dc:certifierReport</a>|ignore| |<a href="infos-accessibilite-ed.html">Publisher accessibility policy</a> <em>[is a link]</em>||<a href="https://ns.editeur.org/onix/en/196/96">(onix only)</a>|ignore| |any text … lorem ipsum … <em>[afficher le contenu tel quel, le marquer avec la balise lang de publication - cet élément n’est pas dans un élément de liste mais dans un <code>p</code>. Dernier élément à afficher]</em>|”accessibilitySummary" : <a href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L18">context.jsonld#L18</a> content=“any text … lorem ipsum …”|<a href="http://schema.org/accessibilitySummary">schema.org:accessibilitySummary</a>|ignore|</p>
