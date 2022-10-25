@@ -1,5 +1,9 @@
 /* Minimal set for demonstration use. */
 
+details h2 {
+	display: inline;
+	color: #003366;
+}
 
 .prototTabs {
 	display: block;
@@ -9,11 +13,11 @@
 
 }
 
-h2{
+h2 {
 	margin-top: 10px;
 }
 
-.pad{
+.pad {
 	margin-left: 120px;
 }
 
@@ -21,8 +25,8 @@ h2{
 	width: 120px;
 	float: left;
 	vertical-align: middle;
-border-color: #fff;
-border-width: 10px;
+	border-color: #fff;
+	border-width: 10px;
 	margin: 15px;
 }
 
@@ -128,8 +132,8 @@ button {
 /** header**/
 
 header {
-	background:#003366;
-	color:#fff;
+	background: #003366;
+	color: #fff;
 	border-radius: 20px;
 	padding: 2px;
 
@@ -250,8 +254,8 @@ footer {
 	clear: both;
 	padding: 1em 0 1em 0;
 	text-align: center;
-	background:#003366;
-	color:#fff;
+	background: #003366;
+	color: #fff;
 	border-radius: 20px;
 
 }
