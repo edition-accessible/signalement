@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+ <meta charset="utf-8" />
+ <link rel="stylesheet" href="../statics/EA21_signalement.css" media="all" />
+ <meta name="generator" content="pandoc" />
+ <meta name="viewport" content="width=device-width, max-width=900px, initial-scale=1.0, user-scalable=yes" />
+ <meta name="author" content="W3C Publishing Community Group. Traduction EDRLab" />
+ <title>Techniques d’affichage des métadonnées d’accessibilité ONIX 1.0</title>
+ <style type="text/css">
+ code{white-space: pre-wrap;}
+ span.smallcaps{font-variant: small-caps;}
+ span.underline{text-decoration: underline;}
+ div.column{display: inline-block; vertical-align: top; width: 50%;}
+ </style>
+</head>
+<body class="simple">
+<header>
+<h1 class="title">Techniques d’affichage des métadonnées d’accessibilité ONIX 1.0</h1>
+<p class="author">W3C Publishing Community Group. Traduction EDRLab</p>
+<p class="date">Novembre 2021</p>
+</header>
+<p>Dernière version publiée : https://www.w3.org/publishing/a11y/UX-Guide-metadata/techniques/onix-metadata/</p>
+<p>Dernière version de l’éditeur : https://w3c.github.io/publ-a11y/UX-Guide-Metadata/draft/techniques/onix-metadata/</p>
+<p>Rédacteurs : - Gregorio Pellegrino (Fondazione LIA)</p>
+<p>Participez : - GitHub w3c/publ-a11y</p>
+<p>Copyright © 2021 les contributeurs de la spécification 1.0 des techniques d’affichage des métadonnées d’accessibilité ONIX, publiée par le Publishing Community Group dans le cadre du W3C Community Final Specification Agreement (FSA).</p>
+<p>Traduction Française par EDRLab.</p>
+<h2 id="métadonnées-onix">1. Métadonnées ONIX</h2>
+<pre><code>Note
+
+D&#39;autres techniques de mise en œuvre des métadonnées d&#39;accessibilité EPUB sont disponibles : Techniques d&#39;affichage des métadonnées d&#39;accessibilité
+
+Note
+
+Ce document fournit des techniques permettant de respecter les directives du User Experience Guide for Displaying Accessibility Metadata. Il fournit des exemples pratiques pour extraire des informations des métadonnées ONIX afin de les montrer aux utilisateurs finaux.
+
+Note
+
+Les messages ONIX décrivent des produits destinés à la chaîne d&#39;approvisionnement mondiale du livre et seront envoyés par l&#39;éditeur ou le créateur des livres électroniques ou numériques avec audio intégral à ceux qui rendront les produits disponibles pour la vente, le prêt ou l&#39;abonnement. Il se peut que ces plateformes ne disposent pas encore des fichiers réels, car ils ne sont peut-être pas encore prêts, ou qu&#39;elles ne choisissent de les mettre en vente que s&#39;ils présentent certaines caractéristiques d&#39;accessibilité. De plus, ONIX ne fait que décrire un produit, il ne peut pas décrire les caractéristiques des systèmes de lecture sur lesquels un produit peut être consulté. Il est important d&#39;utiliser les métadonnées ONIX en complément des données d&#39;accessibilité intégrées dans la publication elle-même, si l&#39;on décrit des livres accessibles, des livres avec audio intégral et des produits connexes pour la chaîne d&#39;approvisionnement mondiale du livre. Un fichier ONIX peut être utilisé pour afficher des informations sur l&#39;accessibilité avant la publication ou lorsque vous n&#39;avez pas accès aux métadonnées du fichier numérique lui-même. Certaines informations sur l&#39;accessibilité peuvent n&#39;être disponibles que lorsque vous avez accès au fichier lui-même. Si vous n&#39;êtes pas familier avec ONIX, vous trouverez plus de documentation sur EDItEUR.org.
+
+Note
+
+ONIX n&#39;a pas de correspondance 1:1 avec les métadonnées d&#39;accessibilité EPUB. Comme certaines assertions d&#39;accessibilité sont formulées différemment entre les deux mécanismes, une correspondance directe entre les deux n&#39;est pas toujours possible. Le tableau de concordance entre EPUB et ONIX souligne le degré élevé de chevauchement actuel des métadonnées et sera mis à jour au fur et à mesure de l&#39;évolution de ces deux spécifications. Il est important de noter qu&#39;ONIX 3.0 comprend un certain nombre de nouveaux codes de métadonnées d&#39;accessibilité, dont certains peuvent ne pas être exprimés dans les versions antérieures d&#39;ONIX.</code></pre>
+<h3 id="exemples-de-notices-onix">1.1 Exemples de notices ONIX</h3>
+<h4 id="fiche-onix-décrivant-un-epub">1.1.1 Fiche ONIX décrivant un EPUB</h4>
+<p>Voici un exemple de notice ONIX (version 3.0), qui sera utilisé comme point de référence pour les exemples suivants sur les métadonnées d’accessibilité des EPUB : les résultats des XPath indiqués sont basés sur cet exemple. (à reproduire)</p>
+<pre><code> Exemple 1
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ONIXMessage xmlns=&quot;http://ns.editeur.org/onix/3.0/reference&quot; release=&quot;3.0&quot;&gt;
+ &lt;Header&gt;...&lt;/Header&gt;
+ &lt;Product&gt;
+ &lt;RecordReference&gt;123456789&lt;/RecordReference&gt;
+ &lt;NotificationType&gt;01&lt;/NotificationType&gt;
+ &lt;ProductIdentifier&gt;
+ &lt;ProductIDType&gt;03&lt;/ProductIDType&gt;
+ &lt;IDValue&gt;9780000000000&lt;/IDValue&gt;
+ &lt;/ProductIdentifier&gt;
+ &lt;ProductIdentifier&gt;
+ &lt;ProductIDType&gt;15&lt;/ProductIDType&gt;
+ &lt;IDValue&gt;9780000000000&lt;/IDValue&gt;
+ &lt;/ProductIdentifier&gt;
+ &lt;DescriptiveDetail&gt;
+ &lt;ProductComposition&gt;00&lt;/ProductComposition&gt;
+ &lt;ProductForm&gt;ED&lt;/ProductForm&gt;
+ &lt;ProductFormDetail&gt;E101&lt;/ProductFormDetail&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;00&lt;/ProductFormFeatureValue&gt;
+ &lt;ProductFormFeatureDescription&gt;
+ Cette publication comprend un balisage permettant l&#39;accessibilité et la compatibilité avec les technologies d&#39;assistance. Les images, le son et la vidéo de la publication sont bien décrits, conformément aux WCAG 2.0 A.
+ &lt;/ProductFormFeatureDescription&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;03&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;10&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;11&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;13&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;14&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;20&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;22&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;12&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;14&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;12&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;16&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;12&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;18&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;12&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;20&lt;/ProductFormFeatureValue&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;94&lt;/ProductFormFeatureValue&gt;
+ &lt;ProductFormFeatureDescription&gt;http://www.certifier.com/&lt;/ProductFormFeatureDescription&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;ProductFormFeature&gt;
+ &lt;ProductFormFeatureType&gt;09&lt;/ProductFormFeatureType&gt;
+ &lt;ProductFormFeatureValue&gt;94&lt;/ProductFormFeatureValue&gt;
+ &lt;ProductFormFeatureDescription&gt;http://www.example.com/a11y/report/9780000000001&lt;/ProductFormFeatureDescription&gt;
+ &lt;/ProductFormFeature&gt;
+ &lt;PrimaryContentType&gt;10&lt;/PrimaryContentType&gt;
+ &lt;EpubTechnicalProtection&gt;03&lt;/EpubTechnicalProtection&gt;
+ &lt;EpubUsageConstraint&gt;
+ &lt;EpubUsageType&gt;04&lt;/EpubUsageType&gt;
+ &lt;EpubUsageStatus&gt;02&lt;/EpubUsageStatus&gt;
+ &lt;/EpubUsageConstraint&gt;
+ &lt;TitleDetail&gt;...&lt;/TitleDetail&gt;
+ &lt;Contributor&gt;...&lt;/Contributor&gt;
+ &lt;Extent&gt;...&lt;/Extent&gt;
+ &lt;Subject&gt;...&lt;/Subject&gt;
+ &lt;/DescriptiveDetail&gt;
+ &lt;CollateralDetail&gt;...&lt;/CollateralDetail&gt;
+ &lt;PublishingDetail&gt;...&lt;/PublishingDetail&gt;
+ &lt;RelatedMaterial&gt;...&lt;/RelatedMaterial&gt;
+ &lt;ProductSupply&gt;...&lt;/ProductSupply&gt;
+ &lt;/Product&gt;
+&lt;/ONIXMessage&gt;</code></pre>
+<h3 id="fiche-onix-décrivant-un-livre-audio">1.1.2 Fiche ONIX décrivant un livre audio</h3>
+<p>Voici un exemple de notice ONIX (version 3.0) décrivant un livre audio, qui servira de point de référence pour certains des exemples suivants sur les métadonnées d’accessibilité EPUB : les résultats des XPath présentés sont basés sur cet exemple.</p>
+<pre><code>Exemple 2
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ONIXMessage xmlns=&quot;http://ns.editeur.org/onix/3.0/reference&quot; release=&quot;3.0&quot;&gt;
+ &lt;Header&gt;...&lt;/Header&gt;
+ &lt;Product&gt;
+ &lt;RecordReference&gt;123456789&lt;/RecordReference&gt;
+ &lt;NotificationType&gt;01&lt;/NotificationType&gt;
+ &lt;ProductIdentifier&gt;
+ &lt;ProductIDType&gt;03&lt;/ProductIDType&gt;
+ &lt;IDValue&gt;0000000000000&lt;/IDValue&gt;
+ &lt;/ProductIdentifier&gt;
+ &lt;DescriptiveDetail&gt;
+ &lt;ProductComposition&gt;00&lt;/ProductComposition&gt;
+ &lt;ProductForm&gt;AO&lt;/ProductForm&gt;
+ &lt;PrimaryContentType&gt;01&lt;/PrimaryContentType&gt;
+ ...
+ &lt;TitleDetail&gt;...&lt;/TitleDetail&gt;
+ &lt;Contributor&gt;...&lt;/Contributor&gt;
+ &lt;Extent&gt;...&lt;/Extent&gt;
+ &lt;Subject&gt;...&lt;/Subject&gt;
+ &lt;/DescriptiveDetail&gt;
+ &lt;CollateralDetail&gt;...&lt;/CollateralDetail&gt;
+ &lt;PublishingDetail&gt;...&lt;/PublishingDetail&gt;
+ &lt;RelatedMaterial&gt;...&lt;/RelatedMaterial&gt;
+ &lt;ProductSupply&gt;...&lt;/ProductSupply&gt;
+ &lt;/Product&gt;
+&lt;/ONIXMessage&gt;</code></pre>
+<h2 id="techniques">2. Techniques</h2>
+<h3 id="convivialité-pour-les-lecteurs-décran">2.1 Convivialité pour les lecteurs d’écran</h3>
+<p>Valeur : “Oui”, “Non” ou “Inconnu”</p>
+<p>Cette technique concerne le principe de l’adaptation aux lecteurs d’écran.</p>
+<p>Cette information peut être extraite de la liste ONIX 81 ; Code : 10 combiné à la liste de codes 196 ; Code : 10 signifie que tout le texte est du texte réel.</p>
+<pre><code>Note
+
+La liste 81 ; Code : 10 seule (sans la liste 196 ; Code : 10) admet la possibilité que le &quot;texte&quot; soit inaccessible parce qu&#39;il s&#39;agit d&#39;une image de texte.</code></pre>
+<h4 id="exemple-1.1">2.1.1 Exemple 1.1</h4>
+<h5 id="xpath">2.1.1.1 XPath</h5>
+<p>Ce champ est vrai si les deux éléments XPath existent :</p>
+<pre><code>Exemple 3
+
+//Product/DescriptiveDetail/PrimaryContentType [text()=&quot;10&quot;] et
+//Product/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;09&quot; and ProductFormFeatureValue=&quot;10&quot;]</code></pre>
+<p>Pour cet exemple, ce XPath a été évalué sur la fiche ONIX présentée dans l’EXEMPLE 1.</p>
+<h5 id="interface-utilisateur">2.1.1.2 INTERFACE UTILISATEUR</h5>
+<p>Compatible avec les lecteurs d’écran : Oui</p>
+<h3 id="audio-intégral">2.2 Audio intégral</h3>
+<p>Valeurs : “Oui” (si non - Omettre cette section)</p>
+<p>Cette technique est liée au principe du Full Audio.</p>
+<p>Si la publication est basée sur du texte avec de l’audio synchronisé, cette information peut être récupérée dans la liste de codes ONIX : 196 ; Code : 20 : Audio préenregistré synchronisé.</p>
+<p>Si la publication est uniquement sonore (par exemple, un livre audio), cette information peut être extraite de la liste de codes ONIX 81 ; Code : 01 : Audiobook.</p>
+<h4>2.2.1 Exemple 2.1 </h4>
+<p> 2.2.1.1 XPath</p>
+<p>Si le XPath suivant renvoie au moins un résultat :</p>
+<pre><code>Exemple 4
+
+//Produit/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;09&quot; et ProductFormFeatureValue=&quot;20&quot;]</code></pre>
+<p>Pour cet exemple, ce XPath a été évalué sur la fiche ONIX présentée dans l’EXEMPLE 1.</p>
+<h5 id="interface-utilisateur-1">2.2.1.2 INTERFACE UTILISATEUR</h5>
+<p>audio intégral : Oui</p>
+<h4 id="exemple-2.2">2.2.2 Exemple 2.2</h4>
+<h5 id="xpath-1">2.2.2.1 XPath</h5>
+<p>Ce champ est vrai si le XPath renvoie un élément pour : Exemple 5</p>
+<p>//Produit/DescriptiveDetail/PrimaryContentType[text()=“01”]</p>
+<p>Pour cet exemple, ce XPath a été évalué sur la fiche ONIX présentée dans l’EXEMPLE 2.</p>
+<h5 id="interface-utilisateur-2">2.2.2.2 INTERFACE UTILISATEUR</h5>
+<p>audio intégral : Oui</p>
+<h3 id="résumé-de-laccessibilité">2.3 Résumé de l’accessibilité</h3>
+<p>Valeur : Données textuelles provenant des métadonnées</p>
+<p>Cette technique concerne le principe du résumé d’accessibilité.</p>
+<p>Cette information peut être extraite de la liste de codes ONIX : 196 ; Code : 00 : Résumé d’accessibilité.</p>
+<h4> 2.3.1 Exemple 3.1 </h4><p>2.3.1.1 XPath</p>
+<p>La valeur peut être récupérée en utilisant XPath :</p>
+<pre><code>Exemple 6
+
+//Produit/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;09&quot; et ProductFormFeatureValue=&quot;00&quot;]/ProductFormFeatureDescription/text()</code></pre>
+<p>Pour cet exemple, ce XPath a été évalué sur l’enregistrement ONIX présenté dans l’EXEMPLE 1.</p>
+<h5 id="interface-utilisateur-3">2.3.1.2 INTERFACE UTILISATEUR</h5>
+<p>Résumé de l’accessibilité :</p>
+<p><em>Cette publication comprend un balisage permettant l’accessibilité et la compatibilité avec les technologies d’assistance. Les images, le son et la vidéo de la publication sont bien décrits, conformément aux WCAG 2.0 A.</em></p>
+<h3 id="conformité-de-laccessibilité">2.4 Conformité de l’accessibilité</h3>
+<p>Valeur : Lien textuel basé sur les métadonnées</p>
+<p>Cette technique est liée au principe de conformité de l’accessibilité.</p>
+<pre><code>Pour l&#39;accessibilité d&#39;EPUB, WCAG-A : Liste : 196 ; Code : 02 : Spécification d&#39;accessibilité EPUB 1.0 A.
+Pour l&#39;accessibilité d&#39;EPUB, WCAG-AA : Liste : 196 ; Code : 03 : Spécification d&#39;accessibilité EPUB 1.0 AA
+Pour l&#39;accessibilité EPUB, WCAG-AAA : Non disponible dans ONIX.</code></pre>
+<h4 id="exemple-4.1">2.4.1 Exemple 4.1</h4>
+<h5 id="xpath-2">2.4.1.1 XPath</h5>
+<p>Si le XPath suivant renvoie au moins un résultat :</p>
+<pre><code>Exemple 7
+
+//Produit/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;09&quot; et ProductFormFeatureValue=&quot;02&quot;]</code></pre>
+<p>Pour cet exemple, ce XPath a été évalué sur la fiche ONIX présentée dans l’EXEMPLE 1.</p>
+<h5 id="interface-utilisateur-4">2.4.1.2 INTERFACE UTILISATEUR</h5>
+<p>Conformité en matière d’accessibilité : Accessibilité EPUB, WCAG-A</p>
+<h3 id="exemple-4.2">2.4.2 Exemple 4.2</h3>
+<h4 id="xpath-3">2.4.2.1 XPath</h4>
+<p>Si le XPath suivant renvoie au moins un résultat :</p>
+<pre><code>Exemple 8
+
+//Produit/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;09&quot; et ProductFormFeatureValue=&quot;03&quot;] renvoie au moins un résultat.</code></pre>
+<p>Pour cet exemple, ce XPath a été évalué sur la fiche ONIX présentée dans l’EXEMPLE 1.</p>
+<h5 id="interface-utilisateur-5">2.4.2.2 INTERFACE UTILISATEUR</h5>
+<p>Conformité en matière d’accessibilité : Accessibilité EPUB, WCAG-AA 2.5 Certifié par</p>
+<p>Valeur : Données textuelles à partir de métadonnées</p>
+<p>Cette technique se rapporte au principe Certified By.</p>
+<p>Liste : 196 ; Code : 93 : Certification de conformité par</p>
+<h4 id="exemple-5.1">2.5.1 Exemple 5.1</h4>
+<h5 id="xpath-4">2.5.1.1 XPath</h5>
+<p>La valeur peut être récupérée en utilisant XPath :</p>
+<pre><code>Exemple 9
+
+//Produit/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;09&quot; et ProductFormFeatureValue=&quot;93&quot;]/ProductFormFeatureDescription/text()</code></pre>
+<p>Pour cet exemple, ce XPath a été évalué sur l’enregistrement ONIX présenté dans l’EXEMPLE 1.</p>
+<h5 id="interface-utilisateur-6">2.5.1.2 INTERFACE UTILISATEUR</h5>
+<p>Certifié par : http://www.certifier.com/</p>
+<pre><code>Note
+
+(URI cliquable vers une page web appartenant à l&#39;organisation responsable des tests de conformité et de la certification du produit)</code></pre>
+<h3 id="identifiant-du-certificateur">2.6 Identifiant du certificateur</h3>
+<p>Valeur : Données textuelles potentiellement liées provenant de métadonnées</p>
+<p>Cette technique est liée au principe du Certifier Credential.</p>
+<p>Non disponible dans ONIX</p>
+<h3 id="rapport-du-certificateur">2.7 Rapport du certificateur</h3>
+<p>Valeur : Données textuelles potentiellement liées provenant de métadonnées</p>
+<p>Cette technique est liée au principe du rapport de certification.</p>
+<p>Liste : 196 ; Code : 94 : Page web de conformité pour des informations détaillées sur l’accessibilité</p>
+<p>Ou</p>
+<p>S’il est certifié par un intermédiaire de confiance, Liste : 196 ; Code : 95 : Page web de l’intermédiaire de confiance pour des informations détaillées sur l’accessibilité</p>
+<p>Ou</p>
+<p>Si un éditeur s’auto-certifie, Liste : 196 ; Code : 96 : Page web de l’éditeur pour des informations détaillées sur l’accessibilité</p>
+<h4 id="exemple-6.1">2.7.1 Exemple 6.1</h4>
+<h5 id="xpath-5">2.7.1.1 XPath</h5>
+<p>La valeur peut être récupérée en utilisant XPath :</p>
+<pre><code>Exemple 10
+
+//Produit/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;09&quot; et ProductFormFeatureValue=&quot;94&quot;]/ProductFormFeatureDescription/text()
+
+Exemple 11
+
+//Product/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;09&quot; and ProductFormFeatureValue=&quot;95&quot;]/ProductFormFeatureDescription/text()
+
+Exemple 12
+
+//Produit/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;09&quot; and ProductFormFeatureValue=&quot;96&quot;]/ProductFormFeatureDescription/text()</code></pre>
+<p>Pour cet exemple, ce XPath a été évalué sur l’enregistrement ONIX présenté dans l’EXEMPLE 1.</p>
+<h5 id="interface-utilisateur-7">2.7.1.2 INTERFACE UTILISATEUR</h5>
+<p>Rapport du certificateur : Page web du rapport</p>
+<pre><code>Exemple 13
+
+(Image cliquable vers l&#39;URI du rapport à partir des métadonnées)
+
+alt-text Page web du rapport
+
+(L&#39;image de la coche et du presse-papiers est donnée à titre indicatif, vous pouvez choisir votre propre image).</code></pre>
+<p>Ou</p>
+<pre><code>Exemple 14
+
+Rapport du certificateur : Rapport sur l&#39;accessibilité
+
+(Lien cliquable vers l&#39;URI du rapport à partir des métadonnées)</code></pre>
+<h3 id="risques">2.8 Risques</h3>
+<p>Valeurs : clignotement, simulation de mouvement, son, pas de clignotement, pas de simulation de mouvement, pas de son, aucun, ou Inconnu.</p>
+<p>Cette technique est liée au principe de <em>Hazards</em>.</p>
+<p>ONIX utilise un composite pour indiquer les différents dangers.</p>
+<p>Pour énumérer la présence ou l’absence de dangers risques, on utilise l’élément ProductFormFeature, avec ProductFormFeatureType égal à 12 (“US CPSIA or other international hazard warning”, de la liste de codes 79) et ProductFormFeatureValue de la liste de codes 143.</p>
+<h4 id="exemple-7.1">2.8.1 Exemple 7.1</h4>
+<h5 id="xpath-6">2.8.1.1 XPath</h5>
+<p>La valeur peut être récupérée en utilisant XPath :</p>
+<pre><code>Exemple 15
+
+//Produit/DescriptiveDetail/ProductFormFeature[ProductFormFeatureType=&quot;12&quot;]/ProductFormFeatureValue</code></pre>
+<p>Pour cet exemple, ce XPath a été évalué sur la fiche ONIX présentée dans l’EXEMPLE 1.</p>
+<h5 id="iu">2.8.1.2 IU</h5>
+<p>Risques : pas de clignotement, pas de son, pas de simulation de mouvement</p>
+<p>(parce que ProductFormFeature avec ProductFormFeatureType égal à 12 et ProductFormFeatureValues égal à : 14, 16, 18)</p>
+<h3 id="toutes-les-métadonnées-daccessibilité">2.9 Toutes les métadonnées d’accessibilité</h3>
+<p>Valeur : Lien vers la liste complète de tous les champs de métadonnées</p>
+<p>Cette technique est liée au principe des métadonnées d’accessibilité.</p>
+<p>Pour une liste complète des métadonnées d’accessibilité ONIX, se référer à la passerelle.</p>
+<pre><code>Accessibilité EPUB : Toutes les métadonnées d&#39;accessibilité https://www.w3.org/community/a11y-discov-vocab/ (draft)
+
+ONIX : Toutes les métadonnées d&#39;accessibilité For a complete list of ONIX accessibility metadata refer to the crosswalk. http://www.a11ymetadata.org/the-specification/metadata-crosswalk/ (no longer maintained)</code></pre>
+<h2 id="a.-a.-remerciements">A. A. Remerciements</h2>
+</body>
+</html>
