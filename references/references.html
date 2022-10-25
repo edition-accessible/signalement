@@ -5,8 +5,15 @@
 <head>
   <title>Références | Signalement des livres numériques accessibles</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="../statics/EA21_signalement.css" media="all" />
-  <link rel="stylesheet" href="../statics/EA21_accessibilite.css" media="all" />
+  <link rel="stylesheet" type="text/css"
+  href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap4.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+  integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
+<link rel="stylesheet" type="text/css" href="../statics/EA21_tabs.css" />
+<link rel="stylesheet" href="../statics/EA21_signalement.css" media="all" />
+<link rel="stylesheet" href="../statics/EA21_accessibilite.css" media="all" />
+<link rel="stylesheet" href="../statics/EA21_tables.css" media="all" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 </head>
 
@@ -147,325 +154,318 @@
 
 
   <section>
-          <details>
+          <details open="true">
             <summary><h2>Correspondances</h2></summary>
-            <p></p>
-          </details>
-       
-            
-            <p>Pour une correspondance MARC, MARC21 et UNIMARC, se référer au <a
-                href="https://w3c.github.io/publ-a11y/drafts/a11y-crosswalk-MARC/"><span lang="en">W3C Schema.org
-                  Accessibility Properties Crosswalk (work in progress)</span></a></p>
-            Titre d'article, de rubrique ou d'onglet</h3>
-            <table>
-              <tr>
-                <th>Label</th>
-                <th>Cas d'usage</th>
-                <th>ONIX</th>
-                <th>Schema.org</th>
-                <th>Notes</th>
-              </tr>
-              <tr>
-                <td>Affichage adaptable</td>
+      
 
-                <td>Pouvoir modifier la taille des caractères ainsi que
-                  les espacements pour rendre la lecture confortable en fonction du matériel ou des conditions.
-                </td>
+              <p>Pour une correspondance MARC, MARC21 et UNIMARC, se référer au <a
+                  href="https://w3c.github.io/publ-a11y/drafts/a11y-crosswalk-MARC/"><span lang="en">W3C Schema.org
+                    Accessibility Properties Crosswalk (work in progress)</span></a></p>
+            <div class="table-wrapper"><h3> Modes de lecture</h3>                    
+              <table class="zebra">
 
-                <td><a href="https://ns.editeur.org/onix/fr/175/E200">Liste 175 Code E200 :
-                    Redimensionnable.</a></td>
-                <td>displayTransformability</td>
-
-
-                <td></td>
-              </tr>
-              <tr>
-                <td>Mise en page fixe</td>
-
-                <td>Disposer d’une représentation exacte de la version papier pour
-                  l’imprimer ou parce que vous utilisez le livre numérique en complément d’une édition imprimée.</td>
-
-                <td>Liste 175 Code E201 : Format fixe.</td>
-                <td></td>
-
-
-                <td></td>
-              </tr>
-              <tr>
-                <td>Texte et images disponibles en vocal</td>
-
-                <td>(Lecture non visuelle). Cas d'usage : vous activez la fonction lecture audio de votre liseuse. Le
-                  livre contient une image. La voix lit une description de l’image. Vous profitez du livre dans son
-                  intégralité.</td>
-                <td><strong>Note</strong> : dans le cas où la mesure de protection serait au choix de l'utilisateur, il
-                  devra être fait mention d'un risque de rupture de l'accessibilité lors de la sélection de la licence.
-                </td>
-                <td>Liste 81 Code 10 + liste 196 Code 10 + 16 (Représentations graphiques de
-                  données également accessibles comme données non graphiques)</td>
-                <td>accessModeSufficient:textual</td>
-
-                <td></td>
-              </tr>
-              <tr>
-                <td>Contenu audio intégral (présentation, index, notes)</td>
-
-                <td>Cas d'usage : vous achetez un livre audio. Après achat vous écoutez le sommaire, le résumé, le temps
-                  de lecture et d’autres informations qui apparaissent sur une image de couverture. </td>
-
-                <td>Liste 81 Code 01 : Audiobook.</td>
-                <td>accessModeSufficient:auditory</td>
-
-
-
-                <td></td>
-              </tr>
-              <tr>
-                <td>Texte & audio synchronisés</td>
-
-
-                <td>Liste 196 Code 20 : Audio préenregistré synchronisé.</td>
-                <td>sychronizedAudioText</td>
-
-
-
-                <td></td>
-              </tr>
-
-              <table>Fonctionnalités</h3>
+                <thead>
                 <tr>
-                  <td>Table des matières</td>
-
-                  <td><strong>Note</strong> : définit la présence d'une table des matières numérique liée aux contenus.
+                  <th>Label</th>
+                  <th>Cas d'usage</th>
+                  <th>ONIX</th>
+                  <th>Schema.org</th>
+                </tr></thead>
+                <tr>
+                  <td>Affichage adaptable</td>
+                    <td>Pouvoir modifier la taille des caractères ainsi que
+                    les espacements pour rendre la lecture confortable en fonction du matériel ou des conditions.
                   </td>
-                  <td>List: 196; Code: 12: Index navigation</td>
-                  <td>index</td>
-
-
-
-                  <td></td>
+                    <td><a href="https://ns.editeur.org/onix/fr/175/E200">Liste 175 Code E200 :
+                      Redimensionnable.</a></td>
+                  <td>displayTransformability</td>
+                  </tr>
+                <tr>
+                  <td>Mise en page fixe</td>
+  
+                  <td>Disposer d’une représentation exacte de la version papier pour
+                    l’imprimer ou parce que vous utilisez le livre numérique en complément d’une édition imprimée.</td>
+  
+                  <td>Liste 175 Code E201 : Format fixe.</td>
+  <td></td>
                 </tr>
                 <tr>
-                  <td>Référence à la pagination du livre imprimé</td>
+                  <td>Texte et images disponibles en vocal</td>
+  
+                  <td>(Lecture non visuelle). Cas d'usage : vous activez la fonction lecture audio de votre liseuse. Le
+                    livre contient une image. La voix lit une description de l’image. Vous profitez du livre dans son
+                    intégralité.<br/>Dans le cas où la mesure de protection serait au choix de l'utilisateur, il
+                    devra être fait mention d'un risque de rupture de l'accessibilité lors de la sélection de la licence.
+                  </td>
+                  <td>Liste 81 Code 10 + liste 196 Code 10 + 16 (Représentations graphiques de
+                    données également accessibles comme données non graphiques)</td>
+                  <td>accessModeSufficient:textual</td>
 
-
-                  <td><a href="https://ns.editeur.org/onix/fr/196/19">Liste 196 Code 19
-                      Numérotation de pages équivalente au document imprimé</a></td>
-                  <td>printPageNumbers</td>
-
-                  <td></td>
                 </tr>
-                <table>Informations d'accessibilité disponibles</h3>
+                <tr>
+                  <td>Contenu audio intégral (présentation, index, notes)</td>
+  
+                  <td>Cas d'usage : vous achetez un livre audio. Après achat vous écoutez le sommaire, le résumé, le temps
+                    de lecture et d’autres informations qui apparaissent sur une image de couverture. </td>
+  
+                  <td>Liste 81 Code 01 : Audiobook.</td>
+                  <td>accessModeSufficient:auditory</td>
+  
+  
+  
+                </tr>
+                <tr>
+                  <td>Texte & audio synchronisés</td>
+  
+  
+                  <td>Liste 196 Code 20 : Audio préenregistré synchronisé.</td>
+                  <td>sychronizedAudioText</td>
+  
+   <td></td>
+  
+                </tr>
+  </table>
+                <table class="zebra"><h3> Fonctionnalités</h3>
+                  <thead>
+                    <tr>
+                      <th>Label</th>
+                      <th>Cas d'usage</th>
+                      <th>ONIX</th>
+                      <th>Schema.org</th>
+                    </tr></thead>
                   <tr>
-                    <td>Résumé d'accessibilité</td>
-
-
-                    <td>List 196 Code 00 : Résumé sur l'accessibilité</td>
-                    <td>schema:accessibilitySummary</td>
-
-
-
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Structuré, navigable</td>
-
-
-                    <td></td>
-                    <td>structuralNavigation</td>
-
-
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Ordre de lecture logique</td>
-
-
-                    <td>List: 196; Code: 13: Reading order</td>
-                    <td>readingOrder</td>
-
-
-
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Descriptions des images</td>
-
-
-                    <td>Liste 196 Code 16 Représentations graphiques de données également
-                      accessibles comme données non graphiques</td>
-                    <td>longDescription</td>
-
-
-
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Conforme au standards EPUB accessibilité 1.0 & WCAG AA</td>
-
-
-                    <td>Liste 196 Code 03 : Spécifications d’accessibilité EPUB 1.0 AA</td>
-                    <td>dcterms:conformsTo</td>
-
-
-
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Conformité établie par xxxx</td>
-
-
-                    <td>Liste 196 Code 93 : Certification de conformité par</td>
-                    <td>a11y:certifiedBy</td>
-
-
-
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Rapport de conformité de ce titre</td>
-
-
-                    <td>196 94 Page web pour les informations détaillées d’accessibilité</td>
-                    <td>certifierReport</td>
-
-
-
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Politique d'accessibilité de l'éditeur</td>
-
-
-                    <td>196 96 Page web de l’éditeur pour les informations détaillées
-                      d’accessibilité</td>
-                    <td></td>
-
-
-
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>Autres informations spécifiques</td>
-
-                    <td><strong>Note</strong> : n'afficher qu'en cas de présence. </td>
-                    <td>un ou des items de la <a href="https://ns.editeur.org/onix/fr/196">Liste
-                        196</a> parmis : ; 196:15 Descriptions alternatives complètes
-                      ; 196:16 Représentations graphiques de données également accessibles comme données non graphiques
-                      ; 196:17 Contenu mathématique accessible
-                      ; 196:18 Contenu chimique accessible
-                      ; 196:19 Numérotation de pages équivalente au document imprimé
-                      ; 196:20 Audio synchronisé préenregistré
-                      ; 196:21 Synthèse vocale optimisée
-                      ; 196:22 Balisage de la langue fourni
-                      ; 196:24 Lisibilité adaptée à la dyslexie
-                      ; 196:25 Usage de la couleur
-                      ; 196:26 Usage du contraste
-                      ; 196:27 Usage de l’audio
-                      ; 196:28 Audio-description alternative complète
-                      ; 196:29 Navigation suivant/précédent
-                      ; List: 81; Code 19: Figures, Diagrams, Charts
+                    <td>Table des matières</td>
+  
+                    <td>Définit la présence d'une table des matières numérique liée aux contenus.
                     </td>
-                    <td>annotations
-                      ; audioDescription
-                      ; braille
-                      ; captions
-                      ; ChemML
-                      ; describedMath
-                      largePrint ; latex
-                      rubyAnnotations
-                      ; signLanguage
-                      ; taggedPDF
-                      ; tactileGraphic
-                      ; tactileObject
-                      ; timingControl
-                      ; transcript
-                      ; ttsMarkup
-                      accessibilityAPI (vocabulary list follows)
-                      ; AndroidAccessibility
-                      ; ARIA
-                      ; ATK
-                      ; AT-SPI
-                      ; BlackberryAccessibility
-                      ; iAccessible2
-                      ; iOSAccessibility
-                      ; JavaAccessibility
-                      ; MacOSXAccessibility
-                      ; MSAA
-                      ; UIAutomation
-                      chartOnVisual Diagrams, Charts
-                      chemOnVisual
-                      ; colorDependent
-                      ; diagramOnVisual
-                      mathOnVisual
-                      ; musicOnVisual
-                      ; tactile
-                      ; textOnVisual
-                    </td>
-                    <td><strong>MARC21</strong> : <a href="https://www.loc.gov/marc/bibliographic/bd341.html">Zone
-                        341</a> :
-                      $a - Content access mode (NR)
-                      $b - Textual assistive features (R)
-                      $c - Visual assistive features (R)
-                      $d - Auditory assistive features (R)
-                      $e - Tactile assistive features (R)
-                      $2 - Source (NR)
-                      $3 - Materials specified (NR)
-                      $6 - Linkage (NR)
-                      $8 - Field link and sequence number (R)
-                    </td>
-                    <td><strong>UNIMARC</strong> : la <a
-                        href="https://cdn.ifla.org/wp-content/uploads/U_B_231_update2021_ONLINE_FINAL-1.pdf">Zone 231i
-                        autorise l'usage des codes de la liste ONIX 196 selon la règle suivante : </a> 231
-                      ##$i<i>(placer le
-                        code onix)</i>$2onix196</td>
-
-                    <td></td>
+                    <td>List: 196; Code: 12: Index navigation</td>
+                    <td>index</td>
+  
+  
+  
+                   
                   </tr>
-
-                  <table> Points d'attention</h3>
-
+                  <tr>
+                    <td>Référence à la pagination du livre imprimé</td>
+  
+   <td></td>
+                    <td><a href="https://ns.editeur.org/onix/fr/196/19">Liste 196 Code 19
+                        Numérotation de pages équivalente au document imprimé</a></td>
+                    <td>printPageNumbers</td>
+  
+                   
+                  </tr>
+                  </table>
+                  <table class="zebra"><h3> Informations d'accessibilité disponibles</h3>
+                    <thead>
+                      <tr>
+                        <th>Label</th>
+                        <th>Cas d'usage</th>
+                        <th>ONIX</th>
+                        <th>Schema.org</th>
+                      </tr></thead>
                     <tr>
-                      <td>Présence de flashs lumineux</td>
-
-
-                      <td>Liste 143 Code 13 : Avertissement : risque de clignotement</td>
-                      <td>accessibilityHazard:flashing</td>
-
-
+                      <td>Résumé d'accessibilité</td>
+  
+   <td></td>
+                      <td>List 196 Code 00 : Résumé sur l'accessibilité</td>
+                      <td>schema:accessibilitySummary</td>
+  
+  
+  
+                     
+                    </tr>
+                    <tr>
+                      <td>Structuré, navigable</td>
+  
+  
+                      <td></td>
+                      <td>structuralNavigation</td>
+  
+  
                       <td></td>
                     </tr>
                     <tr>
-                      <td>Lecture de vidéos automatique</td>
-
-
-                      <td></td>
-                      <td></td>
-
-
-                      <td></td>
+                      <td>Ordre de lecture logique</td>
+  
+        <td></td>
+                      <td>List: 196; Code: 13: Reading order</td>
+                      <td>readingOrder</td>
+  
+  
+  
+                
                     </tr>
                     <tr>
-                      <td>Effets sonores</td>
-
-
-                      <td>Liste 175 Code A310 : Effets sonores.</td>
-                      <td>accessibilityHazard:sound</td>
-
-
-                      <td></td>
+                      <td>Descriptions des images</td>
+  <td></td>
+  
+                      <td>Liste 196 Code 16 Représentations graphiques de données également
+                        accessibles comme données non graphiques</td>
+                      <td>longDescription</td>
+  
+  
+  
+                      
                     </tr>
                     <tr>
-                      <td>Simulation de mouvement</td>
-
-
-                      <td>Liste 143 Code 17 : AVERTISSEMENT : risque de simulation de mouvement.</td>
-                      <td>accessibilityHazard:motionSimulation</td>
-
-
+                      <td>Conforme au standards EPUB accessibilité 1.0 & WCAG AA</td>
+  
                       <td></td>
+  
+                      <td>Liste 196 Code 03 : Spécifications d’accessibilité EPUB 1.0 AA</td>
+                      <td>dcterms:conformsTo</td>
+  
+  
+  
                     </tr>
-
-
+                    <tr>
+                      <td>Conformité établie par xxxx</td>
+  <td></td>
+  
+                      <td>Liste 196 Code 93 : Certification de conformité par</td>
+                      <td>a11y:certifiedBy</td>
+  
+  
+  
+                      
+                    </tr>
+                    <tr>
+                      <td>Rapport de conformité de ce titre</td>
+  <td></td>
+  
+                      <td>196 94 Page web pour les informations détaillées d’accessibilité</td>
+                      <td>certifierReport</td>
+  
+  
+  
+                      
+                    </tr>
+                    <tr>
+                      <td>Politique d'accessibilité de l'éditeur</td>
+                      <td></td>
+  
+                      <td>196 96 Page web de l’éditeur pour les informations détaillées
+                        d’accessibilité</td>
+                      <td></td>
+  
+  
+  
+       
+                    </tr>
+                    <tr>
+                      <td>Autres informations spécifiques</td>
+  
+                      <td>N'afficher qu'en cas de présence. </td>
+                      <td>un ou des items de la <a href="https://ns.editeur.org/onix/fr/196">Liste
+                          196</a> parmis : ; 196:15 Descriptions alternatives complètes
+                        ; 196:16 Représentations graphiques de données également accessibles comme données non graphiques
+                        ; 196:17 Contenu mathématique accessible
+                        ; 196:18 Contenu chimique accessible
+                        ; 196:19 Numérotation de pages équivalente au document imprimé
+                        ; 196:20 Audio synchronisé préenregistré
+                        ; 196:21 Synthèse vocale optimisée
+                        ; 196:22 Balisage de la langue fourni
+                        ; 196:24 Lisibilité adaptée à la dyslexie
+                        ; 196:25 Usage de la couleur
+                        ; 196:26 Usage du contraste
+                        ; 196:27 Usage de l’audio
+                        ; 196:28 Audio-description alternative complète
+                        ; 196:29 Navigation suivant/précédent
+                        ; List: 81; Code 19: Figures, Diagrams, Charts
+                      </td>
+                      <td>annotations
+                        ; audioDescription
+                        ; braille
+                        ; captions
+                        ; ChemML
+                        ; describedMath
+                        largePrint ; latex
+                        rubyAnnotations
+                        ; signLanguage
+                        ; taggedPDF
+                        ; tactileGraphic
+                        ; tactileObject
+                        ; timingControl
+                        ; transcript
+                        ; ttsMarkup
+                        accessibilityAPI (vocabulary list follows)
+                        ; AndroidAccessibility
+                        ; ARIA
+                        ; ATK
+                        ; AT-SPI
+                        ; BlackberryAccessibility
+                        ; iAccessible2
+                        ; iOSAccessibility
+                        ; JavaAccessibility
+                        ; MacOSXAccessibility
+                        ; MSAA
+                        ; UIAutomation
+                        chartOnVisual Diagrams, Charts
+                        chemOnVisual
+                        ; colorDependent
+                        ; diagramOnVisual
+                        mathOnVisual
+                        ; musicOnVisual
+                        ; tactile
+                        ; textOnVisual
+                      </td>
+                    </tr>
+                    </table>
+  
+                    <table class="zebra"><h3>  Points d'attention</h3>
+                      <thead>
+                        <tr>
+                          <th>Label</th>
+                          <th>Cas d'usage</th>
+                          <th>ONIX</th>
+                          <th>Schema.org</th>
+                        </tr></thead>
+                      <tr>
+                        <td>Présence de flashs lumineux</td>
+  
+  
+                        <td>Liste 143 Code 13 : Avertissement : risque de clignotement</td>
+                        <td>accessibilityHazard:flashing</td>
+  
+  
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Lecture de vidéos automatique</td>
+  
+  
+                        <td></td>
+                        <td></td>
+  
+  
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Effets sonores</td>
+  
+  
+                        <td>Liste 175 Code A310 : Effets sonores.</td>
+                        <td>accessibilityHazard:sound</td>
+  
+  
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>Simulation de mouvement</td>
+  
+  
+                        <td>Liste 143 Code 17 : AVERTISSEMENT : risque de simulation de mouvement.</td>
+                        <td>accessibilityHazard:motionSimulation</td>
+  
+  
+                        <td></td>
+                      </tr>
+                      </table>
+  
+                    </div>
+          </details>
+ 
 
 
 

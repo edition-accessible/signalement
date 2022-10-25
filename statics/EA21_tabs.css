@@ -10,7 +10,7 @@ section.js-tabcontent[aria-hidden = true]{
 	border-color: black;
 	border-radius: 20px;
 	border-width: 10px;
-	background-color: rgba(200, 205, 252, 0.257);
+	background-color: #eff7ff;
 	margin-bottom: 4em;
 }
 
