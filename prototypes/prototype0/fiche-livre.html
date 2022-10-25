@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Renseignements sur l'accessibilité du livre | Signalement des livres numériques accessibles</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../statics/EA21_signalement.css" media="all" />
+    <link rel="stylesheet" href="../statics/EA21_accessibilite.css" media="all" />
+    <link rel="stylesheet" href="../statics/EA21_modale.css" media="all" />
+</head>
+
+<body>
+    <div class="inside">
+        <nav role="navigation" aria-label="Accès rapide"><a id="skiplink" href="#main">Aller au contenu</a></nav>
+        <div id="wrapper">
+
+            <div id="header" class="clear">
+                <div class="inside">
+                    <div class="">
+                        <header role="banner">
+                            <h1>Signalement des livres numériques nativement accessibles</h1>
+
+                            <p>Attention ceci est le prototype 0 de décembre 2021. Réalisé par EDRLab, cet ensemble de pages web proposent différents exemples d'implémentation du <i>Guide d'expérience utilisateur pour l'affichage des métadonnées d'accessibilité 1.0</i> élaboré par le <i>Publishing Community Group du W3C.</i></p>
+                        </header>
+                    </div>
+                    <hr/>
+                    <nav id="navigation" role="navigation" aria-label="Menu de navigation">
+                        <ul>
+                            <li><a href="../index.html">Retour à la version actuelle</a></li>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="fiche-livre.html">Affichage dans une fiche livre</a></li>
+                            <li><a href="recherche.html">Options de recherche</a></li>
+                            <li><a href="declaration.html">Déclarations</a></li>
+                            <li><a href="references.html">Références</a></li>
+
+                        </ul>
+                    </nav>
+                    <!-- end #navigation" -->
+                </div>
+            </div>
+            <hr />
+            <!-- end #header -->
+
+
+            <main id="main" role="main" tabindex="-1">
+                <div class="inside">
+
+                    <article class="clear" id="livreex1">
+                        <div class="left-title-book">
+                            <img class="img" src="../statics/lamarquedes4-cover.jpg" role="doc-cover" alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+                        </div>
+                        <div class="clear">
+                            <h2><i>Exemple 1 : un ebook doté de toutes les de métadonnées sur le modèle du guide du W3C.</i></h2>
+                            <p><b>La Marque des quatre</b></p>
+                            <p>Auteur : <span lang="en">Arthur Conan Doyle</span></p>
+                            <p>Copyright : 2020</p>
+                            <p>ISBN : 9780000000000</p>
+                            <p>Éditeur : SNE</p>
+                            <h4>Accessibilité</h4>
+                            <p>Adapté aux lecteurs d'écran : oui.</p>
+                            <p>Résumé : cette publication comprend un balisage permettant la compatibilité avec les technologies d'assistance. Les images de cette publication sont décrites.</p>
+
+                            <button id="modal-def">Toutes les informations d'accessibilité disponibles</button>
+                        </div>
+                    </article>
+
+                    <article class="clear" id="livreex2">
+                        <div class="left-title-book">
+                            <img class="img" src="../statics/Terre-et-Fondation-cover.jpg" role="doc-cover" alt="Couverture : Terre et Fondation, Isaac Asimov, Audiolib 2021" />
+                        </div>
+                        <h2><i>Exemple 2 : un livre audio sur le modèle du guide du W3C.</i></h2>
+                        <p><b>Terre et Fondation</b> </p>
+                        <p>Auteur : Isaac Asimov</p>
+                        <p>Copyright : 2021</p>
+                        <p>ISBN : 9791035405311</p>
+                        <p>Éditeur : Audiolib</p>
+                        <p>Accessibilité : contenu audio intégral</p>
+                    </article>
+
+                    <article class="clear" id="livreex3">
+                        <div class="left-title-book">
+                            <img class="img" src="../statics/illusions-perdues-cover.png" role="doc-cover" alt="Couverture : les illusions perdues, Balzac." />
+                        </div>
+                        <h2><i>Exemple 3 : un ebook sans métadonnées d'accessibilité sur le modèle du guide du W3C.</i></h2>
+                        <p><b>Les Illusions perdues</b></p>
+                        <p>Auteur : Honoré de Balzac</p>
+                        <p>Copyright : 2000</p>
+                        <p>Éditeur : BNF </p>
+                        <p>Collection : Essentiels</p>
+                        <p>Accessibilité : aucune information</p>
+                    </article>
+
+                    <article class="clear" id="livreex4">
+                        <div class="left-title-book">
+                            <img class="img" src="../statics/lamarquedes4-cover.jpg" role="doc-cover" alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+                        </div>
+                        <div class="inside">
+                            <div>
+                                <h2><i>Exemple 4 : un ebook sans métadonnées d'accessibilité mais pour lequel l'éditeur a prévu une déclaration d'accessibilité.</i></h2>
+                                <p><b>La Marque des quatre</b></p>
+                                <p>Auteur : <span lang="en">Arthur Conan Doyle</span></p>
+                                <p>Copyright : 2020</p>
+                                <p>ISBN : 9780000000000</p>
+                                <p>Éditeur : SNE</p>
+                                <a href="infos-accessibilite.html"><img class="img30" src="../statics/accessibility.svg" alt="informations d'accessibilité disponibles" /></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="inside">
+                        <article class="clear" id="livreex5">
+                            <div class="left-title-book">
+                                <img class="img" src="../statics/contesninon-cover.jpg" role="doc-cover" alt="Couverture : Émile Zola, Nouveaux Contes à Ninon, Project Gutenberg, 2005" />
+                            </div>
+                            <div class="inside">
+                                <div>
+                                    <h2><i>Exemple 5 : un ebook sans métadonnées d'accessibilité pour lequel aucune information n'est affichée.</i></h2>
+                                    <p><b>Nouveaux Contes à Ninon</b></p>
+                                    <p>Auteur : Émile Zola</p>
+                                    <p>Copyright : 2005</p>
+                                    <p>EBook-No. 8416</p>
+                                    <p>Éditeur : <span lang="en">Project Gutenberg</span></p>
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <hr/>
+                <!--<img id="logo_img" title="EDRLab" src="https://www.edrlab.org/wp-content/uploads/2016/12/edrlab_logo@2x.jpg" alt="EDRLab" style="max-height: 33px;">-->
+                <span><i>Ces pages sont réalisées à titre d'exemple. Les fonctionnalités présentées n'ont pas vocation à être fonctionelles.</i></span>
+
+            </footer>
+            <!-- end #main -->
+        </div>
+        <!-- end #wrapper -->
+
+
+        <div id="modal-def-content" aria-labelledby="modal-def-title" tabindex="-1" role="dialog">
+            <button class="close" id="btn-close-def" title="Fermer"><span aria-hidden="true">X</span></button>
+            <div tabindex="0" role="document">
+                <h1 id="modal-def-title">Toutes les informations d'accessibilité</h1>
+                <p>Cette publication comprend un balisage permettant la compatibilité avec les technologies d'assistance. Les images de cette publication sont décrites. La liste ci-dessous donne le détail des fonctions incluses.</p>
+                <ul>
+                    <li>Conforme à la norme EPUB accessibilité 1.0 & WCAG AA</li>
+                    <li>Conformité établie par xxxx</li>
+                    <li><a href="ace-smart-report-fr.html">Rapport de conformité de ce titre</a>
+                    </li>
+                    <li><a href="infos-accessibilite.html">Politique d'accessibilité de l'éditeur</a>
+                        <li>Table des matières
+                        </li>
+                        <li>Ordre de lecture logique
+                        </li>
+                        <li>Descriptions brèves des images
+                        </li>
+                        <li>Référence à la pagination du livre imprimé
+                        </li>
+                        <li>Risques : aucun</li>
+
+                </ul>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="../statics/modale-def.js"></script>
+    </div>
+</body>
+
+</html>

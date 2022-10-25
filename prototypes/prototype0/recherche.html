@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+<title>Options de recherche | Signalement des livres numériques accessibles</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../statics/EA21_signalement.css" media="all" />
+<link rel="stylesheet" href="../statics/EA21_accessibilite.css" media="all" />
+<link rel="stylesheet" href="../statics/EA21_modale.css" media="all" />
+</head>
+
+<body><div class="inside">
+<nav role="navigation" aria-label="Accès rapide"><a id="skiplink" href="#main">Contenu</a></nav>
+<div id="wrapper">
+
+ <div id="header" class="clear">
+ <div class="inside">
+ <div>
+ <header role="banner">
+ <h1>Signalement des livres numériques accessibles</h1>
+
+ <p>Attention ceci est le prototype 0 de décembre 2021. Réalisé par EDRLab, cet ensemble de pages web proposent différents exemples d'implémentation du <i>Guide d'expérience utilisateur pour l'affichage des métadonnées d'accessibilité 1.0</i> élaboré par le <i>Publishing Community Group du W3C.</i></p>
+ </header>
+ </div>
+ <hr/>
+<nav id="navigation" role="navigation" aria-label="Menu de navigation">
+                        <ul>
+                            <li><a href="../index.html">Retour à la version actuelle</a></li>
+                            <li><a href="index.html">Accueil</a></li>
+ <li><a href="fiche-livre.html">Affichage dans une fiche livre</a></li>
+ <li><a href="recherche.html">Options de recherche</a></li>
+ <li><a href="declaration.html">Déclarations</a></li>
+ <li><a href="references.html">Références</a></li>
+ 
+ </ul>
+ </nav> <!-- end #navigation" -->
+ </div>
+ </div> <hr /> <!-- end #header -->
+
+
+<main id="main" role="main" tabindex="-1">
+
+ 
+ <div class="inside">
+ <section id="searchexnorme"><h2 class="center">Exemple 1 : filtres de recherche par norme</h2> 
+ 
+ <div role="search" class="clear">
+ <form id="search">
+ <input type="text" id="search-input" title="Rechercher sur le site" placeholder="Recherche" />
+ <input type="image" src="../statics/loupe.svg" title="Lancer la recherche" alt="Lancer la recherche" />
+ </form>
+ </div> 
+ <div>
+ 
+ <h2>Accessibilité :</h2>
+ 
+ <div>
+ <div class="item-list">
+ <ul class="facet-multiselect-checkbox">
+ <li>
+ <input data-facet-value="130886" type="checkbox" id="130886" value="1"> <label class="option" for="130886">Contenu audio intégral</label>
+ 
+ </li>
+ <li>
+ <input data-facet-value="130886" type="checkbox" id="13088620" value="1"> <label class="option" for="13088620">Contenu textuel intégral</label>
+ 
+ </li>
+ <li>
+ <input data-facet-value="130886" type="checkbox" id="1308863" value="1"> <label class="option" for="1308863">Adapté aux lecteurs d'écrans</label>
+ 
+ </li>
+
+ <li>
+ <input data-facet-value="130892" type="checkbox" id="130892" value="1"> <label class="option" for="130892">Aucune information d'accessibilité</label>
+ </li>
+
+ <li class="first">
+ 
+ <input data-facet-value="130883" type="checkbox" id="130883" value="1"> <label class="option" for="130883">Conformes EPUB Accessibility 1.0 </label>
+ 
+ </li>
+ <li class="first">
+ 
+ <input data-facet-value="130883" type="checkbox" id="1308837" value="1"> <label class="option" for="1308837">Conformes <a href="">WCAG 2.0 AAA</a></label>
+ 
+ </li>
+ <li class="first">
+ 
+ <input data-facet-value="130883" type="checkbox" id="1308838" value="1"> <label class="option" for="1308838">Conformes WCAG 2.0 AA</label>
+ 
+ </li>
+ <li>
+ <input data-facet-value="130886" type="checkbox" id="1308869" value="1"> <label class="option" for="1308869">Conformes WCAG 2.0 A</label>
+ 
+ </li>
+ 
+
+
+
+ </ul></div></div>
+ </div>
+ 
+ 
+ </section></div>
+
+
+ <div class="inside">
+ 
+<section id="searchexfonctions"><h2 class="center">Exemple 2 : filtres de recherche par fonctions</h2> 
+
+ <div role="search" class="clear">
+ <form id="search2">
+ <input type="text" id="search-input2" title="Rechercher sur le site" placeholder="Recherche" />
+ <input type="image" src="../statics/loupe.svg" title="Lancer la recherche" alt="Lancer la recherche" />
+ </form>
+ </div> 
+ <div>
+ 
+ <h2>Fonctionnalités d'accessibilité :</h2>
+ 
+ <div>
+ <div class="item-list">
+ <ul class="facet-multiselect-checkbox">
+ <li>
+ <input data-facet-value="130889" type="checkbox" id="1308890" value="1"> <label class="option" for="1308890">Adapté aux lecteurs d'écran (607) </label>
+ </li>
+ <li>
+ <input data-facet-value="130895" type="checkbox" id="130895" value="1"> <label class="option" for="130895">Navigation structurée (877) </label>
+ </li>
+ <li style="display: list-item;">
+ <input data-facet-value="130901" type="checkbox" id="130901" value="1"> <label class="option" for="130901">Table des matières (883) </label>
+ </li>
+
+ <li class="first">
+
+ <input data-facet-value="130883" type="checkbox" id="1308831" value="1"> <label class="option" for="1308831">Images décrites (375) </label>
+
+ </li>
+ <li>
+ <input data-facet-value="130886" type="checkbox" id="1308861" value="1"> <label class="option" for="1308861">Mathématiques décrits (1) </label>
+ 
+ </li>
+
+ <li class="first">
+ <input data-facet-value="130892" type="checkbox" id="1308921" value="1"> <label class="option" for="1308921">​Référence aux numéros de page du livre imprimé (127) </label>
+ 
+ </li>
+
+
+
+ <li class="last" style="display: list-item;"><div >
+ <input data-facet-value="1309071" type="checkbox" id="1309071" value="1"> <label class="option" for="1309071">Audio seulement (358) </label>
+ 
+ </div>
+ </li>
+
+ </ul></div></div>
+ </div>
+
+
+</section></div>
+
+
+ <div class="inside">
+ <section id="searchexsimple"><h2 class="center">Exemple 3 : filtres de recherche simplifié</h2> 
+ 
+ <div role="search" class="clear">
+ <form id="search-s">
+ <input type="text" id="search-input-s" title="Rechercher sur le site" placeholder="Recherche" />
+ <input type="image" src="../statics/loupe.svg" title="Lancer la recherche" alt="Lancer la recherche" />
+ </form>
+ </div> 
+ <div>
+ 
+ <h2>Accessibilité :</h2>
+ 
+ <div>
+ <div class="item-list">
+ <ul class="facet-multiselect-checkbox">
+ <li>
+ <input data-facet-value="130886" type="checkbox" id="13088614" value="1"> <label class="option" for="13088614">Contenu audio intégral</label>
+ 
+ </li>
+
+ <li>
+ <input data-facet-value="130886" type="checkbox" id="13088612" value="1"> <label class="option" for="13088612">Adapté aux lecteurs d'écrans</label>
+ </li>
+
+ <li>
+ <input data-facet-value="130886" type="checkbox" id="13088617" value="1"> <label class="option" for="13088617">Texte et audio synchronisés</label>
+ </li>
+
+
+
+ </ul></div></div>
+ </div>
+ 
+ 
+ </section>
+</main>
+<footer><hr/>
+<span><i>Ces pages sont réalisées à titre d'exemple. Les fonctionnalités présentées n'ont pas vocation à être fonctionelles.</i></span>
+
+</footer>
+<!-- end #main -->
+</div><!-- end #wrapper -->
+
+
+</div></body>
+
+</html>

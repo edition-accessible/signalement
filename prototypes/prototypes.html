@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Signalement des livres numériques accessibles</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../statics/EA21_signalement.css" media="all" />
+    <link rel="stylesheet" href="../statics/EA21_accessibilite.css" media="all" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
+
+    <link rel="stylesheet" type="text/css" href="../statics/EA21_tabs.css" />
+    <link rel="stylesheet" href="../statics/EA21_signalement.css" media="all" />
+    <link rel="stylesheet" href="../statics/EA21_accessibilite.css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <nav role="navigation" aria-label="Accès rapide"><a id="skiplink" href="#main">Aller au contenu</a></nav>
+    <header role="banner" class="blue">
+        <img src="../statics/accessibility.svg" class="left-title" alt="" />
+        <h1 class="center pad">Signaler l'accessibilité des livres numériques</h1>
+        <p class="center bold pad"><em>Les lecteurs en situation de handicap doivent pouvoir aisément et rapidement
+                identifier les livres numériques qui correspondent à leurs besoins</em>
+        </p>
+    </header>
+
+    <nav id="navigation" role="navigation" aria-label="Menu de navigation">
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../recommandation.html">Recommandations</a></li>
+            <li><a href="../prototypes/prototypes.html">Prototypes</a></li>
+            <li><a href="../projet/deroule.html">Déroulé du projet</a></li>
+            <li><a href="../references/references.html">Références</a></li>
+        </ul>
+    </nav>
+    </div>
+    </div>
+    <hr />
+
+
+    <main id="main" role="main" tabindex="-1">
+        <section>
+            <article>
+                <h2 id="recommandationTitre">Protoype 3 : simplification</h2>
+                <p><em> <a href="protoype3/livre1.html">Prototype 2 (novembre 2022)</a></em></p>
+                <p>Ce troisième prototype propose de simplifier l’accès aux informations clés en les
+                    affichant en dehors d’une boîte ouvrable. Les autres informations restent accessibles
+                    sur action de l'utilisateur, mais les redondances ne sont plus exposées.</p>
+                    <section class="js-tabs">
+                        <h2 id="title" property="name">Prototype 3</h2>
+                        <ul class="js-tablist" data-existing-hx="h3">
+                            <li class="js-tablist__item">
+                                <a href="#p3_L1" id="label_p3_L1" class="js-tablist__link">Livre 1</a>
+                            </li>
+                            <li class="js-tablist__item">
+                                <a href="#p3_L2" id="label_p3_L2" class="js-tablist__link">Livre 2</a>
+                            </li>
+                            <li class="js-tablist__item">
+                                <a href="#p3_L3" id="label_p3_L3" class="js-tablist__link">Livre 3</a>
+                            </li>
+                            <li class="js-tablist__item">
+                                <a href="#p3_L4" id="label_p3_L4" class="js-tablist__link">Livre 4</a>
+                            </li>
+                            <li class="js-tablist__item">
+                                <a href="#p3_filtre" id="label_p3_filtre" class="js-tablist__link">Filtrage</a>
+                            </li>
+                        </ul>
+                        <section id="p3_L1" class="js-tabcontent">
+                            <h3>Fiche livre : un epub redistribuable accessible</h3>
+                            <article id="livreex1">
+                                <div class="left-title-book">
+                                    <img class="img" src="../statics/lamarquedes4-cover.jpg" role="doc-cover"
+                                        alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+                                </div>
+                                <div class="fichelivre">
+                                    <h3>La Marque des quatre</h3>
+                
+                                    <em><span lang="en">Arthur Conan Doyle</span></em>
+                                    <p>La Marque des quatre ou Le Signe des quatre (The Sign of Four en version originale)
+                                        est la deuxième aventure de Sherlock Holmes, écrite en 1889 par Arthur Conan Doyle
+                                        et publiée en 1890.
+                                        Ennuyé par le manque d'enquêtes, Sherlock Holmes s'adonne à la consommation de
+                                        drogues pour s'occuper, ainsi qu'à diverses activités ennuyeuses, sous le regard de
+                                        son colocataire, le docteur John Watson.</p>
+                                    <section>
+                                        <h4>Détails du produit</h4>
+                                        <ul>
+                                            <li>Format EPUB</li>
+                                            <li>Protégé par LCP</li>
+                                            <li>Publié en 2020 par le SNE</li>
+                                            <li>ISBN 9780000000000</li>
+                                        </ul>
+                                    </section>
+                                    <section>
+                                        <h4>Accessibilité</h4>
+                                        <ul>
+                                            <li>Affichage adaptable</li>
+                                            <li>Texte et images accessibles en vocal et tactile</li>
+                                            <li>Référence à la pagination du livre imprimé</li>
+                                        </ul>
+                                        </details>
+                                        <details>
+                                            <summary>Autres informations d'accessibilité </summary>
+                                            <ul>
+                
+                                                <li>Descriptions des images</li>
+                                                <li>Conforme aux standards EPUB accessibilité 1.0 & WCAG AA</li>
+                                                <li>Conformité établie par x20xxx</li>
+                                                <li><a href="ace-smart-report-fr.html">Rapport de conformité de ce titre</a>
+                                                </li>
+                                                <li><a href="infos-accessibilite-ed.html">Politique d'accessibilité de
+                                                        l'éditeur</a></li>
+                                            </ul>
+                
+                
+                                            <p>Cette publication comprend un balisage permettant la compatibilité avec les
+                                                technologies d'assistance. Les images de cette publication sont décrites.
+                                            </p>
+                                        </details>
+                                    </section>
+                            </article>
+                        </section>
+                        <section id="p3_L2" class="js-tabcontent">
+                            <h3>Fiche livre : un epub enrichi à mise en page fixe</h3>
+                            <article id="livreex1">
+                                <div class="left-title-book">
+                                    <span lang="en"><img class="img" src="../statics/Galdo-cover_UK.jpg" role="doc-cover"
+                                            alt="Couverture : Galdo's Gift" /></span>
+                                </div>
+                                <div class="fichelivre">
+                                    <h3><span lang="en">Galdo's Gift - The Boovie</span></h3>
+                
+                                    <em><span lang="en">Trevor Young & Eleanor Long</span></em>
+                                    <p><span lang="en">Four hapless heroes are sent on a perilous quest by the frog King
+                                            Galdo to find a rare and special gift for a very special visitor...YOU!</span>
+                                    </p>
+                                    <details>
+                                        <summary>Détails du produit</summary>
+                                        <ul>
+                                            <li>Langue anglaise</li>
+                                            <li>Format EPUB</li>
+                                            <li>Ce livre numérique n'est pas protégé</li>
+                                            <li>Publié en 2017 par Tapocketa</li>
+                                            <li>ISBN : 9781999857608</li>
+                                        </ul>
+                                    </details>
+                                    <details>
+                                        <summary>Modes de lecture</summary>
+                                        <ul>
+                                            <li>Mise en page fixe</li>
+                                            <li>Texte et images disponibles en vocal </li>
+                                            <li>Contenu audio intégral (présentation, index, notes)</li>
+                                        </ul>
+                                    </details>
+                                    <details>
+                                        <summary>Fonctionnalités</summary>
+                                        <ul>
+                                            <li>Table des matières</li>
+                                        </ul>
+                                    </details>
+                                    <details>
+                                        <summary>Informations d'accessibilité</summary>
+                                        <p>Aucune information disponible.</p>
+                
+                                    </details>
+                                    <details>
+                                        <summary>Points d'attention</summary>
+                                        <ul>
+                                            <li>Présence de flashs lumineux</li>
+                                            <li>Lecture de vidéos automatique</li>
+                                            <li>Effets sonores</li>
+                                        </ul>
+                                    </details>
+                                </div>
+                            </article>
+                        </section>
+                        <section id="p3_L3" class="info js-tabcontent">
+                            <h3>Fiche livre : un livre audio</h3>
+                            <article id="livreex1">
+                                <div class="left-title-book">
+                                    <img class="img" src="../statics/Terre-et-Fondation-cover.jpg" role="doc-cover"
+                                        alt="Couverture : Terre et Fondation, Isaac Asimov, Audiolib 2021" />
+                                </div>
+                                <div class="fichelivre">
+                                    <h3>Terre et Fondation</h3>
+                
+                                    <em>Isaac Asimov</em>
+                                    <p>Tout porte à croire que le légendaire berceau de l'humanité, la Terre, se trouve au
+                                        cœur d'un vaste plan à l'permetéchelle galactique, destiné à garantir en coulisse la
+                                        pérennité de la civilisation : une synthèse parfaite entre le matérialisme de la
+                                        Première Fondation et le mentalisme de la Seconde, mise en œuvre par une mystérieuse
+                                        puissance.</p>
+                                    <details>
+                                        <summary>Détails du produit</summary>
+                                        <ul>
+                                            <li>Format MP3</li>
+                                            <li>Temps d'écoute : 18 h 45 min</li>
+                                            <li>Ce livre numérique audio n'est pas protégé</li>
+                                            <li>Publié en 2021 par Audiolib</li>
+                                            <li>ISBN 9791035405311</li>
+                                        </ul>
+                                    </details>
+                
+                                    <p>Aucune information d'accessibilité n'est disponible.</p>
+                
+                                </div>
+                            </article>
+                        </section>
+                            <section id="p3_L4" class="info js-tabcontent">
+                                <h3>Fiche livre : un epub 2 sans information spécifique</h3>
+                                <article id="livreex1">
+                                    <div class="left-title-book">
+                                        <img class="img" src="../statics/illusions-perdues-cover.png" role="doc-cover"
+                                            alt="Couverture : les illusions perdues, Balzac." />
+                                    </div>
+                                    <div class="fichelivre">
+                                        <h3>Les Illusions perdues</h3>
+                
+                                        <em>Honoré de Balzac</em>
+                                        <p>Ce roman sur l’ambition littéraire et le monde impitoyable de la presse est
+                                            aujourd’hui considéré comme un des chefs-d’œuvre de Balzac. Lui-même le considérait
+                                            comme « l'œuvre capitale dans l'œuvre ».</p>
+                                        <details>
+                                            <summary>Détails du produit</summary>
+                                            <ul>
+                                                <li>Format EPUB</li>
+                                                <li>Protégé par LCP</li>
+                                                <li>Publié en 2003 par la BNF</li>
+                                                <li>ISBN 9780000000000</li>
+                                            </ul>
+                                        </details>
+                                        <details>
+                                            <summary>Modes de lecture</summary>
+                                            <ul>
+                                                <li>Affichage adaptable</li>
+                                            </ul>
+                                        </details>
+                                        <details>
+                                            <summary>Fonctionnalités</summary>
+                                            <ul>
+                                                <li>Table des matières</li>
+                                            </ul>
+                                        </details>
+                                        <p>Aucune information d'accessibilité disponible.</p>
+                                    </div>
+                                </article>
+                            </section>
+                            <section id="p3_filtre" class="info js-tabcontent">
+                                <h3>Options de filtrage</h3>
+                                <article class="fichelivre">
+                                    <p><i>En complément des recherches par format et mesures de protection.</i></p>
+                                    <ul class="facet-multiselect-checkbox">
+                                       <li><input type="checkbox"><label class="option">Affichage adaptable</label></li>
+                                       <li><input type="checkbox"><label class="option">Mise en page fixe</label></li>
+                  
+                                       <li><input type="checkbox"><label class="option">Texte et images disponibles en vocal </label></li>
+                                       <li><input type="checkbox"><label class="option">Contenu audio intégral (présentation, index,
+                                             notes) </label></li>
+                                       <li><input type="checkbox"><label class="option">Texte & audio synchronisés</label></li>
+                                       <li><input type="checkbox"><label class="option">Référence à la pagination du livre imprimé</label>
+                                       </li>
+                                       <!--<li><input type="checkbox"><label class="option">Conforme EPUB accessibilité 1.0 & WCAG AA</label></li>
+                       <li><input type="checkbox"><label class="option">Conforme au Guide des contenus web accessibles</label></li>-->
+                                       <li><input type="checkbox"><label class="option">Informations d'accessibilité disponibles</label>
+                                       </li>
+                                    </ul>
+                                 </article>
+                            </section>
+                
+                        </section>
+                </section>
+            </article>
+            <article>
+                <h2>Prototype 2 : révision du vocabulaire</h2>
+                <p><em> <a href="protoype2/livre1.html">Prototype 2 (juillet 2022)</a></em></p>
+                <p>Les prototypes et ateliers menés dans le cadre du projet signalement ont mis en lumière
+                    des difficultées liées au vocabulaire permettant d'exprimer les fonctionnalités
+                    d'accessibilité.</p>
+                <p>
+
+                </p>Un projet complémentaire vise à établir une base de vocabulaire consensuelle
+                et compréhensible. Un site compagnon est dédié à ce <a
+                    href="https://edition-accessible.github.io/vocabulaire/">projet Vocabulaire et
+                    fonctionnalités d'accessibilité</a>. Une première étape de ce projet a consisté à
+                diffuser une enquête nationale en juin 2022, en partenariat avec l’association ALIRE et le
+                Syndicat de la Librairie Française. À destination du grand public, cette enquête a été
+                relayée par epagine.fr, leslibraires.fr et immateriel.fr.
+                </p>
+                <p>Les prototypes de fiche livre, options de recherche et de référence ont étés mis à jour
+                    pour refléter les réponses majoritaires du questionnaire.</p>
+
+                    <section class="js-tabs">
+                        <h2 id="title" property="name">Prototype 2</h2>
+                        <ul class="js-tablist" data-existing-hx="h3">
+                            <li class="js-tablist__item">
+                                <a href="#p2_L1" id="label_p2_L1" class="js-tablist__link">Livre 1</a>
+                            </li>
+                            <li class="js-tablist__item">
+                                <a href="#p2_L2" id="label_p2_L2" class="js-tablist__link">Livre 2</a>
+                            </li>
+                            <li class="js-tablist__item">
+                                <a href="#p2_L3" id="label_p2_L3" class="js-tablist__link">Livre 3</a>
+                            </li>
+                            <li class="js-tablist__item">
+                                <a href="#p2_L4" id="label_p2_L4" class="js-tablist__link">Livre 4</a>
+                            </li>
+                            <li class="js-tablist__item">
+                                <a href="#p2_filtre" id="label_p2_filtre" class="js-tablist__link">Filtrage</a>
+                            </li>
+                        </ul>
+                        <section id="p2_L1" class="js-tabcontent">
+                            <h3>Fiche livre : un epub redistribuable accessible</h3>
+                            <article id="livreex1">
+                                <div class="left-title-book">
+                                    <img class="img" src="../statics/lamarquedes4-cover.jpg" role="doc-cover" alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+                                </div>
+                                <div  class="fichelivre">
+                                   <h3>La Marque des quatre</h3>
+                                  
+                                <em><span lang="en">Arthur Conan Doyle</span></em>
+                                <p>La Marque des quatre ou Le Signe des quatre (The Sign of Four en version originale) est la deuxième aventure de Sherlock Holmes, écrite en 1889 par Arthur Conan Doyle et publiée en 1890.
+                                Ennuyé par le manque d'enquêtes, Sherlock Holmes s'adonne à la consommation de drogues pour s'occuper, ainsi qu'à diverses activités ennuyeuses, sous le regard de son colocataire, le docteur John Watson.</p>
+                                   <details>
+                                <summary>Détails du produit</summary>
+                                <ul>
+                                <li>Format EPUB</li>
+                                <li>Protégé par LCP</li>
+                                <li>Publié en 2020 par le SNE</li>
+                                <li>ISBN 9780000000000</li>
+                                   </ul>
+                                   </details>
+                                   <details>
+                                <summary>Modes de lecture</summary>
+                                <ul>
+                                <li>Affichage adaptable</li>
+                                <li>Texte et images disponibles en vocal</li>
+                                </ul>
+                                   </details> 
+                                   <details>
+                                   <summary>Fonctionnalités</summary>
+                                   <ul>
+                                   <li>Table des matières</li>
+                                   <li>Référence à la pagination du livre imprimé</li>
+                               </ul>
+                                   </details>
+                                   <details>
+                                   <summary>Informations d'accessibilité disponibles </summary>
+                                     <p>Cette publication comprend un balisage permettant la compatibilité avec les technologies d'assistance. Les images de cette publication sont décrites.</p>
+                               <ul>
+                                   
+                                   <li>Structuré, navigable</li>
+                               <li>Ordre de lecture logique</li>
+                               <li>Descriptions des images</li>
+                               <li>Conforme aux standards EPUB accessibilité 1.0 & WCAG AA</li>
+                               <li>Conformité établie par x20xxx</li>
+                               <li><a href="ace-smart-report-fr.html">Rapport de conformité de ce titre</a>
+                               </li>
+                               <li><a href="infos-accessibilite-ed.html">Politique d'accessibilité de l'éditeur</a></li></ul>
+                                   </details>
+                                   </article>
+                        </section>
+                        <section id="p2_L2" class="js-tabcontent">
+                            <h3>Fiche livre : un epub enrichi à mise en page fixe</h3>
+                            <article id="livreex1">
+                                <div class="left-title-book">
+                                    <span lang="en"><img class="img" src="../statics/Galdo-cover_UK.jpg" role="doc-cover" alt="Couverture : Galdo's Gift" /></span>
+                                </div>
+                                <div  class="fichelivre">
+                                   <h3><span lang="en">Galdo's Gift - The Boovie</span></h3>
+                                  
+                                <em><span lang="en">Trevor Young & Eleanor Long</span></em>
+                                <p><span lang="en">Four hapless heroes are sent on a perilous quest by the frog King Galdo to find a rare and special gift for a very special visitor...YOU!</span></p>
+                                   <details>
+                                <summary>Détails du produit</summary>
+                                <ul>
+                                    <li>Langue anglaise</li>
+                                <li>Format EPUB</li>
+                                <li>Ce livre numérique n'est pas protégé</li>
+                                <li>Publié en 2017 par Tapocketa</li>
+                                <li>ISBN : 9781999857608</li>
+                                   </ul>
+                                   </details>
+                                   <details>
+                                <summary>Modes de lecture</summary>
+                                <ul>
+                                <li>Mise en page fixe</li>
+                                <li>Texte et images disponibles en vocal </li>
+                                <li>Contenu audio intégral (présentation, index, notes)</li> 
+                               </ul>
+                                   </details> 
+                                   <details>
+                                   <summary>Fonctionnalités</summary>
+                                   <ul>
+                                   <li>Table des matières</li>
+                               </ul>
+                                   </details>
+                                   <details>
+                                   <summary>Informations d'accessibilité</summary>
+                                     <p>Aucune information disponible.</p>
+                               
+                                   </details>
+                                   <details>
+                                <summary>Points d'attention</summary>
+                                    <ul>
+                                    <li>Présence de flashs lumineux</li>
+                                    <li>Lecture de vidéos automatique</li>
+                                    <li>Effets sonores</li></ul>
+                                    </details>
+                                 </div>  </article>
+                        </section>
+                        <section id="p2_L3" class="info js-tabcontent">
+                            <h3>Fiche livre : un livre audio</h3>
+                            <article id="livreex1">
+                                <div class="left-title-book">
+                                    <img class="img" src="../statics/Terre-et-Fondation-cover.jpg" role="doc-cover" alt="Couverture : Terre et Fondation, Isaac Asimov, Audiolib 2021" />
+                                </div>
+                                <div  class="fichelivre">
+                                   <h3>Terre et Fondation</h3>
+                                  
+                                <em>Isaac Asimov</em>
+                                <p>Tout porte à croire que le légendaire berceau de l'humanité, la Terre, se trouve au cœur d'un vaste plan à l'permetéchelle galactique, destiné à garantir en coulisse la pérennité de la civilisation : une synthèse parfaite entre le matérialisme de la Première Fondation et le mentalisme de la Seconde, mise en œuvre par une mystérieuse puissance.</p>
+                                   <details>
+                                <summary>Détails du produit</summary>
+                                <ul>
+                                <li>Format MP3</li>
+                                <li>Temps d'écoute : 18 h 45 min</li>
+                                <li>Ce livre numérique audio n'est pas protégé</li>
+                                <li>Publié en 2021 par Audiolib</li>
+                                <li>ISBN 9791035405311</li>
+                                   </ul>
+                                   </details>
+                               
+                                     <p>Aucune information d'accessibilité n'est disponible.</p>
+                               
+                                   </div>
+                                   </article>
+                </section>
+                <section id="p2_L4" class="info js-tabcontent">
+                                <h3>Fiche livre : un epub 2 sans information spécifique</h3>
+                                <article id="livreex1">
+                 <div class="left-title-book">
+                     <img class="img" src="../statics/illusions-perdues-cover.png" role="doc-cover" alt="Couverture : les illusions perdues, Balzac." />
+                 </div>
+                 <div  class="fichelivre">
+                    <h3>Les Illusions perdues</h3>
+                   
+                 <em>Honoré de Balzac</em>
+                 <p>Ce roman sur l’ambition littéraire et le monde impitoyable de la presse est aujourd’hui considéré comme un des chefs-d’œuvre de Balzac. Lui-même le considérait comme « l'œuvre capitale dans l'œuvre ».</p>
+                    <details>
+                 <summary>Détails du produit</summary>
+                 <ul>
+                 <li>Format EPUB</li>
+                 <li>Protégé par LCP</li>
+                 <li>Publié en 2003 par la BNF</li>
+                 <li>ISBN 9780000000000</li>
+                    </ul>
+                    </details>
+                    <details>
+                 <summary>Modes de lecture</summary>
+                 <ul>
+                 <li>Affichage adaptable</li>
+                 </ul>
+                    </details> 
+                    <details>
+                    <summary>Fonctionnalités</summary>
+                    <ul>
+                    <li>Table des matières</li>
+                </ul>
+                    </details>
+                      <p>Aucune information d'accessibilité disponible.</p>
+                </div>
+                    </article>
+                </section>
+                <section id="p2_filtre" class="info js-tabcontent">
+                                <h3>Options de filtrage</h3>
+                                <article  class="fichelivre"><h2>Options de filtrage</h2>
+                                    <p><i>En complément des recherches par format et mesures de protection.</i></p>
+                                     <h3>Caractéristiques</h3>
+                                     <ul class="facet-multiselect-checkbox">
+                                     <li><input type="checkbox"><label class="option">Affichage adaptable</label></li>
+                                     <li><input type="checkbox"><label class="option">Mise en page fixe</label></li>
+                                     
+                                     <li><input type="checkbox"><label class="option">Texte et images disponibles en vocal </label></li>
+                                     <li><input type="checkbox"><label class="option">Contenu audio intégral (présentation, index, notes) </label></li>
+                                     <li><input type="checkbox"><label class="option">Texte & audio synchronisés</label></li>
+                                     <li><input type="checkbox"><label class="option">Référence à la pagination du livre imprimé</label></li>
+                                     <!--<li><input type="checkbox"><label class="option">Conforme EPUB accessibilité 1.0 & WCAG AA</label></li>
+                                     <li><input type="checkbox"><label class="option">Conforme au Guide des contenus web accessibles</label></li>-->
+                                     <li><input type="checkbox"><label class="option">Informations d'accessibilité disponibles</label></li>
+                                    </ul>
+                                    </article>
+                            </section>
+                
+                        </section>
+                </section>
+            </article>
+            <article class="protoTabs">
+                <h2>Prototype 1, catégories généralistes</h2>
+                <p><em> <a href="protoype1/livre1.html">Prototype 1 (janvier 2022)</a></em></p>
+
+                <p>À l'issue des ateliers menés autour du prototype 0 nous avons constaté que l'expérience
+                    utilisateur proposée
+                    n'était pas satisfaisante et relevé les principales difficultés suivantes :
+                <ul>
+                    <li>Un vocabulaire perçu comme trop spécialisé (par exemple les formules Adapté aux
+                        lecteurs d'écrans ou Conforme aux WCAG).</li>
+                    <li>Un vocabulaire prétant à confusion (la signification du mot Accessible par exemple).
+                    </li>
+                    <li>Une expérience utilisateur limitée aux besoins spécifique alors que certaines
+                        fonctionnalités sont utiles à des publics plus larges.</li>
+                    <li>Une expérience utilisateur alourdie par les multiples références.</li>
+                    <li>Une correspondance avec les données ONIX difficile.</li>
+                    <li>Une absence de correspondance pour les données MARC et UNIMARC</li>
+                </ul>
+                <p>En conséquence nous proposons un prototype basé sur les attentes des utilisateurs mettant
+                    en avant des catégories générales comme Modes de lecture et Fonctionnalités, réduisant
+                    ainsi l'information relative à des besoins ou des difficultés spécifiques. </p>
+                <p>Nous proposons aussi une simplification des options de filtrage à mettre à disposition
+                    lors de la recherche.</p>
+                <section id="P1" class="js-tabs">
+                    <ul class="js-tablist" data-existing-hx="h3">
+                        <li class="js-tablist__item">
+                            <a href="#p1_L1" id="label_p1_L1" class="js-tablist__link">Livre 1</a>
+                        </li>
+                        <li class="js-tablist__item">
+                            <a href="#p1_L2" id="label_p1_L2" class="js-tablist__link">Livre 2</a>
+                        </li>
+                        <li class="js-tablist__item">
+                            <a href="#p1_L3" id="label_p1_L3" class="js-tablist__link">Livre 3</a>
+                        </li>
+                        <li class="js-tablist__item">
+                            <a href="#p1_L4" id="label_p1_L4" class="js-tablist__link">Livre 4</a>
+                        </li>
+                        <li class="js-tablist__item">
+                            <a href="#p1_filtre" id="label_p1_filtre" class="js-tablist__link">Filtrage</a>
+                        </li>
+                    </ul>
+                    <section id="p1_L1" class="js-tabcontent">
+                        <h3>Fiche livre : un epub redistribuable accessible</h3>
+                        <article id="livreex1">
+                            <div class="left-title-book">
+                                <img class="img" src="../statics/lamarquedes4-cover.jpg" role="doc-cover"
+                                    alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+                            </div>
+                            <div class="fichelivre">
+                                <h3>La Marque des quatre</h3>
+
+                                <em><span lang="en">Arthur Conan Doyle</span></em>
+                                <p>La Marque des quatre ou Le Signe des quatre (The Sign of Four en version
+                                    originale) est la deuxième aventure de Sherlock Holmes, écrite en 1889
+                                    par Arthur Conan Doyle et publiée en 1890.
+                                    Ennuyé par le manque d'enquêtes, Sherlock Holmes s'adonne à la
+                                    consommation de drogues pour s'occuper, ainsi qu'à diverses activités
+                                    ennuyeuses, sous le regard de son colocataire, le docteur John Watson.
+                                </p>
+                                <details>
+                                    <summary>Détails du produit</summary>
+                                    <ul>
+                                        <li>Format EPUB</li>
+                                        <li>Protégé par LCP</li>
+                                        <li>Publié en 2020 par le SNE</li>
+                                        <li>ISBN 9780000000000</li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>Modes de lecture</summary>
+                                    <ul>
+                                        <li>Mise en page fluide</li>
+                                        <li>Le contenu textuel permet la compréhension</li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>Fonctionnalités</summary>
+                                    <ul>
+                                        <li>Table des matières</li>
+                                        <li>Référence à la pagination du livre imprimé</li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>Réponses à des besoins spécifiques</summary>
+                                    <p>Cette publication comprend un balisage permettant la compatibilité
+                                        avec les technologies d'assistance. Les images de cette publication
+                                        sont décrites.</p>
+                                    <ul>
+
+                                        <li>Structuré, navigable</li>
+                                        <li>Ordre de lecture logique</li>
+                                        <li>Descriptions des images</li>
+                                        <li>Conforme aux standards EPUB accessibilité 1.0 & WCAG AA</li>
+                                        <li>Conformité établie par x20xxx</li>
+                                        <li><a href="ace-smart-report-fr.html">Rapport de conformité de ce
+                                                titre</a>
+                                        </li>
+                                        <li><a href="infos-accessibilite-ed.html">Politique d'accessibilité
+                                                de l'éditeur</a></li>
+                                    </ul>
+                                </details>
+                        </article>
+
+                    </section>
+                    <section id="p1_L2" class="js-tabcontent">
+                        <h3>Fiche livre : un epub enrichi à mise en page fixe</h3>
+                        <article id="livreex1">
+                            <div class="left-title-book">
+                                <span lang="en"><img class="img" src="../statics/Galdo-cover_UK.jpg" role="doc-cover"
+                                        alt="Couverture : Galdo's Gift" /></span>
+                            </div>
+                            <div class="fichelivre">
+                                <h3><span lang="en">Galdo's Gift - The Boovie</span></h3>
+
+                                <em><span lang="en">Trevor Young & Eleanor Long</span></em>
+                                <p><span lang="en">Four hapless heroes are sent on a perilous quest by the
+                                        frog King Galdo to find a rare and special gift for a very special
+                                        visitor...YOU!</span></p>
+                                <details>
+                                    <summary>Détails du produit</summary>
+                                    <ul>
+                                        <li>Langue anglaise</li>
+                                        <li>Format EPUB</li>
+                                        <li>Sans mesure de protection</li>
+                                        <li>Publié en 2017 par Tapocketa</li>
+                                        <li>ISBN : 9781999857608</li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>Modes de lecture</summary>
+                                    <ul>
+                                        <li>Mise en page fixe</li>
+                                        <li>Le contenu textuel suffit à la compréhension</li>
+                                        <li>Le contenu audio suffit à la compréhension</li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>Fonctionnalités</summary>
+                                    <ul>
+                                        <li>Table des matières</li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>Réponses à des besoins spécifiques</summary>
+                                    <p>Aucune information disponible.</p>
+
+                                </details>
+                                <details>
+                                    <summary>Points d'attention</summary>
+                                    <ul>
+                                        <li>Présence de flashs lumineux</li>
+                                        <li>Lecture de vidéos automatique</li>
+                                        <li>Effets sonores</li>
+                                    </ul>
+                                </details>
+                            </div>
+                        </article>
+                    </section>
+                    <section id="p1_L3" class="info js-tabcontent">
+                        <h3>Fiche livre : un livre audio</h3>
+                        <article id="livreex1">
+                            <div class="left-title-book">
+                                <img class="img" src="../statics/Terre-et-Fondation-cover.jpg" role="doc-cover"
+                                    alt="Couverture : Terre et Fondation, Isaac Asimov, Audiolib 2021" />
+                            </div>
+                            <div class="fichelivre">
+                                <h4>Terre et Fondation</h4>
+
+                                <em>Isaac Asimov</em>
+                                <p>Tout porte à croire que le légendaire berceau de l'humanité, la Terre, se
+                                    trouve au cœur d'un vaste plan à l'permetéchelle galactique, destiné à
+                                    garantir en coulisse la pérennité de la civilisation : une synthèse
+                                    parfaite entre le matérialisme de la Première Fondation et le mentalisme
+                                    de la Seconde, mise en œuvre par une mystérieuse puissance.</p>
+                                <details>
+                                    <summary>Détails du produit</summary>
+                                    <ul>
+                                        <li>Format MP3</li>
+                                        <li>Temps d'écoute : 18 h 45 min</li>
+                                        <li>Sans mesure de protection</li>
+                                        <li>Publié en 2021 par Audiolib</li>
+                                        <li>ISBN 9791035405311</li>
+                                    </ul>
+                                </details>
+                                <!--   <details>
+                                            <summary>Modes de lecture</summary>
+                                            <ul>
+                                                  <li>Le contenu audio permet la compréhension</li>
+                                            </ul>
+                                               </details> -->
+                                <details>
+                                    <summary>Réponses à des besoins spécifiques</summary>
+                                    <p>Aucune information n'est disponible.</p>
+
+                                </details>
+                            </div>
+                        </article>
+                    </section>
+                    <section id="p1_L4" class="info js-tabcontent">
+                        <h3>Fiche livre : un epub 2 sans information spécifique</h3>
+                        <article id="livreex1">
+                            <div class="left-title-book">
+                                <img class="img" src="../statics/illusions-perdues-cover.png" role="doc-cover"
+                                    alt="Couverture : les illusions perdues, Balzac." />
+                            </div>
+                            <div class="fichelivre">
+                                <h3>Les Illusions perdues</h3>
+
+                                <em>Honoré de Balzac</em>
+                                <p>Ce roman sur l’ambition littéraire et le monde impitoyable de la presse
+                                    est aujourd’hui considéré comme un des chefs-d’œuvre de Balzac. Lui-même
+                                    le considérait comme « l'œuvre capitale dans l'œuvre ».</p>
+                                <details>
+                                    <summary>Détails du produit</summary>
+                                    <ul>
+                                        <li>Format EPUB</li>
+                                        <li>Protégé par LCP</li>
+                                        <li>Publié en 2003 par la BNF</li>
+                                        <li>ISBN 9780000000000</li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>Modes de lecture</summary>
+                                    <ul>
+                                        <li>Mise en page fluide</li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>Fonctionnalités</summary>
+                                    <ul>
+                                        <li>Table des matières</li>
+                                    </ul>
+                                </details>
+                                <details>
+                                    <summary>Réponses à des besoins spécifiques</summary>
+                                    <p>Aucune information disponible.</p>
+                                </details>
+                            </div>
+                        </article>
+                    </section>
+                    <section id="p1_filtre" class="info js-tabcontent">
+                        <h3>Options de filtrage</h3>
+                        <article class="fichelivre">
+                            <p><i>En complément des recherches par format et mesures de protection.</i></p>
+                            <h3>Caractéristiques</h3>
+                            <ul class="facet-multiselect-checkbox">
+                                <li><input type="checkbox"><label class="option">Mise en page fluide</label>
+                                </li>
+                                <li><input type="checkbox"><label class="option">Mise en page fixe</label>
+                                </li>
+
+                                <li><input type="checkbox"><label class="option">Le contenu textuel permet
+                                        la compréhension</label></li>
+                                <li><input type="checkbox"><label class="option">Le contenu audio permet la
+                                        compréhension</label></li>
+                                <li><input type="checkbox"><label class="option">Texte & audio
+                                        synchronisés</label></li>
+                                <li><input type="checkbox"><label class="option">Référence à la pagination
+                                        du livre imprimé</label></li>
+                                <!--<li><input type="checkbox"><label class="option">Conforme EPUB accessibilité 1.0 & WCAG AA</label></li>
+                                                 <li><input type="checkbox"><label class="option">Conforme au Guide des contenus web accessibles</label></li>-->
+                                <li><input type="checkbox"><label class="option">Contenus accessibles
+                                        conformes</label></li>
+                            </ul>
+                        </article>
+                    </section>
+
+
+                </section>
+            </article>
+
+            <article class="protoTabs">
+                <h2>Prototype 0, implémentation stricte</h2>
+                <p><em> <a href="prototype0/index.html">Prototype 0 (décembre 2021)</a></em></p>
+                <p>En décembre 2022 un prototype proposant une implémentation stricte du <i>Guide
+                        d'expérience utilisateur pour l'affichage des métadonnées d'accessibilité 1.0</i>
+                    élaboré par le <i>Publishing Community Group du W3C</i> a permis d'interroger les
+                    acteurs de la chaine du livre concernés.</p>
+                <section id="p0" class="js-tabs">
+
+                    <ul class="js-tablist" data-existing-hx="h3">
+                        <li class="js-tablist__item">
+                            <a href="#p0_L1" id="label_p0_L1" class="js-tablist__link">Livre 1</a>
+                        </li>
+                        <!-- <li class="js-tablist__item">
+                                            <a href="#p0_L2" id="label_p0_L2" class="js-tablist__link">Livre 2</a>
+                                        </li> -->
+                        <li class="js-tablist__item">
+                            <a href="#p0_L3" id="label_p0_L3" class="js-tablist__link">Livre 3</a>
+                        </li>
+                        <li class="js-tablist__item">
+                            <a href="#p0_L4" id="label_p0_L4" class="js-tablist__link">Livre 4</a>
+                        </li>
+                        <li class="js-tablist__item">
+                            <a href="#p0_filtre" id="label_p0_filtre" class="js-tablist__link">Filtrage</a>
+                        </li>
+                    </ul>
+                    <section id="p0_L1" class="js-tabcontent">
+                        <article class="clear" id="livreex1">
+                            <div class="left-title-book">
+                                <img class="img" src="../statics/lamarquedes4-cover.jpg" role="doc-cover"
+                                    alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+                            </div>
+                            <div class="clear">
+                                <h3><i>Exemple 1 : un ebook doté de toutes les de métadonnées sur le modèle
+                                        du guide du W3C.</i></h3>
+                                <p><b>La Marque des quatre</b></p>
+                                <p>Auteur : <span lang="en">Arthur Conan Doyle</span></p>
+                                <p>Copyright : 2020</p>
+                                <p>ISBN : 9780000000000</p>
+                                <p>Éditeur : SNE</p>
+                                <h4>Accessibilité</h4>
+                                <p>Adapté aux lecteurs d'écran : oui.</p>
+                                <p>Résumé : cette publication comprend un balisage permettant la
+                                    compatibilité avec les technologies
+                                    d'assistance. Les images de cette publication sont décrites.</p>
+                                <details>
+                                    <summary id="modal-def-title">Toutes les informations d'accessibilité
+                                    </summary>
+                                    <p>Cette publication comprend un balisage permettant la compatibilité
+                                        avec les technologies
+                                        d'assistance. Les images de cette publication sont décrites. La
+                                        liste ci-dessous donne le détail
+                                        des fonctions incluses.</p>
+                                    <ul>
+                                        <li>Conforme à la norme EPUB accessibilité 1.0 & WCAG AA</li>
+                                        <li>Conformité établie par xxxx</li>
+                                        <li><a href="ace-smart-report-fr.html">Rapport de conformité de ce
+                                                titre</a>
+                                        </li>
+                                        <li><a href="infos-accessibilite.html">Politique d'accessibilité de
+                                                l'éditeur</a>
+                                        <li>Table des matières
+                                        </li>
+                                        <li>Ordre de lecture logique
+                                        </li>
+                                        <li>Descriptions brèves des images
+                                        </li>
+                                        <li>Référence à la pagination du livre imprimé
+                                        </li>
+                                        <li>Risques : aucun</li>
+                                </details>
+                            </div>
+                        </article>
+                    </section>
+                    <!-- <section id="p0_L2" class="js-tabcontent">
+                                        <h3>Fiche livre : un epub enrichi à mise en page fixe</h3>
+                                    </section> -->
+                    <section id="p0_L3" class="info js-tabcontent">
+                        <article class="clear" id="livreex2">
+                            <div class="left-title-book">
+                                <img class="img" src="../statics/Terre-et-Fondation-cover.jpg" role="doc-cover"
+                                    alt="Couverture : Terre et Fondation, Isaac Asimov, Audiolib 2021" />
+                            </div>
+                            <h3><i>Exemple 2 : un livre audio sur le modèle du guide du W3C.</i></h3>
+                            <p><b>Terre et Fondation</b> </p>
+                            <p>Auteur : Isaac Asimov</p>
+                            <p>Copyright : 2021</p>
+                            <p>ISBN : 9791035405311</p>
+                            <p>Éditeur : Audiolib</p>
+                            <p>Accessibilité : contenu audio intégral</p>
+                        </article>
+                    </section>
+                    <section id="p0_L4" class="info js-tabcontent">
+                        <article class="clear" id="livreex3">
+                            <div class="left-title-book">
+                                <img class="img" src="../statics/illusions-perdues-cover.png" role="doc-cover"
+                                    alt="Couverture : les illusions perdues, Balzac." />
+                            </div>
+                            <h3><i>Exemple 3 : un ebook sans métadonnées d'accessibilité sur le modèle du
+                                    guide du W3C.</i></h3>
+                            <p><b>Les Illusions perdues</b></p>
+                            <p>Auteur : Honoré de Balzac</p>
+                            <p>Copyright : 2000</p>
+                            <p>Éditeur : BNF </p>
+                            <p>Collection : Essentiels</p>
+                            <p>Accessibilité : aucune information</p>
+                        </article>
+                    </section>
+                    <section id="p0_filtre" class="info js-tabcontent">
+                        <h3>Options de filtrage</h3>
+
+                        <h4 class="center">Exemple 1 : filtres de recherche par norme</h4>
+
+
+                        <h5>Accessibilité :</h5>
+
+
+                        <ul class="facet-multiselect-checkbox">
+                            <li>
+                                <input data-facet-value="130886" type="checkbox" id="130886" value="1">
+                                <label class="option" for="130886">Contenu audio intégral</label>
+
+                            </li>
+                            <li>
+                                <input data-facet-value="130886" type="checkbox" id="13088620" value="1">
+                                <label class="option" for="13088620">Contenu textuel intégral</label>
+
+                            </li>
+                            <li>
+                                <input data-facet-value="130886" type="checkbox" id="1308863" value="1">
+                                <label class="option" for="1308863">Adapté aux lecteurs d'écrans</label>
+
+                            </li>
+
+                            <li>
+                                <input data-facet-value="130892" type="checkbox" id="130892" value="1">
+                                <label class="option" for="130892">Aucune information
+                                    d'accessibilité</label>
+                            </li>
+
+                            <li class="first">
+
+                                <input data-facet-value="130883" type="checkbox" id="130883" value="1">
+                                <label class="option" for="130883">Conformes EPUB Accessibility 1.0 </label>
+
+                            </li>
+                            <li class="first">
+
+                                <input data-facet-value="130883" type="checkbox" id="1308837" value="1">
+                                <label class="option" for="1308837">Conformes <a href="">WCAG 2.0
+                                        AAA</a></label>
+
+                            </li>
+                            <li class="first">
+
+                                <input data-facet-value="130883" type="checkbox" id="1308838" value="1">
+                                <label class="option" for="1308838">Conformes WCAG 2.0 AA</label>
+
+                            </li>
+                            <li>
+                                <input data-facet-value="130886" type="checkbox" id="1308869" value="1">
+                                <label class="option" for="1308869">Conformes WCAG 2.0 A</label>
+                            </li>
+                        </ul>
+
+
+                        <h4 class="center">Exemple 2 : filtres de recherche par fonctions</h4>
+
+
+                        <h5>Fonctionnalités d'accessibilité :</h5>
+
+                        <ul class="facet-multiselect-checkbox">
+                            <li>
+                                <input data-facet-value="130889" type="checkbox" id="1308890" value="1">
+                                <label class="option" for="1308890">Adapté aux lecteurs d'écran (607)
+                                </label>
+                            </li>
+                            <li>
+                                <input data-facet-value="130895" type="checkbox" id="130895" value="1">
+                                <label class="option" for="130895">Navigation structurée (877) </label>
+                            </li>
+                            <li style="display: list-item;">
+                                <input data-facet-value="130901" type="checkbox" id="130901" value="1">
+                                <label class="option" for="130901">Table des matières (883) </label>
+                            </li>
+
+                            <li class="first">
+
+                                <input data-facet-value="130883" type="checkbox" id="1308831" value="1">
+                                <label class="option" for="1308831">Images décrites (375) </label>
+
+                            </li>
+                            <li>
+                                <input data-facet-value="130886" type="checkbox" id="1308861" value="1">
+                                <label class="option" for="1308861">Mathématiques décrits (1) </label>
+
+                            </li>
+
+                            <li class="first">
+                                <input data-facet-value="130892" type="checkbox" id="1308921" value="1">
+                                <label class="option" for="1308921">​Référence aux numéros de page du livre
+                                    imprimé
+                                    (127) </label>
+
+                            </li>
+
+
+
+                            <li class="last" style="display: list-item;">
+                                <div>
+                                    <input data-facet-value="1309071" type="checkbox" id="1309071" value="1">
+                                    <label class="option" for="1309071">Audio seulement (358) </label>
+
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <h4 class="center">Exemple 3 : filtres de recherche simplifié</h4>
+
+                        <h5>Accessibilité :</h5>
+                        <ul class="facet-multiselect-checkbox">
+                            <li>
+                                <input data-facet-value="130886" type="checkbox" id="13088614" value="1">
+                                <label class="option" for="13088614">Contenu audio intégral</label>
+
+                            </li>
+
+                            <li>
+                                <input data-facet-value="130886" type="checkbox" id="13088612" value="1">
+                                <label class="option" for="13088612">Adapté aux lecteurs d'écrans</label>
+                            </li>
+
+                            <li>
+                                <input data-facet-value="130886" type="checkbox" id="13088617" value="1">
+                                <label class="option" for="13088617">Texte et audio synchronisés</label>
+                            </li>
+                        </ul>
+
+                    </section>
+                </section>
+            </article>
+        </section>
+
+    </main>
+    <!-- end #main -->
+    <footer>
+
+        <!--<img id=" logo_img " title="EDRLab " src="https://www.edrlab.org/wp-content/uploads/2016/12/edrlab_logo@2x.jpg " alt="EDRLab " style="max-height: 33px; ">-->
+        <p><i>Ces pages sont réalisées à titre d'exemple. Les fonctionnalités présentées n'ont pas vocation
+                à être fonctionelles.</i></p>
+
+    </footer>
+    </div>
+    <!-- end #wrapper -->
+    </div>
+    <script pagespeed_no_defer="">//<![CDATA[
+        (function () { var g = this, h = function (b, d) { var a = b.split("."), c = g; a[0] in c || !c.execScript || c.execScript("var " + a[0]); for (var e; a.length && (e = a.shift());)a.length || void 0 === d ? c[e] ? c = c[e] : c = c[e] = {} : c[e] = d }; var l = function (b) { var d = b.length; if (0 < d) { for (var a = Array(d), c = 0; c < d; c++)a[c] = b[c]; return a } return [] }; var m = function (b) { var d = window; if (d.addEventListener) d.addEventListener("load", b, !1); else if (d.attachEvent) d.attachEvent("onload", b); else { var a = d.onload; d.onload = function () { b.call(this); a && a.call(this) } } }; var n, p = function (b, d, a, c, e) { this.f = b; this.h = d; this.i = a; this.c = e; this.e = { height: window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight, width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth }; this.g = c; this.b = {}; this.a = []; this.d = {} }, q = function (b, d) { var a, c, e = d.getAttribute("pagespeed_url_hash"); if (a = e && !(e in b.d)) if (0 >= d.offsetWidth && 0 >= d.offsetHeight) a = !1; else { c = d.getBoundingClientRect(); var f = document.body; a = c.top + ("pageYOffset" in window ? window.pageYOffset : (document.documentElement || f.parentNode || f).scrollTop); c = c.left + ("pageXOffset" in window ? window.pageXOffset : (document.documentElement || f.parentNode || f).scrollLeft); f = a.toString() + "," + c; b.b.hasOwnProperty(f) ? a = !1 : (b.b[f] = !0, a = a <= b.e.height && c <= b.e.width) } a && (b.a.push(e), b.d[e] = !0) }; p.prototype.checkImageForCriticality = function (b) { b.getBoundingClientRect && q(this, b) }; h("pagespeed.CriticalImages.checkImageForCriticality", function (b) { n.checkImageForCriticality(b) }); h("pagespeed.CriticalImages.checkCriticalImages", function () { r(n) }); var r = function (b) { b.b = {}; for (var d = ["IMG", "INPUT"], a = [], c = 0; c < d.length; ++c)a = a.concat(l(document.getElementsByTagName(d[c]))); if (0 != a.length && a[0].getBoundingClientRect) { for (c = 0; d = a[c]; ++c)q(b, d); a = "oh=" + b.i; b.c && (a += "&n=" + b.c); if (d = 0 != b.a.length) for (a += "&ci=" + encodeURIComponent(b.a[0]), c = 1; c < b.a.length; ++c) { var e = "," + encodeURIComponent(b.a[c]); 131072 >= a.length + e.length && (a += e) } b.g && (e = "&rd=" + encodeURIComponent(JSON.stringify(s())), 131072 >= a.length + e.length && (a += e), d = !0); t = a; if (d) { c = b.f; b = b.h; var f; if (window.XMLHttpRequest) f = new XMLHttpRequest; else if (window.ActiveXObject) try { f = new ActiveXObject("Msxml2.XMLHTTP") } catch (k) { try { f = new ActiveXObject("Microsoft.XMLHTTP") } catch (u) { } } f && (f.open("POST", c + (-1 == c.indexOf("?") ? "?" : "&") + "url=" + encodeURIComponent(b)), f.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), f.send(a)) } } }, s = function () { var b = {}, d = document.getElementsByTagName("IMG"); if (0 == d.length) return {}; var a = d[0]; if (!("naturalWidth" in a && "naturalHeight" in a)) return {}; for (var c = 0; a = d[c]; ++c) { var e = a.getAttribute("pagespeed_url_hash"); e && (!(e in b) && 0 < a.width && 0 < a.height && 0 < a.naturalWidth && 0 < a.naturalHeight || e in b && a.width >= b[e].k && a.height >= b[e].j) && (b[e] = { rw: a.width, rh: a.height, ow: a.naturalWidth, oh: a.naturalHeight }) } return b }, t = ""; h("pagespeed.CriticalImages.getBeaconData", function () { return t }); h("pagespeed.CriticalImages.Run", function (b, d, a, c, e, f) { var k = new p(b, d, a, e, f); n = k; c && m(function () { window.setTimeout(function () { r(k) }, 0) }) }); })(); pagespeed.CriticalImages.Run('/mod_pagespeed_beacon', 'https://smart.daisy.org/report.php', 'YddRYU7ik1', true, false, 'BNElRhnDBHY');
+    //]]>
+    </script>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
+    </script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js">
+    </script>
+    <script>$(document).ready(function () { $('#conformance table').DataTable({ "paging": false, "info": false }); });</script>
+    <script src="https://smart.daisy.org/js/a11ytabs.js">
+    </script>
+</body>
+
+</html>

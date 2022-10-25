@@ -12,175 +12,357 @@
 
 <body>
     <div class="inside">
-<nav role="navigation" aria-label="Accès rapide"><a id="skiplink" href="#main">Aller au contenu</a></nav>
-<div id="wrapper">
+        <nav role="navigation" aria-label="Accès rapide"><a id="skiplink" href="#main">Aller au contenu</a></nav>
+        <div id="wrapper">
 
-    <div id="header" class="clear">
-<div class="inside">
-    <div class="">
-<header role="banner">
-    <h1>Signalement des livres numériques nativement accessibles</h1>
+            <div id="header" class="clear">
+                <div class="inside">
+                    <div class="">
+                        <header role="banner">
+                            <h1>Signalement des livres numériques nativement accessibles</h1>
+<p>La directive Européenne 2018/ entrera en vigueur en juin 2025. À cette date les livres numériques sur le marché devront respecter un niveau d'accessibilité minimum ou faire preuve d'une dérogation.</p>
+<p>Ce document propose des recommandations permettant un affichage harmonieux des informations d'accessibilité d'un livre numérique avant son achat afin que les lecteurs sachent si le livre correspondra à leurs besoins.</p>
+<p>Il est l'aboutissement d'un travail interprofessionnel piloté par EDRLab dans le cadre d'une mission confiée par le comité de pilotage interministeriel.</p>
+<p>Il s'appuie sur un travail de prototypes itératifs ayant servis de support pour interroger les publics généralistes ou concernés ainsi que les acteurs de la chaine de distribution. <em><span>Bien que stabilisé, ce travail ets toujours en cours et ces recommandations peuvent-être amenées à évoluer</span></em></p>
+ 
+                        </header>
+                    </div>
+                    <hr />
+                    <!-- <nav id="navigation" role="navigation" aria-label="Menu de navigation">
+                        <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="fiche-livre.html">Affichage dans une fiche livre</a></li>
+                            <li><a href="recherche.html">Options de recherche</a></li>
+                            <li><a href="declaration.html">Déclarations</a></li>
+                            <li><a href="references.html">Références</a></li>
 
-    <p>Réalisé par EDRLab, cet ensemble de pages web proposent différents exemples d'implémentation du <i>Guide d'expérience utilisateur pour l'affichage des métadonnées d'accessibilité 1.0</i> élaboré par le <i>Publishing Community Group du W3C.</i></p>
-</header>
-    </div>
-    <hr/>
-    <nav id="navigation" role="navigation" aria-label="Menu de navigation">
-<ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="fiche-livre.html">Affichage dans une fiche livre</a></li>
-    <li><a href="recherche.html">Options de recherche</a></li>
-    <li><a href="declaration.html">Déclarations</a></li>
-    <li><a href="references.html">Références</a></li>
-
-</ul>
-    </nav>
-    <!-- end #navigation" -->
-</div>
-    </div>
-    <hr />
-    <!-- end #header -->
+                        </ul>
+                    </nav> -->
+                </div>
+            </div>
+            <hr />
 
 
-    <main id="main" role="main" tabindex="-1">
-<div class="inside">
+            <main id="main" role="main" tabindex="-1">
+                <div class="inside">
+                    <section>
+                        <h1 id="recommandationTitre">Recommandations pour l'affichage des informations d'accessibilité
+                        </h1>
+                        <p>L'approche retenue vise à proposer un accès rapide aux informations clés en les affichant à priori, c'est à dire non masquées et clairement identifiées. 
+                            Les informations plus détaillées sont contenues dans un element masqué et peuvent être consultées sur action de l'utilisateur.</p>
+                            <p>Une attention particulière est portée sur l'évitement de possibles redondances. </p>
+                            <p>Une grille de correspondance, en fin de document, permet d'identifier les métadonnées ONIX qui assurent cette information. Un Crosswalk est disponible pour assurer l'interopérabilité des principales autres normes de métadonnées (Schema.org, MARC, MARC21 et UNIMARC).</p>
 
-<section><h2>Fiche livre : modes, fonctionnalités & accessibilité</h2>
-    <article id="livreex1">
-        <div class="left-title-book">
-            <img class="img" src="../statics/lamarquedes4-cover.jpg" role="doc-cover" alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+
+                        <article>
+                            <h2>Fiche livre : informations générales</h2>
+                                            <h3>Détails du produit</h3>
+                                            <p><em>Doivent être affiché à minima les informations suivantes : </em></p>
+                                            <ul>
+                                                <li>Format du fichier (EPUB, PDF, Etc.)</li>
+                                                <li>La mesure de protection ou son absence</li>
+                                                <li>Date de publication</li>
+                                                <li>Nom de la maison d'édition</li>
+                                            </ul>
+
+                                            <h3>Accessibilité</h3>
+                                            <p><em>Un niveau de titre logique doit regrouper les informations d'accessibilité. L'intitulé de ce titre devrait être <strong>Accessibilité</strong> ou <strong>Informations d'accessibilité</strong>. Il contiendra à minima les informations suivantes : </em></p>
+                                            <ul>
+                                                <li>Si une conformité WCAG AA est déclarée, indiquer : Accessible, sinon ne rien afficher.</li>
+                                                <li>Mode de lecture (Affichage adaptable ou Mise en page fixe ou Livre audio)</li>
+                                                <li>Si le livre contient de l'audio et du texte synchronisés, </li>
+                                                <li>Référence à la pagination du livre imprimé</li>
+                                                <details>
+                                                    <summary>Plus d'informations sur l'accessibilité</summary>
+                                                    <li>Descriptions longues des images</li>
+                                                    <li><a href="ace-smart-report-fr.html">Rapport de conformité de ce
+                                                            titre</a>
+                                                    </li>
+                                                    <li><a href="infos-accessibilite.html">Politique d'accessibilité de
+                                                            l'éditeur</a></li>
+                                            </ul>
+
+                                            <p>Cette publication comprend un balisage permettant la compatibilité avec
+                                                les technologies d'assistance. Les images de cette publication sont
+                                                décrites.</p>
+                                            </details>
+                                        </article>
+                                    </section>
+
+                                </div>
+                                <hr />
+                                <section>
+                                    <article class="fichelivre">
+                                        <h3>Options de filtrage</h3>
+                                        <ul class="facet-multiselect-checkbox">
+                                            <li><input type="checkbox"><label class="option">Accessibilité</label></li>
+                                            <li><input type="checkbox"><label class="option">Texte et images accessibles en voix de synthèse et braille</label></li>
+
+                                            <li><input type="checkbox"><label class="option">Texte et audio synchronisés</label></li>
+
+                                        </ul>
+                                    </article>
+                                </section>
+                                <h2>Correspondances</h2>
+                                <h3 id="filtres-de-recherche">Filtres de recherche</h3>
+                                <ul>
+                                    <li>Accessible</li>
+                                    <li>Texte et audio synchronisés: </li>
+                                </ul>
+                                <p>Un pictogramme Homme de Vitruve avec texte alt “entièrement accessible” peut-être affecté à
+                                    tout fichier déclarant <a href="#conformsTo">conforme aux WCAG AA</a>: <img
+                                        src="https://www.w3.org/2021/09/UX-Guide-metadata-1.0/principles/media/accessibility.svg"
+                                        alt="entièrement accessible" width="15"></p>
+                                
+
+                                <h3 id="détails-du-livre">Détails du livre</h3>
+                                <p>À minima les éléments suivants doivent être indiquès</p>
+                                <table>
+                                    <thead>
+                                        <tr class="header">
+                                            <th>Affichage</th>
+                                            <th>Definition</th>
+                                            <th>Note</th>
+                                            <th>Si absent</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd">
+                                            <td>Format : EPUB</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>Protection : LCP</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>Publié en 2020 par SNE</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>ISBN 9780000000000</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>Langue : Français (fr)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h3 id="accessibilité">Accessibilité</h3>
+                                <p>Ceci est un titre (niveau h à déterminer)</p>
+                                <ul>
+                                    <li>Si conforme aux WCAG AA, afficher : <strong>Accessiblité</strong></li><li> Si conforme
+                                        aux WCAG A, afficher : <strong>Accessibilité</strong> : <strong>Accessibilité
+                                            partielle</strong>.</li><li> Si aucune de ces informations n’est fournie, afficher :
+                                        <strong>Aucune information sur l’accessibilité
+                                            n’est disponible</strong> .
+                                    </li>
+                                </ul>
+                                <p>Ensuite, si elle est présente, les informations suivantes sont affichées sous forme de liste :</p>
+                                <table>
+
+                                    <thead>
+                                        <tr class="header">
+                                            <th>Affichage</th>
+                                            <th>ReadiumJSON</th>
+                                            <th>fileMeta</th>
+                                            <th>ifNotPresent</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd">
+                                            <td>Affichage de la transformabilité</td>
+                                            <td>“feature” :" <a
+                                                    href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L21">context.jsonld#L21</a>
+                                                content=“displayTransformability”</td>
+                                            <td><a
+                                                    href="http://schema.org/accessibilityFeature">schema.org:accessibilityFeature</a>
+                                                content=“displayTransformability”</td>
+                                            <td>ignore</td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>Fixed-layout</td>
+                                            <td></td>
+                                            <td><em>aucune valeur existante dans schema.org. peut être extrait du format
+                                                    (pdf + epub3FXL</em> Dans EPUB3 opf : rendition:layout property set
+                                                to pre-paginated</td>
+                                            <td>ignore</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>“accessMode” :" <a
+                                                    href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L19">context.jsonld#L19</a>
+                                                <a
+                                                    href="https://github.com/readium/webpub-manifest/pull/85/files#diff-8cea754a027fe5af49d66d2c09ca919e926a884e447a290dbb71420c0c804f34#L55">content=“visual”,
+                                                    “textual”, “auditory”, “tactil”, etc.</a> (une ligne par valeur ou
+                                                valeurs séparées par des virgules dans un champ)
+                                            </td>
+                                            <td><a href="http://schema.org/accessMode">schema.org:accessMode</a></td>
+                                            <td>ignore</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>TTS &amp; Screen reader friendly</td>
+                                            <td>“accessModeSufficient” <a
+                                                    href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L20">context.jsonld#L20</a>
+                                                : textual</td>
+                                            <td><a href="http://schema.org/accessModeSufficient">accessModeSufficient :
+                                                    textual</a></td>
+                                            <td>ignore</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>Contenu audio intégral (présentation, index, notes)</td>
+                                            <td>“accessModeSufficient” <a
+                                                    href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L20">context.jsonld#L20</a>
+                                                : auditif</td>
+                                            <td>schema.org:accessModeSufficient:auditif</td>
+                                            <td>ignore</td>
+                                        </tr>
+                                        <tr class="even">
+                                            <td>Synchronisation du texte et de l’audio</td>
+                                            <td>“feature” : <a
+                                                    href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L19">context.jsonld#L21</a>
+                                                content=“synchronizedAudioText”</td>
+                                            <td><a
+                                                    href="http://schema.org/accessibilityFeature">schema.org:accessibilityFeature</a>
+                                                <a
+                                                    href="https://www.w3.org/2021/a11y-discov-vocab/latest/#synchronizedAudioText">schema.org:sychronizedAudioText</a>
+                                            </td>
+                                            <td>ignore</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td>Référence à la pagination des livres imprimés</td>
+                                            <td>“feature” : <a
+                                                    href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L21">context.jsonld#L21</a>
+                                                content=“printPageNumbers”</td>
+                                            <td><a
+                                                    href="http://schema.org/accessibilityFeature">schema.org:accessibilityFeature</a>
+                                                <a
+                                                    href="https://www.w3.org/2021/a11y-discov-vocab/latest/#printPageNumbers">schema.org:printPageNumbers</a>
+                                            </td>
+                                            <td>ignore</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p>Risques : si l’une des informations suivantes est définie sur <code>true</code>, elle doit également
+                                    être affichée ici.</p>
+                                <table>
+
+                                    <thead>
+                                        <tr class="header">
+                                            <th>Affichage</th>
+                                            <th>ReadiumJSON</th>
+                                            <th>fileMeta</th>
+                                            <th>ifNotPresent</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd">
+                                            <td>L’une des valeurs suivantes : <em>clignotement, simulation de mouvement, bruitages.</em></td>
+                                            <td> <em>“danger” : <a
+                                                        href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L22">context.jsonld#L22</a>
+                                                    content= une des valeurs suivantes : </em>flashing, motionSimulation, sound. Ignore if any other value.</td>
+                                            <td><a
+                                                    href="http://schema.org/accessibilityHazard">schema.org:accessibilityHazard</a>
+                                            </td>
+                                            <td>ignore</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <h3 id="plus-dinformations-sur-laccessibilité">Plus d’informations sur l’accessibilité
+                                </h3>
+                                <p>Ceci est un élément <code>details</code>, le <code>summary</code> est <strong>Plus
+                                        d’informations sur l’accessibilité</strong>.</p>
+                                <p>Si aucune des informations n’est fournie, affichez dans un <code>&lt;p&gt;</code> :
+                                    <strong>Aucune information sur l’accessibilité n’est disponible</strong> à la place.
+                                </p>
+                                <p><em>Afin d’éviter les redondances, les éléments suivants ne sont pas implémentés
+                                        :</em></p>
+                                
+                                <ul>
+                                    <li><em>Certified By (this info is found in the certfier report)</em></li>
+                                    <li><em>schema:structural &amp; schema:NavigationreadingOrder are implied by WCAG
+                                            A</em></li>
+                                </ul>
+                                <p>accessibilitySummary is now at the very end of this section.</p>
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 25%" />
+                                        <col style="width: 25%" />
+                                        <col style="width: 25%" />
+                                        <col style="width: 25%" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr class="header">
+                                            <th>Affichage</th>
+                                            <th>ReadiumJSON</th>
+                                            <th>fileMeta</th>
+                                            <th>ifNotPresent</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd">
+                                            <td>Fully described graphical ressources</td>
+                                            <td>“feature”: <a
+                                                    href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L21">context.jsonld#L21</a>
+                                                content=“longDescription”</td>
+                                            <td><a
+                                                    href="http://schema.org/accessibilityFeature">schema.org:accessibilityFeature</a>
+                                                <a
+                                                    href="https://www.w3.org/2021/a11y-discov-vocab/latest/#longDescription">schema.org:longDescription</a>
+                                            </td>
+                                            <td>ignore</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                |
+                                <dt id="conformsTo">
+                                    conformsTo
+                                </dt>
+                                <p>: readable human text or URL <em>[display content as it is, mark it with publication
+                                        language]</em> lang tag|“conformsTo”: <a
+                                        href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L7">context.jsonld#L7</a>
+                                    content=“readable human text or
+                                    URL”|[dc:conformsTo](http://purl.org/dc/terms/conformsTo“||No known conformity
+                                    declared.| |<a href="ace-smart-report-fr.html">Conformance report</a> <em>[is a
+                                        link]</em>||<a
+                                        href="https://www.w3.org/TR/epub-a11y-11/#certifierReport">dc:certifierReport</a>|ignore|
+                                    |<a href="infos-accessibilite-ed.html">Publisher accessibility policy</a> <em>[is a
+                                        link]</em>||<a href="https://ns.editeur.org/onix/en/196/96">(onix
+                                        only)</a>|ignore| |any text … lorem ipsum … <em>[afficher le contenu tel quel,
+                                        le marquer avec la balise lang de publication - cet élément n’est pas dans un
+                                        élément de liste mais dans un <code>p</code>. Dernier élément à
+                                        afficher]</em>|”accessibilitySummary" : <a
+                                        href="https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L18">context.jsonld#L18</a>
+                                    content=“any text … lorem ipsum …”|<a
+                                        href="http://schema.org/accessibilitySummary">schema.org:accessibilitySummary</a>|ignore|
+                                </p>
+
+                        </section>
+            </main>
+
+            <footer>
+                <hr />
+                <!--<img id="logo_img" title="EDRLab" src="https://www.edrlab.org/wp-content/uploads/2016/12/edrlab_logo@2x.jpg" alt="EDRLab" style="max-height: 33px;">-->
+                <span><i>Ces pages sont réalisées à titre d'exemple. Les fonctionnalités présentées n'ont pas vocation à
+                        être fonctionelles.</i></span>
+
+            </footer>
+            <!-- end #main -->
         </div>
-        <div  class="fichelivre">
-    <h3>La Marque des quatre</h3>
-   
-        <em><span lang="en">Arthur Conan Doyle</span></em>
-        <p>La Marque des quatre ou Le Signe des quatre (The Sign of Four en version originale) est la deuxième aventure de Sherlock Holmes, écrite en 1889 par Arthur Conan Doyle et publiée en 1890.
-        Ennuyé par le manque d'enquêtes, Sherlock Holmes s'adonne à la consommation de drogues pour s'occuper, ainsi qu'à diverses activités ennuyeuses, sous le regard de son colocataire, le docteur John Watson.</p>
-    <details>
-        <summary>Détails du produit</summary>
-        <ul>
-        <li>Format EPUB</li>
-        <li>Protégé par LCP</li>
-        <li>Publié en 2020 par le SNE</li>
-        <li>ISBN 9780000000000</li>
-    </ul>
-    </details>
-    <details>
-        <summary>Modes de lecture</summary>
-        <ul>
-        <li>Mise en page fluide</li>
-        <li>Le contenu textuel permet la compréhension</li>
-        </ul>
-    </details> 
-    <details>
-    <summary>Fonctionnalités</summary>
-    <ul>
-    <li>Table des matières</li>
-    <li>Référence à la pagination du livre imprimé</li>
-</ul>
-    </details>
-    <details>
-    <summary>Réponses à des besoins spécifiques</summary>
-      <p>Cette publication comprend un balisage permettant la compatibilité avec les technologies d'assistance. Les images de cette publication sont décrites.</p>
-<ul>
-    
-    <li>Structuré, navigable</li>
-<li>Ordre de lecture logique</li>
-<li>Descriptions des images</li>
-<li>Conforme au standards EPUB accessibilité 1.0 & WCAG AA</li>
-<li>Conformité établie par x20xxx</li>
-<li><a href="ace-smart-report-fr.html">Rapport de conformité de ce titre</a>
-</li>
-<li><a href="infos-accessibilite.html">Politique d'accessibilité de l'éditeur</a></li></ul>
-    </details>
-    </article>
-    <article id="livreex1">
-        <div class="left-title-book">
-            <img class="img" src="../statics/lamarquedes4-cover.jpg" role="doc-cover" alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
-        </div>
-        <div  class="fichelivre">
-    <h3>La Marque des quatre</h3>
-   
-        <em><span lang="en">Arthur Conan Doyle</span></em>
-        <p>La Marque des quatre ou Le Signe des quatre (The Sign of Four en version originale) est la deuxième aventure de Sherlock Holmes, écrite en 1889 par Arthur Conan Doyle et publiée en 1890.
-        Ennuyé par le manque d'enquêtes, Sherlock Holmes s'adonne à la consommation de drogues pour s'occuper, ainsi qu'à diverses activités ennuyeuses, sous le regard de son colocataire, le docteur John Watson.</p>
-        <details>
-        <summary>Détails du produit</summary>
-            <ul>
-            <li>Format EPUB</li>
-            <li>Sans mesure de protection</li>
-            <li>Publié en 2017 par Tapocketa</li>
-            <li>ISBN 9780000000000</li>
-        </ul>
-        </details>
-        <details>
-            <summary>Modes de lecture</summary>
-            <ul>
-            <li>Mise en page fluide</li>
-            <li>Le contenu textuel permet la compréhension</li>
-            <li>Le contenu audio permet la compréhension</li> 
-            <li>Texte & audio synchronisés</li> 
-            </ul>
-        </details> 
-        <details>
-        <summary>Fonctionnalités</summary>
-        <ul>
-        <li>Table des matières</li>
-        <li>Référence à la pagination du livre imprimé</li>
-    </ul>
-        </details>
-        <details>
-        <summary>Réponses à des besoins spécifiques</summary>
-          <p>Cette publication comprend un balisage permettant la compatibilité avec les technologies d'assistance. Les images de cette publication sont décrites.</p>
-    <ul>
-        
-        <li>Structuré, navigable</li>
-    <li>Ordre de lecture logique</li>
-    <li>Descriptions des images</li>
-    <li>Conforme au standards EPUB accessibilité 1.0 & WCAG AA</li>
-    <li>Conformité établie par xxxx</li>
-    <li><a href="ace-smart-report-fr.html">Rapport de conformité de ce titre</a>
-    </li>
-    <li><a href="infos-accessibilite.html">Politique d'accessibilité de l'éditeur</a></li></ul>
-        </details>
-        <details>
-    <summary>Points d'attention</summary>
-        <ul>
-        <li>Présence de flashs lumineux</li>
-        <li>Lecture de vidéos automatique</li>
-        <li>Effets sonores</li></ul>
-        </details>
-    </article>
-    </section>
-</div>
-    <hr/>
-    <section>
-        <article  class="fichelivre"><h3>Options de filtrage</h3>
-            <h4>Caractéristiques</h4>
-            <ul class="facet-multiselect-checkbox">
-            <li><input type="checkbox"><label class="option">Mise en page fluide</label></li>
-            <li><input type="checkbox"><label class="option">Mise en page fixe</label></li>
-            
-            <li><input type="checkbox"><label class="option">Le contenu textuel permet la compréhension</label></li>
-            <li><input type="checkbox"><label class="option">Le contenu audio permet la compréhension</label></li>
-            <li><input type="checkbox"><label class="option">Texte & audio synchronisés</label></li>
-            <li><input type="checkbox"><label class="option">Référence à la pagination du livre imprimé</label></li>
-            <li><input type="checkbox"><label class="option">Conforme au standards EPUB accessibilité 1.0 & WCAG AA</label></li>
-    </ul>
-    </article>
-</section>
-
-    </main>
-
-    <footer>
-<hr/>
-<!--<img id="logo_img" title="EDRLab" src="https://www.edrlab.org/wp-content/uploads/2016/12/edrlab_logo@2x.jpg" alt="EDRLab" style="max-height: 33px;">-->
-<span><i>Ces pages sont réalisées à titre d'exemple. Les fonctionnalités présentées n'ont pas vocation à être fonctionelles.</i></span>
-
-    </footer>
-    <!-- end #main -->
-</div>
-<!-- end #wrapper -->
+        <!-- end #wrapper -->
 
 </body>
 

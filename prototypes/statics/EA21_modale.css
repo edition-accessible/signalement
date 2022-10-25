@@ -1,0 +1,97 @@
+
+/** Toggle **/
+
+#myToggle {
+	margin:0;
+	font-size:1em;
+}
+
+#myToggle button{
+	border:0;
+	font-size:1.6em;
+	background:transparent;
+	margin:0;
+	padding:0;
+	display:block;
+	width:100%;
+	color:#fff;
+	padding:1em 0;
+	background:#00857C;
+	text-align:center;
+	text-transform:uppercase;
+	font-size:1em;
+}
+
+#myToggle button:hover,
+#myToggle button:focus{
+	background:#333
+}
+
+#myContentToToggle,
+#modal-def-content{
+	display:none
+}
+
+#modal-def-content.is-visible,
+#myContentToToggle.is-visible{
+	display:block;
+	position: fixed;
+}
+
+
+#modal-def-content{
+	position:absolute;
+	width:40%;
+	top:45%;
+	left:15%;
+	z-index:600;
+	background:#fff;
+	padding:0.3em;
+	border:1px solid grey;
+	box-shadow:2px 2px 12px #000;
+}
+
+#modal-def-content h1{
+	font-size:1em;
+	border-bottom:double 2px gray;
+	text-transform:initial;
+}
+
+#modal-def-content figure{
+	margin:0 0 20px 0 
+}
+
+#modal-def-content img{
+	float:left;
+	margin-right:5px;
+}
+
+#modal-def-content .legend{
+	padding-top:3em;
+	font-size:0.8em;
+}
+
+#modal-def-content p{
+	font-size:1em;
+}
+
+#btn-close-def{
+	position:absolute;
+	top:2px;
+	right:2px;
+	border-radius:40px;
+	width:1.8em;
+	height:1.8em;
+	border:1px solid grey;
+}
+
+#btn-close-def span{
+	font-weight:bold;
+}
+
+#btn-close-def:hover,
+#btn-close-def:focus{
+	background-color:rgb(255, 136, 0);
+	color:#fff;
+	outline:none;
+}
