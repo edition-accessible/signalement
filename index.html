@@ -14,107 +14,58 @@
         <div id="wrapper">
 
             <div id="header" class="clear">
-                <div class="inside">
-                    <div class="">
-                        <header role="banner">
-                            <h1>Signalement des livres numériques nativement accessibles</h1>
 
-                            <p>Réalisé par EDRLab, cet ensemble de pages web proposent une expérience utilisateur pour trouver un livre numérique accessible à des besoins spécifiques.</p>
-                        </header>
-                    </div>
-                    <hr/>
-                    <nav id="navigation" role="navigation" aria-label="Menu de navigation">
-                        <ul>
-                            <li><a href="index.html">Accueil</a></li>
+                <header role="banner" class="blue">
+                    <img src="statics/accessibility.svg" class="left-title" alt="" />
+                    <h1 class="center pad">Signaler l'accessibilité des livres numériques</h1>
 
-                            <li><a href="protoype2/livre1.html">Livre 1</a></li>
-                            <li><a href="protoype2/livre2.html">Livre 2</a></li>
-                            <li><a href="protoype2/livre3.html">Livre 3</a></li>
-                            <li><a href="protoype2/livre4.html">Livre 4</a></li>
-                            <li><a href="protoype2/recherche.html">Options de filtrage</a></li>
-                            <li><a href="protoype2/references.html">Références</a></li>
-                        </ul>
-                    </nav>
-                    <!-- end #navigation" -->
-                </div>
+                    <p class="center bold pad"><em>Les lecteurs en situation de handicap doivent pouvoir aisément et
+                            rapidement identifier les livres numériques qui correspondent à leurs besoins</em></p>
+                </header>
+
+                <nav id="navigation" role="navigation" aria-label="Menu de navigation">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="recommandation.html">Recommandations</a></li>
+                        <li><a href="prototypes/prototypes.html">Prototypes</a></li>
+                        <li><a href="projet/deroule.html">Déroulé du projet</a></li>
+                        <li><a href="references/references.html">Références</a></li>
+                    </ul>
+                </nav>
             </div>
             <hr />
-            <!-- end #header -->
-
             <main id="main" role="main" tabindex="-1">
-                <section>
-                    <article>                        <h2 id="recommandationTitre">Recommandations pour l'affichage des informations d'accessibilité
-                    </h2>
-                    <p>Ce troisième prototype propose de simplifier l’accès aux informations clés en les affichant en dehors d’une boîte ouvrable. Les autres informations restent accessibles sur action de l'utilisateur, mais les redondances ne sont plus exposées. Plus de <a href="references.html">détails sur la façon de remplir les
-                            informations</a> sont fournis dans ce document.</p></article>
-                    <article><h2>Juillet 2022 : révision du vocabulaire</h2>
-                    <p>Les prototypes et ateliers menés dans le cadre du projet signalement ont mis en lumière des difficultées liées au vocabulaire permettant d'exprimer les fonctionnalités d'accessibilité.</p><p>
-
-                    </p>Un projet complémentaire est en cours pour établir une base de vocabulaire consensuelle et compréhensible. Un site compagnon est dédié à ce <a href="https://edition-accessible.github.io/vocabulaire/">projet Vocabulaire et fonctionnalités d'accessibilité</a>. Une première étape de ce projet a consisté à diffuser une enquête nationale en juin 2022, en partenariat avec l’association ALIRE et le Syndicat de la Librairie Française. À destination du grand public, cette enquête a été relayée par epagine.fr, leslibraires.fr et immateriel.fr.
-                    </p>
-                    <p>Les prototypes de fiche livre, options de recherche et de référence ont étés mis à jour pour refléter les réponses majoritaires du questionnaire.</p>
-                    <p>Les protoypes précédents restent consultables : </p>
-                    <ul>
-                        <li><a href="protoype1/livre1.html">Prototypes 1 (janvier 2022)</a></li>
-                        <li><a href="prototype0/index.html">prototypes 0 (décembre 2020)</a></li>
-                    </ul>
-                    </article>
-                    <article><h2>Mise à jour des prototypes, janvier 2022</h2>
-                <p>En décembre 2022 un prototype proposant une implémentation stricte du <i>Guide d'expérience utilisateur pour l'affichage des métadonnées d'accessibilité 1.0</i> élaboré par le <i>Publishing Community Group du W3C</i> a permis d'interroger les acteurs de la chaine du livre concernés.</p>
-                <p>À l'issue de ces ateliers nous avons constaté que l'expérience utilisateur proposée n'était pas satisfaisante et relevé les principales difficultés suivantes : 
-                    <ul>
-                        <li>Un vocabulaire perçu comme trop spécialisé (par exemple les formules Adapté aux lecteurs d'écrans ou Conforme aux WCAG).</li>
-                        <li>Un vocabulaire prétant à confusion (la signification du mot Accessible par exemple).</li>
-                        <li>Une expérience utilisateur limitée aux besoins spécifique alors que certaines fonctionnalités sont utiles à des publics plus larges.</li>
-                        <li>Une expérience utilisateur alourdie par les multiples références.</li>
-                        <li>Une correspondance avec les données ONIX difficile.</li>
-                        <li>Une absence de correspondance pour les données MARC et UNIMARC</li>
-                    </ul>
-<p>En conséquence nous proposons un prototype basé sur les attentes des utilisateurs mettant en avant des catégories générales comme Modes de lecture et  Fonctionnalités, réduisant ainsi l'information relative à des besoins ou des difficultés spécifiques. </p>
-<p>Nous proposons aussi une simplification des options de filtrage à mettre à disposition lors de la recherche.</p>
-                <p>Nous avons archivé pour mémoire les <a href="prototype0/index.html">prototypes des ateliers de 2020</a>.</p>
-            </article></section>
-                <section id="block-1" class="clear inside">
-
-                    <article class="clear" id="annonce">
-                        <div class="left-title">
-                            <img class="img" src="https://www.edrlab.org/wp-content/uploads/2016/12/edrlab_logo@2x.jpg" alt="Logo EDRLab" />
-                        </div>
-<h2>Signaler les caractéristiques d’accessibilité des livres numériques à toutes les étapes de la chaîne de distribution.</h2>
-                        <p>En décembre 2020, le <a href="https://www.culture.gouv.fr/Thematiques/Livre-et-lecture/Les-politiques-de-soutien-a-l-economie-du-livre/Accessibilite-des-livres-numeriques">comité de pilotage interministériel pour le développement d’une offre de livres numériques nativement accessibles aux personnes en situation de handicap</a>                            a missionné EDRLab pour travailler sur l’axe 7 de son plan stratégique, dont le titre est <i>
- « Signaler les caractéristiques d’accessibilité des livres numériques à toutes les étapes de la chaîne de distribution. »</i></p>
-                        <p>
-
-                            Cet axe 7 est décrit par le texte suivant :</p>
-                        <p><i>
- « Les lecteurs en situation de handicap doivent pouvoir aisément et rapidement identifier les livres numériques qui correspondent à leurs besoins. Les acteurs de la chaîne du livre travailleront à l’utilisation d’un langage de métadonnées commun permettant d’identifier les caractéristiques d’accessibilité des livres numériques. Ces métadonnées seront, dans l’idéal, renseignées qualitativement par les éditeurs, prises en charge par les distributeurs, intégrées dans bases de données bibliographiques, portées à la connaissance du public sur les plateformes de vente et de prêt de livres numériques sous une forme synthétique et facilement compréhensible par les personnes en situation de handicap. »</i></p>
-
-                        <p>En parallèle durant l’année 2021, la communauté publishing du W3C a travaillé sur un guide d’expérience utilisateur pour l’affichage des métadonnées d’accessibilité. La première version de ce guide a été mise en ligne au mois de
-                            septembre, ce qui nous donne l’opportunité de l’interroger et de participer à son évolution. </p>
-                        <p>
-
-                            Nous vous proposons donc d'interroger ensemble les attentes et les possibles concernant le signalement des livres numériques nativement accessibles. La question posée est : en pratique, comment permettre à un lecteur de trouver facilement un livre numérique
-                            adapté à ses besoins particuliers ?</p>
-                        <p>
-
-                            Cet ensemble de pages web a pour vocation de nous aider à répondre ensemble à ces deux questions :</p>
-                        <ul class="listnodeco">
-                            <li>
-                                les expériences utilisateur proposées en exemple sont-elles satisfaisantes ?</li>
-                            <li>
-                                les expériences utilisateur proposées en exemple sont-elles implémentables ?</li>
-                        </ul>
-                        <p> Nous espérons que les résultats de ce travail pourront rapidement être mis en œuvre sur les plateformes des opérateurs économiques liés à la distribution des livres numériques en France, et si possible en Europe. Nous pensons que
-                            cet outil constitue une plus value pour l’accès des usagers aux contenus numériques, notamment en vue de l'entrée en vigueur, en 2025, des dispositions de
-                            <a href="https://ec.europa.eu/social/main.jsp?catId=1202&langId=fr">l'Acte législatif européen sur l'accessibilité.</a></p>
-                    </article>
+                <p>
+                    La <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32019L0882"> 
+                    directive (UE) 2019/882 du
+                    Parlement européen
+                     </a> connue comme Acte Européen sur l’Accessibilité (European Accessibility Act), entrera en vigueur en juin 2025. À cette date les livres numériques
+                    sur le marché devront respecter un niveau d’accessibilité minimum ou faire preuve d’une dérogation.
+                </p>
+                <p>
+                    Ce mini site propose des recommandations permettant un affichage harmonieux des informations
+                    d’accessibilité d’un livre numérique avant son achat afin que les lecteurs sachent si le livre
+                    correspondra à leurs besoins.
+                </p>
+                <p>
+                    Il est l’aboutissement d’un travail interprofessionnel piloté par EDRLab dans le cadre d’une mission
+                    confiée par le comité de pilotage interministeriel.
+                </p>
+                <p>
+                    Il s’appuie sur un travail de prototypes itératifs ayant servis de support pour interroger les
+                    publics généralistes ou concernés ainsi que les acteurs de la chaine de distribution. <em><span>Bien
+                            que stabilisé, ce travail est toujours en cours et ces recommandations peuvent-être amenées
+                            à évoluer</span></em>
+                </p>
+                
                 </section>
             </main>
             <!-- end #main -->
             <footer>
-                <hr/>
+
                 <!--<img id=" logo_img " title="EDRLab " src="https://www.edrlab.org/wp-content/uploads/2016/12/edrlab_logo@2x.jpg " alt="EDRLab " style="max-height: 33px; ">-->
-                <p><i>Ces pages sont réalisées à titre d'exemple. Les fonctionnalités présentées n'ont pas vocation à être fonctionelles.</i></p>
+                <p><i>Ces pages sont réalisées à titre d'exemple. Les fonctionnalités présentées n'ont pas vocation à
+                        être fonctionelles.</i></p>
 
             </footer>
         </div>
