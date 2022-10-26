@@ -1,0 +1,132 @@
+
+/** Data tables (and properly marked-up index tables) *************************/
+
+	/*https://www.w3.org/StyleSheets/TR/2021/base.css
+		 <table class="data"> highlights structural relationships in a table
+		 when correct markup is used (e.g. thead/tbody, th vs. td, scope attribute)
+
+		 Use class="complex data" for particularly complicated tables --
+		 (This will draw more lines: busier, but clearer.)
+
+		 Use class="long" on table cells with paragraph-like contents
+		 (This will adjust text alignment accordingly.)
+		 Alternately use class="longlastcol" on tables, to have the last column assume "long".
+	*/
+
+
+	table.zebra {
+		font-size: inherit;
+		font: 90%;
+		margin: 1em;
+	}
+
+	table.zebra td {
+		padding-left: 0.3em;
+	}
+
+	table.zebra th {
+		font-weight: bold;
+		text-align: center;
+		background-color:#003366; !important;
+		font-size: 110%;
+		color: #fff;
+	}
+
+	table.zebra th a:link {
+		color: #fff;
+	}
+
+	table.zebra th a:visited {
+		color: #aaa;
+	}
+
+	table.zebra tr:nth-child(even) {
+		background-color: #eff7ff !important;
+	}
+
+	table.zebra th {
+		border-bottom: 1px solid #bbb;
+		padding: .2em 1em;
+	}
+
+	table.zebra td {
+		border-bottom: 1px solid #ddd;
+		padding: .2em 1em;
+	}
+
+	table {
+		word-wrap: normal;
+		overflow-wrap: normal;
+		hyphens: auto;
+		border-radius: 20px;
+	}
+
+	table.data,
+	table.index {
+		margin: 1em auto;
+		border-collapse: collapse;
+		border: hidden;
+		width: 100%;
+	}
+	table.data caption,
+	table.index caption {
+		max-width: 50em;
+		margin: 0 auto 1em;
+	}
+
+	table.data td,  table.data th,
+	table.index td, table.index th {
+		padding: 0.5em 1em;
+		border-width: 1px;
+		border-color: silver;
+		border-color: var(--datacell-border);
+		border-top-style: solid;
+	}
+
+	table.data thead td:empty {
+		padding: 0;
+		border: 0;
+	}
+
+	table.data  thead,
+	table.index thead,
+	table.data  tbody,
+	table.index tbody {
+		border-bottom: 2px solid;
+	}
+
+	table.data colgroup,
+	table.index colgroup {
+		border-left: 2px solid;
+	}
+
+	table.data  tbody th:first-child,
+	table.index tbody th:first-child  {
+		border-right: 2px solid;
+		border-top: 1px solid silver;
+		border-top: 1px solid var(--datacell-border);
+		padding-right: 1em;
+	}
+
+	table.data th[colspan],
+	table.data td[colspan] {
+		text-align: center;
+	}
+
+	table.complex.data th,
+	table.complex.data td {
+		border: 1px solid silver;
+		border: 1px solid var(--datacell-border);
+		text-align: center;
+	}
+
+	table.data.longlastcol td:last-child,
+	table.data td.long {
+	 vertical-align: baseline;
+	 text-align: left;
+	}
+
+	table.data img {
+		vertical-align: middle;
+	}
+
