@@ -178,7 +178,7 @@ Sous ce niveau de titre seront indiquées les modes de lecture et les fonctionna
 <details>
 <summary>Notes sur les modes de lecture et fonctions d’accessibilité</summary>
 <p>
-<em></em>
+<em>Ces informations de premier niveau constituent les fonctionnalités cruciales pour l'accès à la lecture. Elles s'adressent aux personnes en situation de handicap mais peuvent aussi rendre service à une grande majorité de lecteurs.</em>
 </p>
 </details>
 <h3 id="plus-dinformations-sur-laccessibilité">Plus d’informations sur l’accessibilité</h3>
@@ -221,13 +221,7 @@ Sous ce niveau de titre seront indiquées les modes de lecture et les fonctionna
 <td>ignorer</td>
 <td></td>
 </tr>
-<tr class="even">
-<td><a href="ace-smart-report-fr.html">Rapport de conformité</a></td>
-<td></td>
-<td>Liste 196 code 94 Page web pour les informations détaillées d’accessibilité</td>
-<td>ignorer</td>
-<td>C’est un lien vers un fichier HTML</td>
-</tr>
+
 <tr class="odd">
 <td><a href="infos-accessibilite-ed.html">Politique d’accessibilité de l’éditeur</a></td>
 <td></td>
@@ -237,8 +231,8 @@ Sous ce niveau de titre seront indiquées les modes de lecture et les fonctionna
 </tr>
 <tr class="even">
 <td><em>texte</em></td>
-<td>Texte écrit par l’éditeur indiquant les limites ou les particularitées qui ne sont pas exprimable autrement en ONIX</td>
-<td>Liste 196 Code 00 : Résumé sur l’accessibilité content=“textetext … lorem ipsum …”</td>
+<td>Le résumé d'accessibilité doit être considéré comme un addendum. C'est un texte écrit par l’éditeur indiquant les limites ou les particularitées qui ne sont pas exprimable autrement en ONIX.</td>
+<td>Liste 196 Code 00 : Résumé sur l’accessibilité content=“lorem ipsum …”</td>
 <td>ignorer</td>
 <td><em>[afficher le contenu tel quel, le marquer avec la balise lang de publication - cet élément n’est pas dans un élément de liste mais dans un <code>p</code>. Dernier élément à afficher]</em></td>
 </tr>
@@ -259,4 +253,20 @@ Sous ce niveau de titre seront indiquées les modes de lecture et les fonctionna
 </li>
 </ul>
 <p>Un pictogramme Homme de Vitruve avec texte alt " accessible" peut-être affecté à tout fichier déclarant <strong>Liste 196 Code 03 Spécifications d’accessibilité EPUB 1.0 AA</strong> : <img src="https://www.w3.org/2021/09/UX-Guide-metadata-1.0/principles/media/accessibility.svg" alt="Informations sur l'accessibilité" width="15"></p>
+</article>
+
+
+<article>
+    <h2>Au sujet des livres imprimés</h2>
+    <p>Les livres imprimés ne peuvent prétendre à une accessibilité universelle, à moins d'être livrées en différentes versions dans une même édition. Cependant certaines édition sspécialisées peuvent répondfre à des besoins spécifiques. </p>
+    <p>ONIX permet d'informer sur ces éditions. Si la liste 196 est dédiée à l'accessibilité numérique, la <a href="https://ns.editeur.org/onix/fr/21">liste 21</a> permet d'indiquer un type d'édition particulier. On retiendra en particulier :</p>
+        <ul>
+        <li><a href="https://ns.editeur.org/onix/fr/21/HRE">21:HRE Édition haute lisibilité</a></li>
+        <li><a href="https://ns.editeur.org/onix/fr/21/BRL">21:BRL Édition en Braille</a></li>
+        <li><a href="https://ns.editeur.org/onix/fr/21/ETR">21:ETR Édition facile à lire</a></li>
+        <li><a href="https://ns.editeur.org/onix/fr/21/LTE">21:LTE Édition en grands caractères</a></li>
+        <li><a href="https://ns.editeur.org/onix/fr/21/ULP">21:ULP Édition en très gros caractères</a></li>
+    </ul>
+    <p>Les libellés peuvent être utilisés tels que proposés par ONIX.</p>
+
 </article>
