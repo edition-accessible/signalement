@@ -89,7 +89,8 @@ Si aucune des informations n’est fournie, afficher : <strong>Aucune informatio
 </p></li>
 <li><p>Si une ou plusieurs des informations ci-dessous sont présente, elles devraient être regroupées sous un niveau de titre logique. <br/>L’intitulé de ce titre devrait être <strong>Accessibilité</strong> ou <strong>Informations d’accessibilité</strong>. <br/>Le pictogramme de l’homme de Vitruve pourra être utilisé en complément.</li>
     </ul>
-
+<p>Chaque tableau indique une catégorie d'information qui peuvent être affichées sur une seule ligne ou regroupées sous l'intitulé correspondant.</p>
+<h4>Modes de lecture</h4>
 <table  class="zebra">
 <thead>
 <tr class="header">
@@ -97,17 +98,11 @@ Si aucune des informations n’est fournie, afficher : <strong>Aucune informatio
 <th>Définition</th>
 <th>code ONIX</th>
 <th>En cas d’absence</th>
-<th>Note</th>
+<th>Importance</th>
 </tr>
 </thead>
 <tbody>
-<!-- <tr class="odd">
-<td>Accessible</td>
-<td><em>Le fichier est conforme au standard d’accessibilité reconnu comme répondant aux exigences de la directive Européenne</em></td>
-<td>Liste 196 Code 03 : Spécifications d’accessibilité EPUB 1.0 AA</td>
-<td>Ignorer</td>
-<td></td>
-</tr> -->
+</tr> 
 <tr class="even">
 <td>Texte et images disponibles en voix de synthèse et braille</td>
 <td><em>Le contenu nécessaire à la compréhension est entièrement restitué aux techonologies d’assistance</em></td>
@@ -136,48 +131,82 @@ Si aucune des informations n’est fournie, afficher : <strong>Aucune informatio
 <td>ignorer</td>
 <td></td>
 </tr>
+</tbody>
+</table>
+<h4>Fonctionnalités</h4>
+<table  class="zebra">
+<thead>
+<tr class="header">
+<th>Valeur affichée</th>
+<th>Définition</th>
+<th>code ONIX</th>
+<th>En cas d’absence</th>
+<th>Importance</th>
+</tr>
+</thead>
+<tbody>
 <tr class="even">
 <td>Référence à la pagination du livres imprimé {contenu de 51-13 RelatedProduct}</td>
 <td></td>
 <td><a href="https://ns.editeur.org/onix/fr/196/19">Liste 196 Code 19 Numérotation de pages équivalente au document imprimé et 51 - 13 - Publication numérique basée sur (édition papier)</a></td>
 <td>ignorer</td>
 <td></td>
-</tr>
 <tr class="odd">
-<td>Attention ce livre inclut des Flashs lumineux</td>
-<td></td>
-<td>Liste 143 Code 13 : Avertissement : risque de clignotement</td>
-<td>ignorer</td>
-<td></td>
+    <td>Données accessibles</td>
+    <td>Le texte alternatif des images est complété par une description détaillée. Cela indique que les tableaux en images, les schémas ou les diagrammes sont complétés par un accès complet aux données qu’ils représentent</td>
+    <td>Liste 196 Code 16 Représentations graphiques de données également accessibles comme données non graphiques</td>
+    <td>ignorer</td>
+    <td></td>
+    </tr>
 </tr>
-<tr class="even">
-<td>Attention ce livre inclut des bruitages sonores</td>
-<td></td>
-<td>Liste 175 Code A310 : Effets sonores</td>
-<td>ignorer</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Attention ce livre inclut des stimulations corporelles simulant le mouvement</td>
-<td></td>
-<td>Liste 143 Code 17 : Avertissement : risque de simulation de mouvement</td>
-<td>ignorer</td>
-<td></td>
-</tr>
+
 </tbody>
 </table>
-<details>
+<h4>Points d'attention</h4>
+<table  class="zebra">
+    <thead>
+    <tr class="header">
+    <th>Valeur affichée</th>
+    <th>Définition</th>
+    <th>code ONIX</th>
+    <th>En cas d’absence</th>
+    <th>Importance</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tr> 
+    <tr class="odd">
+    <td>Attention ce livre inclut des Flashs lumineux</td>
+    <td></td>
+    <td>Liste 143 Code 13 : Avertissement : risque de clignotement</td>
+    <td>ignorer</td>
+    <td></td>
+    </tr>
+    <tr class="even">
+    <td>Attention ce livre inclut des bruitages sonores</td>
+    <td></td>
+    <td>Liste 175 Code A310 : Effets sonores</td>
+    <td>ignorer</td>
+    <td></td>
+    </tr>
+    <tr class="odd">
+    <td>Attention ce livre inclut des stimulations corporelles simulant le mouvement</td>
+    <td></td>
+    <td>Liste 143 Code 17 : Avertissement : risque de simulation de mouvement</td>
+    <td>ignorer</td>
+    <td></td>
+    </tr>
+    </tbody>
+    </table>
+<!-- <details>
 <summary>Notes sur les modes de lecture et fonctions d’accessibilité</summary>
 <p>
 <em>Ces informations de premier niveau constituent les fonctionnalités cruciales pour l'accès à la lecture. Elles s'adressent aux personnes en situation de handicap mais peuvent aussi rendre service à une grande majorité de lecteurs.</em>
 </p>
-</details>
+</details> -->
 <h3 id="plus-dinformations-sur-laccessibilité">Plus d’informations sur l’accessibilité</h3>
-<p>À la suite immédiate des focntionnalités d’accessibilité clef, il est conseillé d’ajouter une liste plus détaillée. Pour ne pas alourdir la lecture, cette liste devrait être affichée uniquement sur action de l’utilisateur. l’usage de l’élément HTML <code>details</code> assure l’accessibilité du composant. Son <code>summary</code> Devrait indiquer <strong>Plus d’informations sur l’accessibilité</strong>.</p>
-<p><em>Afin d’éviter les redondances, les éléments suivants ne sont pas implémentés :</em></p>
-<ul>
-<li><em>196 93 Certification de conformité par (l’information est disponible dans le rapport)</em></li>
-</ul>
+<p>À la suite immédiate des fonctionnalités d’accessibilité clef, il est conseillé d’ajouter une liste plus détaillée. Pour ne pas alourdir la lecture, cette liste devrait être affichée uniquement sur action de l’utilisateur. l’usage de l’élément HTML <code>details</code> assure l’accessibilité du composant. Son <code>summary</code> Devrait indiquer <strong>Plus d’informations sur l’accessibilité</strong>.</p>
+
 
 <table  class="zebra">
 <thead>
@@ -200,17 +229,11 @@ Si aucune des informations n’est fournie, afficher : <strong>Aucune informatio
 <tr class="odd">
 <td><a href="https://edition-accessible.github.io/signalement/references/ace-smart-report-fr.html">Rapport de conformité</a> (c'est un lien) par ...</td>
 <td></td>
-<td>196 94 Page web pour les informations détaillées d’accessibilité</td>
+<td>196 94 Page web pour les informations détaillées d’accessibilité et 196 93 Certification de conformité par.</td>
 <td>Ignorer</td>
 <td></td>
 </tr>
-<tr class="odd">
-<td>Les ressources graphiques sont décrites de façon détaillée</td>
-<td>Le texte alternatif des images est complété par une description détaillée. Cela indique que les tableaux en images, les schémas ou les diagrammes sont complétés par un accès complet aux données qu’ils représentent</td>
-<td>Liste 196 Code 16 Représentations graphiques de données également accessibles comme données non graphiques</td>
-<td>ignorer</td>
-<td></td>
-</tr>
+
 
 <tr class="odd">
 <td><a href="infos-accessibilite-ed.html">Politique d’accessibilité de l’éditeur</a></td>
