@@ -49,21 +49,11 @@
 <em>Doivent être affiché à minima les informations suivantes : </em>
 </p>
 <ul>
-<li>
-Format de fichier (EPUB, PDF, MP3, Audiobook, Etc.)
-</li>
-<li>
-La mesure de protection ou son absence
-</li>
-<li>
-Date de publication
-</li>
-<li>
-Nom de la maison d’édition
-</li>
-<li>
-La langue principale du contenu
-</li>
+<li>Format de fichier (EPUB, PDF, MP3, Audiobook, Etc.)</li>
+<li>La mesure de protection ou son absence</li>
+<li>Date de publication</li>
+<li>Nom de la maison d’édition</li>
+<li>La langue principale du contenu</li>
 </ul>
 <details>
 <summary>Pourquoi ces informations sont importantes pour l’accessibilité</summary>
@@ -90,15 +80,16 @@ La langue principale du contenu permet au lecteur de s’assurer qu’il pourra 
 </p>
 </details>
 <h3 id="accessibilité">Accessibilité</h3>
-<p>
-<em>Un niveau de titre logique doit regrouper les informations d’accessibilité. L’intitulé de ce titre devrait être <strong>Accessibilité</strong> ou <strong>Informations d’accessibilité</strong>. Le pictogramme de l’homme de Vitruve pourra être utilisé en complément.
-</p>
-<p>
-Si aucune des informations n’est fournie, n’utilisez pas un niveau de titre mais affichez dans un paragraphe : <strong>Aucune information sur l’accessibilité n’est disponible</strong> à la place.
-</p>
-Sous ce niveau de titre seront indiquées les modes de lecture et les fonctionnalités principales, soit à minima les informations suivantes : </em>
-</p>
-<ul>
+
+    <ul>
+        <li>
+<p>Si le code 196- 09 Inaccessible est présent, afficher : <strong>Défauts d'accessibilité reconnus</strong>. </p></li>
+        <li><p>
+Si aucune des informations n’est fournie, afficher : <strong>Aucune information sur l’accessibilité n’est disponible</strong>.
+</p></li>
+<li><p>Si une ou plusieurs des informations ci-dessous sont présente, elles devraient être regroupées sous un niveau de titre logique. <br/>L’intitulé de ce titre devrait être <strong>Accessibilité</strong> ou <strong>Informations d’accessibilité</strong>. <br/>Le pictogramme de l’homme de Vitruve pourra être utilisé en complément.</li>
+    </ul>
+
 <table  class="zebra">
 <thead>
 <tr class="header">
@@ -133,7 +124,7 @@ Sous ce niveau de titre seront indiquées les modes de lecture et les fonctionna
 </tr>
 <tr class="even">
 <td>Mise en page fixe</td>
-<td>L’aspect du texte et la mise en page sont une représentation exacte de la version papier et ne peuvent pas être modifiées ou de façon limitée.</td>
+<td>L’aspect du texte et la mise en page ne peuvent pas être modifiées ou de façon limitée.</td>
 <td>Liste 175 Code E201 : Format fixe.</td>
 <td>ignorer</td>
 <td></td>
@@ -185,10 +176,9 @@ Sous ce niveau de titre seront indiquées les modes de lecture et les fonctionna
 <p>À la suite immédiate des focntionnalités d’accessibilité clef, il est conseillé d’ajouter une liste plus détaillée. Pour ne pas alourdir la lecture, cette liste devrait être affichée uniquement sur action de l’utilisateur. l’usage de l’élément HTML <code>details</code> assure l’accessibilité du composant. Son <code>summary</code> Devrait indiquer <strong>Plus d’informations sur l’accessibilité</strong>.</p>
 <p><em>Afin d’éviter les redondances, les éléments suivants ne sont pas implémentés :</em></p>
 <ul>
-<li><em>Certified By (l’information est disponible dans le rapport)</em></li>
-<li><em>schema:structural &amp; schema:NavigationreadingOrder are implied by WCAG A</em></li>
+<li><em>196 93 Certification de conformité par (l’information est disponible dans le rapport)</em></li>
 </ul>
-<p>accessibilitySummary is now at the very end of this section.</p>
+
 <table  class="zebra">
 <thead>
 <tr class="header">
@@ -201,14 +191,14 @@ Sous ce niveau de titre seront indiquées les modes de lecture et les fonctionna
 </thead>
 <tbody>
 <tr class="odd">
-<td>Contenus accessibles conformes aux standards</td>
+<td>Contenus accessibles conformes aux standards (A <em>ou</em> AA)</td>
 <td></td>
-<td>Liste 196 Code 03 : Spécifications d’accessibilité EPUB 1.0 AA</td>
+<td>Liste 196 Code 02 Spécifications d’accessibilité EPUB 1.0 A ou <br/>Liste 196 Code 03 : Spécifications d’accessibilité EPUB 1.0 AA</td>
 <td>Aucune conformité déclarée</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><a href="https://edition-accessible.github.io/signalement/references/ace-smart-report-fr.html">Rapport de conformité</a> (c'est un lien)</td>
+<td><a href="https://edition-accessible.github.io/signalement/references/ace-smart-report-fr.html">Rapport de conformité</a> (c'est un lien) par ...</td>
 <td></td>
 <td>196 94 Page web pour les informations détaillées d’accessibilité</td>
 <td>Ignorer</td>
