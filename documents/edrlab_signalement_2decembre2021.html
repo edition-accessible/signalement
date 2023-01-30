@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gautier Chomel, Laurent Le Meur" />
+  <title>Présentation du projet signalement porté par EDRLab</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+</head>
+<body>
+<header>
+<h1 class="title">Présentation du projet signalement porté par EDRLab</h1>
+<p class="author">Gautier Chomel, Laurent Le Meur</p>
+<p class="date">2 décembre 2021</p>
+</header>
+<p>En décembre 2020, le comité de pilotage interministériel pour le développement d’une offre de livres numériques nativement accessibles aux personnes en situation de handicap a missionné EDRLab pour travailler sur l’axe 7 de son plan stratégique, dont le titre est <em>Signaler les caractéristiques d’accessibilité des livres numériques à toutes les étapes de la chaîne de distribution.</em></p>
+<p>Cet axe 7 est décrit par le texte suivant :</p>
+<p><em>Les lecteurs en situation de handicap doivent pouvoir aisément et rapidement identifier les livres numériques qui correspondent à leurs besoins. Les acteurs de la chaîne du livre travailleront à l’utilisation d’un langage de métadonnées commun permettant d’identifier les caractéristiques d’accessibilité des livres numériques. Ces métadonnées seront, dans l’idéal, renseignées qualitativement par les éditeurs, prises en charge par les distributeurs, intégrées dans bases de données bibliographiques, portées à la connaissance du public sur les plateformes de vente et de prêt de livres numériques sous une forme synthétique et facilement compréhensible par les personnes en situation de handicap.</em></p>
+<p>Durant l’année 2021, la communauté publishing du W3C a travaillé sur un guide d’expérience utilisateur pour l’affichage des métadonnées d’accessibilité. La première version de ce guide a été mise en ligne au mois de septembre, ce qui nous donne l’opportunité de l’interroger et de participer à son évolution.</p>
+<p>Nous vous proposons donc d’interroger ensemble les attentes et les possibles concernant le signalement des livres numériques nativement accessibles. La question posée est : <em>en pratique, comment permettre à un lecteur de trouver facilement un livre numérique adapté à ses besoins particuliers ?</em></p>
+<p>Cet ensemble de pages web a pour vocation de nous aider à répondre ensemble à ces deux questions :</p>
+<ul>
+<li><em>les expériences utilisateur proposées en exemple sont-elles satisfaisantes ?</em></li>
+<li><em>les expériences utilisateur proposées en exemple sont-elles implémentables ?</em></li>
+</ul>
+<p>Nous espérons que les résultats de ce travail pourront rapidement être mis en œuvre sur les plateformes des opérateurs économiques liés à la distribution des livres numériques en France, et si possible en Europe. Nous pensons que cet outil constitue une plus value pour l’accès des usagers aux contenus numériques, dans le cadre de la Directive Accessibilité européenne.</p>
+<h2 id="demarche">demarche</h2>
+<p>l’accessibilité est une démarche transversale qui joue sur la totalité des facettes d’une chaine de production et de distribution (ici la chaine du livre). Tout en gardant une vision globale il est nécessaire de prendre les problématiques unes à unes pour ne pas être submergés. Comme un puzzle, pièce après pièce toute en prenant en compte les interdépendances. Notre pièce de puzzle ici concerne tres précisément la présentation du signalement des livres numériques nativement accessibles.</p>
+<p>Nous parlons donc de l’experience utilisateur des sites web présentant des livres numériques nativement accessibles produits par les éditeurs.</p>
+<p>Nous ne parlons pas des oeuvres produites dans le cadre de l’édition adapté bénéficiant de l’exception au droit d’auteur, le centre exception handicap de la BNF porte une réflexion sur ce sujet spécifique.</p>
+<p>Nous ne parlerons pas de certification, un groupe de travail piloté par le service livre et lecture du ministère de la culture et de la communication portant cette réflexion. Néanmoins la question de la validité d’un fichier au sens de certaines normes étant posée nous préférerons le mot de “conformité” à celui de label ou de certification.</p>
+<h2 id="nous-parlons-dune-portion-de-la-chaine-du-livre">Nous parlons d’une portion de la chaine du livre</h2>
+<p>Si nous résumons la chaine du livre :</p>
+<pre><code>A) Les éditeurs
+    1. produisent les fichiers EPUB nativement accessibles
+    2. contrôlent l’accessibilité
+    3. ajoutent les métadonnées d’accessibilité dans les flux ONIX
+B) Les distributeurs transfèrent vers les plateformes de vente et de prêt
+    1. les métadonnées en ONIX
+    2. les fichiers EPUB
+C) Les métadonnées et les fichiers sont ingérés par les plateformes de vente et de prêt
+    1. assurent le cryptage et le stockage des fichiers EPUB
+    2. constituent le catalogue des titres disponibles
+    3. interprètent les métadonnées ONIX, dont les caractéristiques d’accessibilité
+    4. permettent de filtrer les titres en fonction de leur caractéristiques d’accessibilité
+    5. exposent la fiche de chaque livre avec toutes ses métadonnées d’accessibilité
+    6. gèrent les comptes des usagers avec leur profil
+D) Les usagers récupèrent les fichiers achetés ou empruntés
+    1. ils peuvent afficher les caractéristiques du livre
+    2. ils peuvent lire le livre</code></pre>
+<p>Les points dans le périmètre du projet Signalement sont les suivants :</p>
+<ol start="3" type="1">
+<li><em>interprétation des métadonnées ONIX</em></li>
+<li><em>filtrage des titres en fonction de leur caractéristiques</em></li>
+<li><em>exposition de la fiche de chaque livre avec toutes ses métadonnées</em></li>
+</ol>
+<h2 id="nous-mobiliserons-les-références-suivantes">Nous mobiliserons les références suivantes</h2>
+<ul>
+<li><strong>Les lecteurs d’écrans</strong> logiciel d’assistance technique destiné aux personnes « empêchées de lire » (aveugles, fortement malvoyantes, dyslexiques, dyspraxiques…) : il retranscrit par synthèse vocale et/ou sur un afficheur braille ce qui est affiché sur l’écran d’un ordinateur tant en termes de contenu que de structure et permet d’interagir.</li>
+<li><strong>Les aménagements spécifiques</strong> (contraste inversé, gros caractères, etc.), des fonctionalités proposés par des logiciels de lecture permettants de modifier l’aspect et la mise en forme d’un document pour permettre sa lecture dans les meilleures conditions possibles. Le mode lecture immersive dans un navigateur ou les preferences d’affichage dans thorium, par exemple.</li>
+<li><p><strong>Les différents vocabulaires de métadonnées</strong>, nous parlerons d’ONIX qui est le vocabulaire principal utilisé par la chaine du livre ; de schema.org qui est le vocabulaire utilisé par les technologies web et par consequent dans un fichier epub ; mais également de MARC21 et UNIMARC (machine readable cataloging, catalogage lisible par machine) qui sont les vocabulaires implémentés dans les SIGB et donc les catalogues informatisés.</p></li>
+<li><p><strong>Les normes WCAG A, AA et AAA</strong> qui sont des règles pour l’accessibilité des contenus web développées dans le cadre du W3C en collaboration avec des personnes et des organismes du monde entier, dans le but de fournir un standard unique commun pour l’accessibilité des contenus web répondant, au niveau international, aux besoins des personnes, des organismes et des gouvernements. Les documents des WCAG expliquent comment rendre les contenus web plus accessibles aux personnes handicapées. Le terme « contenu » Web fait en général référence à l’information d’une page web comprenant les informations générales telles que le texte, les images et les sons mais aussi le code ou le balisage qui définit la structure, la présentation, etc. Une traduction française de ces normes existe.</p></li>
+<li><p>La spécification <strong>EPUB accessibility</strong> qui définit comment satisfaire aux exigences de découvrabilité et d’accessibilité des publications EPUB. Cette spécification est accompagnée d’un guide qui explique comment mettre en pratique ces exigences pour lequel nous disposons d’une traduction en langue française.</p></li>
+<li><p><strong>La Charte technique du SNE pour la production d’EPUBs textuels nativement accessibles</strong> qui a pour objectif d’aider les acteurs de la production d’EPUB nativement accessibles à se mettre en conformité avec les exigences de ces référentiels. La charte apporte des éclaircissements sur tout ce qui fait question dans les standards d’accessibilité applicables aux EPUBs : éléments appelant des choix stratégiques et technologiques, éléments difficiles à comprendre ou sujets à interprétation.</p></li>
+<li><p>La spécification <strong>W3C Display Techniques for A11y Metadata</strong> produite par le <em>publishing community group</em> pour aider à rendre disponibles les métadonnées d’accessibilité aux utilisateurs. Elle permet de comprendre comment représenter les métadonnées d’accessibilité lisibles par machine dans une interface utilisateur (UI) et avec une expérience utilisateur (UX) conviviale. Ce document date de septembre 2021, nous en proposons une traduction dans le cadre de ce projet.</p></li>
+</ul>
+<h2 id="nous-parlons-donc-dexpérience-utilisateur">Nous parlons donc d’expérience utilisateur</h2>
+<p>L’enjeux principal sera de nous accorder sur un vocabulaire. Par exemple doit on afficher <em>Adapté aux lecteurs d’écran : oui</em> ou seulement <em>Adapté aux lecteurs d’écran</em> et omettre cette mention. Autre exemple : le résumé d’accessibilité suivant est il compréhensible et suffisant : <em>cette publication comprend un balisage permettant la compatibilité avec les technologies d’assistance. Les images de cette publication sont décrites.</em></p>
+<p>Enfin, devons nous afficher toutes les informations d’accessibilité disponibles dans les vocabulaires de métadonnées ? Voici un exemple d’une liste d’informations extraite de la liste 196 d’ONIX :</p>
+<pre><code>- Conforme à la norme EPUB accessibilité 1.0 &amp; WCAG AA
+- Table des matières
+- Ordre de lecture logique
+- Descriptions brèves des images
+- Référence à la pagination du livre imprimé
+- Risques : aucun pour utilisateur sujet a epilepsie
+- Politique d&#39;accessibilité de l&#39;éditeur
+- Conformité établie par un tiers ou par le producteur
+- Rapport de conformité de ce titre</code></pre>
+<h2 id="les-travaux-en-cours">Les travaux en cours</h2>
+<ul>
+<li><p>Le guide du W3C demande à être interrogé par sa mise en pratique. Nous les avons traduits, nous les mettons à votre disposition, vos commentaires et corrections sont bienvenus.</p></li>
+<li><p>Nous avons recueillis différents exemples de signalement implémentés, ils sont également à votre disposition et vos commentaires sont là aussi les bienvenus. Si vous avez connaissance d’autres mises en oeuvres nous vous remercions de nous les signaler afin que nous puissions les référencer.</p></li>
+<li><p>Des difficultés apparissent dans l’alignement des vocabulaires de métadonnées. Cet aspect est hors du cadre de notre projet qui se concentre sur le vocabulaire ONIX. Cependant il est important de noter que des efforts de mise en compatibilité sont en cours, que ce soit du côté des vocabulaires MARC21 (zone 341) ou UNIMARC (zone 231i) et que le W3C porte l’initiative “metadata-crosswalk” qui interroge aujourd’hui la correspondance entre les vocabulaires ONIX et Schema.org.</p></li>
+</ul>
+<h2 id="les-actions-dans-le-cadre-du-projet">Les actions dans le cadre du projet</h2>
+<p>Pour proposer une implémentation française de ce guide, nous avons taché de réunir des acteurs variés agissants tout au long de la chaine du livre, des producteurs aux lecteurs en passant par les acteurs techniques et les organisations impliquées dans l’accès à la lecture pour les publics empêchés de lire le texte imprimé. nous souhaitons aussi favoriser une compréhension transversale a la chaine du livre.</p>
+<p>Nous avons obtenu une longue liste qui reste pourtant sans doute incomplète. Pour interroger une telle diversité de profils et que chacun y trouve quelques intérêts, nous avons du faire des choix et voici comment nous vous proposons d’opérer</p>
+<ol type="1">
+<li>Mise à votre disposition de prototypes</li>
+</ol>
+<p>Sous la forme de pages web a vocation demonstrative, non fonctionnelles, vous trouverez à l’adresse https://edition-accessible.github.io/signalement/ :</p>
+<ul>
+<li>des exemples d’affichage dans une fiche livre,</li>
+<li>des exemples d’options de recherche,</li>
+<li>des exemples de déclarations types (détaillant / éditeur),</li>
+<li>la traduction du Guide d’expérience utilisateur pour l’affichage des métadonnées d’accessibilité 1.0 et des Techniques d’affichage des métadonnées d’accessibilité ONIX 1.0,</li>
+<li>des liens vers des implémentations en situation réelle.</li>
+</ul>
+<p>Nous vous invitons à en prendre connaissance et à nous faire tous les retours qui vous paraîtront appropriés.</p>
+<p>Pour faciliter ces retours et un échange à plusieurs souvent constructif et porteur d’innovations nous proposons des ateliers collectifs.</p>
+<ol start="2" type="1">
+<li>Ateliers thématiques</li>
+</ol>
+<p>Pour la participation aux ateliers nous n’avons pas voulu restreindre l’accès ou faire des choix à votre place, nous vous laissons juges de votre positionnement.</p>
+<p>Il y a deux thématiques principales définies ci-dessous.</p>
+<ul>
+<li><p>Côté les utilisateurs : les expériences utilisateur proposées en exemple sont elles satisfaisantes ? (mercredi 8 et jeudi 9 décembre à 14h). Les discussions porteront sur l’usage, la convivialité et l’utilité.</p></li>
+<li><p>Côté acteurs techniques et producteurs : les expériences utilisateur proposées en exemple sont elles implémentables ? (mercredi 15 et jeudi 16 décembre à 14h). Les discussions porteront sur la faisabilité, les enjeux et les adaptations nécessaires.</p></li>
+</ul>
+<p>En parallèle nous menons des entretiens individuels avec les acteurs qui n’ont pas pu se joindre aux groupes ou qui le souhaitent.</p>
+<p>Nous aviserons à la suite de ces ateliers si des thématiques doivent être approfondies ou d’autres sujets discutés auquel cas nous pourrons ouvrir d’autres ateliers en 2022 si cela s’avére nécessaire.</p>
+<ol start="3" type="1">
+<li>Documentation et restitution À l’issue de ce projet nous espérons pouvoir proposer une compilation des retours d’expérience et produire les documents suivants :
+<ul>
+<li>traduction et résumé des guides <em>User Experience Guide for Displaying Accessibility Metadata 1.0</em> &amp; <em>Display Techniques for ONIX</em>,</li>
+<li>fiche de référence &amp; tableau récapitulatif,</li>
+<li>des prototypes de mise en oeuvre.</li>
+</ul></li>
+</ol>
+<p>Nous proposerons également une restitution à l’ensemble des participants ainsi qu’au comité de pilotage qui nous a missionné.</p>
+<p>Gautier Chomel, chargé de projet</p>
+<p>Laurent Le Meur, Directeur d’EDRLab</p>
+</body>
+</html>
