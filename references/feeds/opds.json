@@ -13,7 +13,7 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/daisy/epub-accessibility-tests/blob/master/Accessibility-Tests-Extended-Descriptions-v1.1.1.epub",
+                "identifier": "https://github.com/daisy/epub-accessibility-tests/blob/master/Accessibility-Tests-Extended-Descriptions-v1.1.1",
                 "title": "Advanced Accessibility Tests: Extended Descriptions",
                 "author": "DAISY Consortium Transition to EPUB 3 and DIAGRAM Standards WG",
                 "description": "Tests for accessible extended descriptions of images in EPUBs",
