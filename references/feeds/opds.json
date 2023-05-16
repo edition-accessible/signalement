@@ -28,7 +28,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/daisy/epub-accessibility-tests/blob/master/build/Accessibility-Tests-Extended-Descriptions-v1.1.1.epub"
+                    "href": "https://github.com/daisy/epub-accessibility-tests/raw/master/build/Accessibility-Tests-Extended-Descriptions-v1.1.1.epub"
                 }
             ],
             "images": [
