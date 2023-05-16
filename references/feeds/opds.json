@@ -34,7 +34,7 @@
             "images": [
                 {
                     "href": "https://raw.githubusercontent.com/daisy/epub-accessibility-tests/master/content/epub30-test-0340/EPUB/Images/cover.jpg",
-                    "type": "image/jpg",
+                    "type": "image/jpeg",
                     "height": 600,
                     "width": 400
                 }
