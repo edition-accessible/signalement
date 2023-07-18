@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Display informations about book accessibility</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="../statics/EA21_tabs.css" />
+    <link rel="stylesheet" href="../statics/EA21_signalement.css" media="all" />
+    <link rel="stylesheet" href="../statics/EA21_accessibilite.css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <div class="inside">
+        <nav role="navigation" aria-label="Accès rapide"><a id="skiplink" href="#main">Reach content</a></nav>
+        <div id="wrapper">
+
+            <div id="header" class="clear">
+
+                <header role="banner" class="blue">
+                    <img src="../statics/accessibility.svg" class="left-title" alt="" />
+                    <h1 class="center pad">Signposting accessible digital books</h1>
+
+                    <p class="center bold pad"><em>Readers with disabilities must be able to easily and quickly
+                        quickly identify the digital books that meet their needs</em></p>
+                </header>
+
+                <nav id="navigation" role="navigation" aria-label="Menu de navigation">
+                    <ul>
+                        <li><a href="index-en.html">Project details</a></li>
+                        <li><a href="../index.html" lang="fr">Français</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <hr />
+                        <main id="main" role="main" tabindex="-1">
+                            <div class="inside">
+
+                                <section id="p4en">
+                                    <article>
+                                        <h2>Protoype 4 : functionalities</h2>
+                                        <p><em>June 2023.</em> This prototype exposes actual state of discussions at W3C. Based on <a href="https://w3c.github.io/publ-a11y/UX-Guide-Metadata/draft/principles/?updated">draft of Display Guide.</a></p>
+                                            <section class="js-tabs">
+                                                <ul class="js-tablist" data-existing-hx="h3">
+                                                    <li class="js-tablist__item">
+                                                        <a href="#p3_L1" id="label_p3_L1" class="js-tablist__link">Book 1</a>
+                                                    </li>
+                                                    <!-- <li class="js-tablist__item">
+                                                        <a href="#p3_L2" id="label_p3_L2" class="js-tablist__link">Livre 2</a>
+                                                    </li>
+                                                    <li class="js-tablist__item">
+                                                        <a href="#p3_L3" id="label_p3_L3" class="js-tablist__link">Livre 3</a>
+                                                    </li>
+                                                    <li class="js-tablist__item">
+                                                        <a href="#p3_L4" id="label_p3_L4" class="js-tablist__link">Livre 4</a>
+                                                    </li> -->
+                        
+                                                </ul>
+                                                <section id="p3_L1" class="js-tabcontent">
+                                                    <h3>Book information page: an accessible epub3 reflowable.</h3>
+                                                    <article id="livreex1">
+                                                        <div class="left-title-book">
+                                                            <img class="img" src="statics/Moby-Dick_FE_title_page.jpg" role="doc-cover"
+                                                                alt="The cover of the first American edition of Moby-Dick" />
+                                                        </div>
+                                                        <div class="fichelivre">
+                                                            <h3>Moby Dick; Or, The Whale.</h3>
+                                        
+                                                            <em>Herman Melville</em>
+                                                            <p>The sailor Ishmael's narrative of the maniacal quest of Ahab, captain of the whaling ship Pequod, for vengeance against Moby Dick, the giant white whale that bit off his leg on the ship's previous voyage.</p>
+                                                            <section>
+                                                                <h4>Product details</h4>
+                                                                <ul>
+                                                                    <li>EPUB Protected by LCP</li>
+                                                                    <li>Published in 1851 by Richard Bentley (United Kingdom)</li>
+                                                                    <li>ISBN 9780000000000</li>
+                                                                </ul>
+                                                            </section>
+                                                            <section>
+                                                                <h4>Accessibility</h4>
+<li>All content available for computer-generated speech and braille reading.</li>
+<li>Appearance can be modified.</li>
+<li>Navigation by table of contents, index, landmarks, and page list.</li>
+<li>No hazards.</li>
+<li>This publication is certified to meet accepted accessibility standards.</li>
+<details><summary>Additional Accessibility Information</summary>
+                                                                            <ul>
+                                                                                <li>This publication meets accepted accessibility recommendations and reports (EPUB
+                                                                                    Accessibility 1.1 and Web Accessibility Content Guidelines (WCAG) 2.1 Level
+                                                                                    AA.)</li>
+                                                                                <li>This publication was certified on 2021-09-07.</li>
+                                                                                <li>This publication is certified by Foo's Accessibility Testing (a third-party).</li>
+                                                                                <li>The certifier's credential is "Enterprise Accessibility Rating."</li>
+                                                                                <li>For more information, refer to the <a
+                                                                                        href="http://www.example.com/a11y/report/9780000000001">certifier's
+                                                                                    report.</a></li>
+                                                                            </ul>
+                                                                        </details>
+                                                            </section>
+                                                    </article>
+                                                </section>
+                                                </section>
+</article>                                                <hr/>
+                                <section id="p0en">
+                                    <h2>Book info for an accessible reflowable epub</h2>
+                                    <p><em>June 2022.</em> Outdated prototype.</p>
+                                    <article id="livreex1">
+                                        <div class="left-title-book">
+                                            <img class="img"
+                                                src="https://edition-accessible.github.io/signalement/statics/lamarquedes4-cover.jpg"
+                                                role="doc-cover"
+                                                alt="Couverture : Arthur Conan Doyle, La Marque des quatre, Syndicat national de l’Édition, 2020" />
+                                        </div>
+                                        <div class="fichelivre">
+                                            <h3>La Marque des quatre</h3>
+
+                                            <em><span lang="en">Arthur Conan Doyle</span></em>
+                                            <p>La Marque des quatre ou Le Signe des quatre (The Sign of Four en version
+                                                originale) est la deuxième aventure de Sherlock Holmes, écrite en 1889
+                                                par Arthur Conan Doyle et publiée en 1890.
+                                                Ennuyé par le manque d'enquêtes, Sherlock Holmes s'adonne à la
+                                                consommation de drogues pour s'occuper, ainsi qu'à diverses activités
+                                                ennuyeuses, sous le regard de son colocataire, le docteur John Watson.
+                                            </p>
+                                            <section>
+                                                <h4>Book details</h4>
+                                                <ul>
+                                                    <li>Format: EPUB</li>
+                                                    <li>Protection: LCP</li>
+                                                    <li>Published on 2020 by SNE</li>
+                                                    <li>ISBN 9780000000000</li>
+                                                    <li>Language: English (en)</li>
+                                                </ul>
+                                            </section>
+                                            <section>
+                                                <h4>Accessibility</h4>
+                                                <ul>
+                                                    <li>Adaptable text and layout</li>
+                                                    <li>TTS & Screen reader friendly
+                                                        <!--https://github.com/readium/webpub-manifest/blob/8d3cd47a67b80d188143f6b92d83fb8665a01160/context.jsonld#L20    "accessModeSufficient": "http://schema.org/accessModeSufficient",-->
+                                                    </li>
+                                                    <li>Printed book pagination reference</li>
+                                                </ul>
+
+                                                <details>
+                                                    <summary>More about accessibility</summary>
+
+                                                    <ul>
+                                                        <li>Images with short descriptions</li>
+                                                        <li>Accessible as per EPUB accessibility 1.A & WCAG AA </li>
+
+                                                        <li><a
+                                                                href="https://edition-accessible.github.io/signalement/protoype2/ace-smart-report-fr.html">Conformance
+                                                                report for this title</a>
+                                                        </li>
+                                                    </ul>
+                                                    <p><em>This publication is readable with eyes, ears and fingers,
+                                                            please enjoy and let us know about any issue!</em></p>
+                                                    <!--accessibilitySummary-->
+                                                </details>
+                                            </section>
+                                    </article>
+                                </section>
+                            </div>
+
+                        </main>
+
+                        <footer>
+                        </footer>
+                        <!-- end #main -->
+                    </div>
+                    <!-- end #wrapper -->
+                    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+                        </script>
+                    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js">
+                    </script>
+                    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js">
+                    </script>
+                    <script>$(document).ready(function () { $('#conformance table').DataTable({ "paging": false, "info": false }); });</script>
+                    <script src="https://smart.daisy.org/js/a11ytabs.js">
+                    </script>
+</body>
+
+</html>
