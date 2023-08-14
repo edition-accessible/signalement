@@ -46,20 +46,20 @@
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
   --r-heading-font:
-    League Gothic,
+    /* League Gothic,
     Impact,
-    sans-serif;
+    sans-serif; */
   --r-heading-color: #fff;
   --r-heading-line-height: 1em;
   --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: uppercase;
+  --r-heading-text-transform: ;
   --r-heading-text-shadow: none;
-  --r-heading1-font-weight: normal;
-  --r-heading2-font-weight: normal;
-  --r-heading3-font-weight: normal;
-  --r-heading4-font-weight: normal;
-  --r-heading5-font-weight: normal;
-  --r-heading6-font-weight: normal;
+  --r-heading1-font-weight: bold;
+  --r-heading2-font-weight: bold;
+  --r-heading3-font-weight: bold;
+  --r-heading4-font-weight: bold;
+  --r-heading5-font-weight: bold;
+  --r-heading6-font-weight: bold;
   --r-heading1-text-shadow: none;
   --r-heading1-size: 3.77em;
   --r-heading2-size: 2.11em;
@@ -76,12 +76,12 @@
 }
 .reveal-viewport {
   background: rgb(28, 30, 32);
-  background: -moz-radial-gradient(center, circle cover, rgb(85, 90, 95) 0%, rgb(28, 30, 32) 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgb(85, 90, 95)), color-stop(100%, rgb(28, 30, 32)));
-  background: -webkit-radial-gradient(center, circle cover, rgb(85, 90, 95) 0%, rgb(28, 30, 32) 100%);
-  background: -o-radial-gradient(center, circle cover, rgb(85, 90, 95) 0%, rgb(28, 30, 32) 100%);
-  background: -ms-radial-gradient(center, circle cover, rgb(85, 90, 95) 0%, rgb(28, 30, 32) 100%);
-  background: radial-gradient(center, circle cover, rgb(85, 90, 95) 0%, rgb(28, 30, 32) 100%);
+  background: -moz-radial-gradient(center, circle cover, rgb(0, 51, 153) 0%, rgb(28, 30, 32) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgb(0, 51, 153)), color-stop(100%, rgb(28, 30, 32)));
+  background: -webkit-radial-gradient(center, circle cover, rgb(0, 51, 153) 0%, rgb(28, 30, 32) 100%);
+  background: -o-radial-gradient(center, circle cover, rgb(0, 51, 153) 0%, rgb(28, 30, 32) 100%);
+  background: -ms-radial-gradient(center, circle cover, rgb(0, 51, 153) 0%, rgb(28, 30, 32) 100%);
+  background: radial-gradient(center, circle cover, rgb(0, 51, 153) 0%, rgb(28, 30, 32) 100%);
   background-color: var(--r-background-color);
 }
 .reveal {
@@ -401,4 +401,11 @@ p.reset-paragraph {
 .footnotes > ol > li::marker {
   color: var(--r-link-color);
   content: counter(list-item) ": ";
+}
+
+.svg-inline--fa{}
+
+.mermaid {
+  width: 100%;
+  text-align: center;
 }
