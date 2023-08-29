@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Will this book fit my reading needs?</title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="css/edrlab-reveal.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Will this book fit <br></br>my reading needs? 
+
+[bit.ly/sadb](https://edition-accessible.github.io/signalement/en/index-en.html)
+
+<img src="https://s2982.pcdn.co/wp-content/uploads/2014/04/confused-reader-2-featured-e1460293628801.jpeg.webp" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## European Digital Reading Lab
+
+*open source software and open standards for the publishing sector, worldwide*
+
+edrlab.org
+
+
+<img src="images/logo-edrlab.png" alt="" style="object-fit: scale-down">
+
+
+Gautier Chomel
+
+*Project manager | Digital book & accessibility*
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Invisible ebooks
+
+Who buys a book with no cover?
+
+<img src="images/Pasted image 20230806225932.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Reading needs
+
+Can I read this book with ears or fingers?
+
+<img src="https://lh3.googleusercontent.com/NpvamJQcVxuufpSvGcTt5WD4-FA6RkNXiI0s47KqEEsRLDlby0JabV-alBHIbzGJAlMhxWLZFph3fDjFwxxi0QsiP2bZfyglb5bF5LS9SJbxZiylpx-VOuTbDc-nLn0QAP0rpz2Zd7iVTM4=s2048" alt="Image|600" style="width: 600px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Pionners
+
+<img src="https://lh4.googleusercontent.com/9FoB7UkGPZVoQXhxy57DW0RFeokL8-BPjl1wVK16ktKmNMzOwc_zKNXhKJ8_n8LZmMo8w0WJq6lDEBetDFt9cf8ADgVY1aRqzS97rjJiKnQGef1Oz_YKTiD6NBG9ZX15nssKcWeXVk9i4PrF-hji2Q=s2048" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Random user experience
+
+<img src="https://lh3.googleusercontent.com/tqNwk7iIpVkLuZbLfRJweusWRmiA6wkjDT7yDsu6HtHS9ExIr9Zg0-MH3uZUOU0r0rCkaiADl-63OpbgSBsptbpfVTDI3jqRXOWcnf80_kpYr9yJTdRi_lVO5vLu5kW8oZDCOukPg60d-8XNvIwzlg=s2048" alt="Image|400|rotate(180deg)" style="width: 400px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### User Experience Guide 1.0 (2021)
+
+- W3C Community Group Report<!-- .element: class="fragment" -->
+- Publishing Accessibility task force<!-- .element: class="fragment" -->
+- Principles independent of metadata standards<!-- .element: class="fragment" -->
+- Feedback requested<!-- .element: class="fragment" -->
+
+<img src="https://lh5.googleusercontent.com/CaWCm4ArCR9HcJLBMZ4pIyjtUq64cFDfG_jFp-KhGcpSHL5ozM3TDrfv7Xki4bTSnFRysL9U9viV0jh5xWUNPPpmJ_CJ8Zuh7xuga4GCsaD2yrjjJGrDT37TZ5tSAujJvgs7hO4QYpwRkPK5kC0vXw=s2048" alt="Image|400|" style="width: 400px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**Have a related project?  Let us know!** <!-- .element: class="fragment" -->
+
+
+<div class="mermaid">
+graph RL
+
+RecInt((Recommandation W3C))-->France
+RecInt((Recommandation W3C))-->Italy
+RecInt((Recommandation W3C))-->Canada
+RecInt((Recommandation W3C))-->Canada
+RecInt((Recommandation W3C))-->Netherlands
+France-->EDR{{EDRLab}}-->RecInt
+Italy-->LIA-->RecInt
+Netherlands-->Dedicon/KB-->RecInt
+Canada-->DeMarque-->RecInt
+Canada-->leslibraires.ca-->RecInt 
+who((?))-->where((?))  
+
+
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## France 2020-2024
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="mermaid">
+graph 
+RecFr((Rec. FR))-->RecInt
+Atl{{Workshops}}-->EDR
+EDR-->Atl{{Workshops}}
+EtVoc{{Localized Vocabulary Study}}-->EDR
+POC{{Proof of Concept}} -->EDR
+
+RecInt((Display Guide W3C))-->RecFr
+EDR{{EDRLab}}-->RecFr
+EDR{{EDRLab}}-->RecInt
+
+RecInt-->prototypes
+prototypes-->Atl
+prototypes-->EtVoc
+prototypes-->POC
+
+leslibraires.fr-->POC
+epagine-->POC
+
+30{{30 organisations}}-->Atl
+
+
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Prototypes / Iterations
+
+[https://edition-accessible.github.io/signalement/](https://edition-accessible.github.io/signalement/)
+
+[bit.ly/sadb](https://edition-accessible.github.io/signalement/en/index-en.html)
+
+ 
+<span text-size="0.5em">Licence CC by</span>
+
+<img src="https://lh3.googleusercontent.com/7YIY1VjgrsKdb6f2waGp1PahAMn6us3LJAUj97togG565B-1ptfbyyPrTh6qqkAOwtdpcnQSI6vGQC17-AR5l9S9KT8q_9tN6kE0d0ient1D3k_BZUYUEYaM6qsgU0HZiDKpCMqj5UeUUE6HoTfHPg=s2048" alt="Image|400" style="width: 400px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Workshops
+
+**54 persons from 30 organisations** <!-- .element: class="fragment" -->
+
+ *is the provided information of use to help me choose a book that fits my needs?* <!-- .element: class="fragment" -->
+
+ *is this information present and reachable to be provided to users?*<!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Reactions
+
+* Overspecialized wording <!-- .element: class="fragment" -->
+* Wording generate misunderstandings<!-- .element: class="fragment" -->
+* Important characteristics missing<!-- .element: class="fragment" -->
+* Exclusive UX<!-- .element: class="fragment" -->
+* Holes in mappings <!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Actions
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Better metadata mapping
+
+* ONIX 
+* schema.org
+* MARC21
+* UNIMARC
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Rewriting proposal
+
+**Accessibility Task Force of the Publishing Community Group**
+
+https://github.com/w3c/publ-a11y/issues
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Categories and subcategories:
+
+- 40+ Metadata values  <!-- .element: class="fragment" -->
+- Strategic meaningful grouping  <!-- .element: class="fragment" -->
+- Identify a name for easy localisation <!-- .element: class="fragment" -->
+- Identify a textual description <!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Flexibility
+
+Long & short forms
+
+**![](https://lh5.googleusercontent.com/djbczZoe5FTqrSQof2HjDfVtaN4tAtQ2jpCBVzM_3Ygi9HdPrGkqyFLBFTdu3nKOlUgBIuWcKlGhMdDoWRd9T4KO0Jjmgo4r66WX5QTeyrKpperTMcY46biaKz0J1kPumvqlawmoUY232xnbFT04mg=s2048)**
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Release
+  
+- W3C process is based on consensus <!-- .element: class="fragment" -->
+- Raise awareness among the stakeholders <!-- .element: class="fragment" -->
+- To arrive at a proposal shared by all <!-- .element: class="fragment" -->
+- Updated version by the end of 2023 <!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Localising vocabulary
+
+Survey & Use cases
+
+<img src="https://lh3.googleusercontent.com/BQ1u56TXP-_316xC8rZvNylPIcFQijcfxxPDZAbaC0ueZ79wVLQtwj_mKTKSm2zozBKM4rh93gTi71Rhx-5j2F5L6aY3EdGNWTn8emGuh7J3B7Ng5g_YnQRfL2I9GjIKWM0I4z7fCsd3RWuaqJg24w=s2048" alt="image|600" style="width: 600px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Side effects
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Publisher’s efforts understoods
+
+<img src="https://lh3.googleusercontent.com/eyBG2X2_vn9bnb5h2XHTrvszvzwG5qMnUZMUblIbyhAUE5pNqUowqmvQdf5i6DMR9aQ0AAITNkMF15UWvReNtKE5pFchncp9G-SYHoWMM9ov-CpqkblOL3PMTkhWj5CB_Jc1r9nYngmv4ezUVAiLPw=s2048" alt="image|600" style="width: 600px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### For who set up metadatas
+
+Dictionary: Conditions | Feature | Code
+
+[lina25.fr](https://lina25.fr)
+
+<img src="https://lh6.googleusercontent.com/BDHg6HNFa5NoEiNIpTDK6ci7daC1ZmaHpO22ZpOMiIHIZ7mY3KxUH6GFNliKlGKx3Rfd1MrUHc25ttUPhqUHLZLkcICTWIOArjTC_Cqxsg52B4iCdoVfHSIIR41M5faLPt7QDbLrbh3o6D6I0dA-Jw=s2048" alt="image|600" style="width: 600px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Users discovers rich reading experiences!
+
+>“ What a pleasure it is to be able to buy a digital book and read it whenever we like, without having to go through a lengthy and very expensive transcription process.... 
+
+> ... at least we can read what we want, when we want, at the same price as anyone else!”
+
+(Laeticia, unable to read printed books)
+
+*But not thru all devices...*<!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## AT support 
+
+* FXL Fallbacks<!-- .element: class="fragment" -->
+* EPUB3 reflowable<!-- .element: class="fragment" -->
+* EPUB3 rich features<!-- .element: class="fragment" -->
+* LCP DRM<!-- .element: class="fragment" -->
+
+Dolphin Computers | Humanware | Bones | VinVision
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Moving a whole ecosystem
+
+* From *quality of metadata*<!-- .element: class="fragment" -->
+* To *appropriation by readers*<!-- .element: class="fragment" -->
+
+**AT are a wonderful vehicle to empower users in the use of born accessible materials.**<!-- .element: class="fragment" -->
+
+**We hope for more collaborations!**<!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**Thank you!** *Questions?*
+
+<img src="images/logo-edrlab.png" alt="" style="object-fit: scale-down">
+
+edrlab.org
+
+gautier . chomel @ edrlab . org
+
+[bit.ly/sadb](https://edition-accessible.github.io/signalement/en/index-en.html)
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+	<script src="plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  ElapsedTimeBar
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":"c/t","transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
