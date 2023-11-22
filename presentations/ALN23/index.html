@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Will this book fit my reading needs?</title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="css/edrlab-reveal.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Pourrais-je lire ce livre ?
+
+_Les lecteurs en situation de handicap doivent pouvoir aisément et rapidement identifier les livres numériques qui correspondent à leurs besoins_
+
+[https://lina25.fr](https://lina25.fr)
+
+<img src="https://s2982.pcdn.co/wp-content/uploads/2014/04/confused-reader-2-featured-e1460293628801.jpeg.webp" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## European Digital Reading Lab
+
+*logiciels libres et normes ouvertes pour le secteur de l'édition, dans le monde entier*
+
+edrlab.org
+
+
+<img src="images/logo-edrlab.png" alt="" style="object-fit: scale-down">
+
+
+Gautier Chomel
+
+Responsable de projet | Livre numérique et accessibilité
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Livres invisibles
+Qui achète un livre sans couverture ?
+
+<img src="images/Pasted image 20230806225932.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Besoins invisibles ? 
+
+Puis-je lire ce livre avec les oreilles ou les doigts ?
+
+<img src="https://lh3.googleusercontent.com/NpvamJQcVxuufpSvGcTt5WD4-FA6RkNXiI0s47KqEEsRLDlby0JabV-alBHIbzGJAlMhxWLZFph3fDjFwxxi0QsiP2bZfyglb5bF5LS9SJbxZiylpx-VOuTbDc-nLn0QAP0rpz2Zd7iVTM4=s2048" alt="Image|600" style="width: 600px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Pionniers
+
+<img src="https://lh4.googleusercontent.com/9FoB7UkGPZVoQXhxy57DW0RFeokL8-BPjl1wVK16ktKmNMzOwc_zKNXhKJ8_n8LZmMo8w0WJq6lDEBetDFt9cf8ADgVY1aRqzS97rjJiKnQGef1Oz_YKTiD6NBG9ZX15nssKcWeXVk9i4PrF-hji2Q=s2048" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Expérience utilisateur aléatoire
+
+<img src="https://lh3.googleusercontent.com/tqNwk7iIpVkLuZbLfRJweusWRmiA6wkjDT7yDsu6HtHS9ExIr9Zg0-MH3uZUOU0r0rCkaiADl-63OpbgSBsptbpfVTDI3jqRXOWcnf80_kpYr9yJTdRi_lVO5vLu5kW8oZDCOukPg60d-8XNvIwzlg=s2048" alt="Image|400|rotate(180deg)" style="width: 400px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Guide de l'expérience utilisateur 1.0 (2021)
+
+- W3C Community Group Report<!-- .element: class="fragment" -->
+- Publishing Accessibility task force<!-- .element: class="fragment" -->
+- Principles independent of metadata standards<!-- .element: class="fragment" -->
+- Feedback requested<!-- .element: class="fragment" -->
+
+<img src="https://lh5.googleusercontent.com/CaWCm4ArCR9HcJLBMZ4pIyjtUq64cFDfG_jFp-KhGcpSHL5ozM3TDrfv7Xki4bTSnFRysL9U9viV0jh5xWUNPPpmJ_CJ8Zuh7xuga4GCsaD2yrjjJGrDT37TZ5tSAujJvgs7hO4QYpwRkPK5kC0vXw=s2048" alt="Image|400|" style="width: 400px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+**Receuil de commentaires** <!-- .element: class="fragment" -->
+
+
+<div class="mermaid">
+graph RL
+
+RecInt((Recommandation W3C))-->France
+RecInt((Recommandation W3C))-->Italy
+RecInt((Recommandation W3C))-->Canada
+RecInt((Recommandation W3C))-->Canada
+RecInt((Recommandation W3C))-->Netherlands
+RecInt((Recommandation W3C))-->Allemagne
+Allemagne-->Börsenverein
+France-->EDR{{EDRLab}}-->RecInt
+Italy-->LIA-->RecInt
+Netherlands-->Dedicon/KB-->RecInt
+Canada-->DeMarque-->RecInt
+Canada-->leslibraires.ca-->RecInt 
+who((?))-->where((?))  
+
+
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## France 2020-2024
+
+Comité de pilotage interministériel 
+
+**Plan stratégique axe 7**
+
+*Signaler les caractéristiques d’accessibilité des livres numériques*
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="mermaid">
+graph 
+RecFr((Rec. FR))-->RecInt
+Atl{{Workshops}}-->EDR
+EDR-->Atl{{Ateliers}}
+EtVoc{{étude du vocabulaire}}-->EDR
+POC{{Preuve de concept}} -->EDR
+
+RecInt((Display Guide W3C))-->RecFr
+EDR{{EDRLab}}-->RecFr
+EDR{{EDRLab}}-->RecInt
+
+RecInt-->prototypes
+prototypes-->Atl
+prototypes-->EtVoc
+prototypes-->POC
+
+leslibraires.fr-->POC
+epagine-->POC
+epagine-->Panels-->EtVoc
+
+30{{30 organisations}}-->Atl
+
+
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Prototypes / Iterations
+ 
+<span text-size="0.5em">Licence CC by</span>
+
+<img src="https://lh3.googleusercontent.com/7YIY1VjgrsKdb6f2waGp1PahAMn6us3LJAUj97togG565B-1ptfbyyPrTh6qqkAOwtdpcnQSI6vGQC17-AR5l9S9KT8q_9tN6kE0d0ient1D3k_BZUYUEYaM6qsgU0HZiDKpCMqj5UeUUE6HoTfHPg=s2048" alt="Image|400" style="width: 400px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Ateliers
+
+**54 personnes de 30 organisations** <!-- .element: class="fragment" -->
+
+ *Les informations sont-elles utiles pour m'aider à choisir un livre  ?* <!-- .element: class="fragment" -->
+
+ *Ces informations sont-elles présentes et transférables aux utilisateurs ?*<!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Reactions
+
+* Vocabulaire trop spécialisé <!-- .element: class="fragment" -->
+* Caractéristiques importantes manquent <!-- .element: class="fragment" -->
+* L'expérience utilisateur devrait être plus inclusive <!-- .element: class="fragment" -->
+* La formulation peut générer des malentendus <!-- .element: class="fragment" -->
+* Détailler filtrage (recherche) <!-- .element: class="fragment" -->
+* ONIX insuffisant <!-- .element: class="fragment" -->
+* Aucune cartographie MARC / UNIMARC <!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Actions
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Meilleures métadonnées
+
+ONIX 
+
+EPUB
+
+UNIMARC
+
+MARC21
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Guide de l'expérience utilisateur 2.0 (2024)
+<img src="images/Pasted image 20231122154247.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Étude du vocabulaire
+
+Enquête, panels et cas d'usage
+
+<img src="https://lh3.googleusercontent.com/BQ1u56TXP-_316xC8rZvNylPIcFQijcfxxPDZAbaC0ueZ79wVLQtwj_mKTKSm2zozBKM4rh93gTi71Rhx-5j2F5L6aY3EdGNWTn8emGuh7J3B7Ng5g_YnQRfL2I9GjIKWM0I4z7fCsd3RWuaqJg24w=s2048" alt="image|600" style="width: 600px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Pour ceux qui renseignent les métadonnées
+
+Dictionnaire : Conditions | Caractéristique | Code
+
+[lina25.fr](https://lina25.fr)
+
+<img src="https://lh6.googleusercontent.com/BDHg6HNFa5NoEiNIpTDK6ci7daC1ZmaHpO22ZpOMiIHIZ7mY3KxUH6GFNliKlGKx3Rfd1MrUHc25ttUPhqUHLZLkcICTWIOArjTC_Cqxsg52B4iCdoVfHSIIR41M5faLPt7QDbLrbh3o6D6I0dA-Jw=s2048" alt="image|600" style="width: 600px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+### Les utilisateurs découvrent des expériences de lecture !
+
+>“  Quel plaisir de pouvoir acheter un livre numérique et de le lire quand on le souhaite, sans devoir passer par un processus de transcription long et très coûteux.... 
+
+>... au moins, on peut lire ce qu'on veut, quand on veut, au même prix que tout le monde !”
+
+(Laeticia, empêchée de lire)
+
+*Mais pas sur tous les appareils*<!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## AT support 
+
+* FXL Fallbacks<!-- .element: class="fragment" -->
+* EPUB3 reflowable<!-- .element: class="fragment" -->
+* EPUB3 rich features<!-- .element: class="fragment" -->
+* LCP DRM<!-- .element: class="fragment" -->
+
+Dolphin Computers | Humanware | Bones | VinVision
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Merci !
+
+<img src="images/logo-edrlab.png" alt="" style="object-fit: scale-down">
+
+edrlab.org
+
+gautier . chomel @ edrlab . org
+
+[lina25.fr](https://lina25.fr)
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+	<script src="plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  ElapsedTimeBar
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":"c/t","transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
