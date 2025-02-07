@@ -11,6 +11,17 @@ border-collapse: collapse;
 border-spacing: 0;
 } */
 
+p .message {
+	text-align: center;
+	align-content: center;
+	width: 800px;
+}
+.message {
+	background-color: #ffbb0084;
+	border-left: 6px solid #bc3c3c;
+	margin: 10px 0;
+	padding: 15px 10px 15px 10px;
+}
 
 details h2 {
 	display: inline;
